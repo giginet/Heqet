@@ -10,8 +10,12 @@
 @interface KWVector : NSObject {
 	CGFloat x_,y_;
 }
+
 @property(assign, readwrite) CGFloat x;
 @property(assign, readwrite) CGFloat y;
+@property(readonly) CGFloat length;
+@property(readonly) CGFloat angle;
+@property(readonly) CGPoint point;
 
 + (KWVector*)vector;
 + (KWVector*)vectorWithPoint:(CGPoint)point;
@@ -34,7 +38,4 @@
 - (KWVector*)max:(CGFloat)max;
 - (KWVector*)min:(CGFloat)min;
 
-@property(readonly) CGFloat length;
-@property(readonly) CGFloat angle;
-@property(readonly) CGPoint point;
 @end

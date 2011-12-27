@@ -8,7 +8,6 @@
 
 #import "KWVector.h"
 
-
 @implementation KWVector
 
 @synthesize x=x_, y=y_;
@@ -22,15 +21,20 @@
 }
 
 - (id)init{
-	[super init];
-	x_ = 0;
-	y_ = 0;
+	self = [super init];
+  if(self) {
+    x_ = 0;
+    y_ = 0;
+  }
 	return self;
 }
 
 - (id)initWithPoint:(CGPoint)point{
-	x_ = point.x;
-	y_ = point.y;
+	self = [self init];
+  if(self){
+    x_ = point.x;
+    y_ = point.y;
+  }
 	return self;
 }
 
@@ -57,11 +61,11 @@
 }
 
 - (CGFloat)scalar:(KWVector *)v{
-	return x_*v.x+y_*v.y;
+	return x_ * v.x + y_ * v.y;
 }
 
 - (CGFloat)cross:(KWVector *)v{
-	return x_*v.y-y_*v.x;
+	return x_ * v.y - y_ * v.x;
 }
 
 - (KWVector*)scale:(CGFloat)n{
@@ -75,7 +79,7 @@
 }
 
 - (KWVector*)normalize{
-	if([self length]==0){
+	if([self length] == 0){
 		x_ = 0;
 		y_ = 0;
 		return self;
@@ -95,14 +99,14 @@
 - (KWVector*)rotate:(CGFloat)deg{
 	CGFloat rad = M_PI*deg/180;
 	CGFloat tmpx = x_;
-	x_ = sin(rad)*y_+cos(rad)*x_;
-	y_ = cos(rad)*y_-sin(rad)*tmpx;
+	x_ = sin(rad) * y_ + cos(rad) * x_;
+	y_ = cos(rad) * y_ - sin(rad) * tmpx;
 	return self;
 }
 
 - (KWVector*)reverse{
-	x_ *=-1;
-	y_ *=-1;
+	x_ *= -1;
+	y_ *= -1;
 	return self;
 }
 
