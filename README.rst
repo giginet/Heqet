@@ -4,7 +4,7 @@ Heqet
 
 Description
 ---------------
-Heqet means Kawaz integrated Game Utilities.
+Heqet is an useful utility collection for game development.
 It extends cocos2d.
 
 Installation
