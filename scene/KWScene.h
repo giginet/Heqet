@@ -10,13 +10,12 @@
 #import "cocos2d.h"
 
 @interface KWScene : CCLayer {
+ @private
   ccColor4B backgroundColor_;
-  CGSize winSize_;
 }
 
-// returns a CCScene that contains this layer as the only child
 + (CCScene*)scene;
-
 - (void)update:(ccTime)dt;
 
+@property(readwrite) ccColor4B backgroundColor;
 @end

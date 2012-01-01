@@ -20,4 +20,5 @@
 #import "KWAnimation.h"
 #import "KWMusicManager.h"
 
+#import "KWLogoScene.h"
 #import "KWTimerLabel.h"

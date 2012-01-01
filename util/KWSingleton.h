@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface KWSingleton : NSObject {
 }
 + (id)instance;

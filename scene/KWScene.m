@@ -10,20 +10,21 @@
 
 
 @implementation KWScene
+@synthesize backgroundColor=backgroundColor_;
 
 - (id)init{
   if( (self = [super init]) ){
-    winSize_ = [[CCDirector sharedDirector] winSize];
+    CGSize winSize = [[CCDirector sharedDirector] winSize];
     CCLayerColor* bg = [CCLayerColor layerWithColor:backgroundColor_
-                                              width:winSize_.width
-                                             height:winSize_.height];
+                                              width:winSize.width
+                                             height:winSize.height];
     [self addChild:bg];
     [self schedule:@selector(update:)];
   }
   return self;
 }
 
-+ (CCScene*)scene{
++ (CCScene*)scene {
   CCScene* scene = [CCScene node];
   CCLayer* layer = [[self class] node];
   [scene addChild:layer];

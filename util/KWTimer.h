@@ -32,7 +32,7 @@
 - (BOOL)isOver;
 
 @property(readonly) BOOL isActive;
-@property(getter=isLooping) BOOL looping;
+@property(readwrite, getter=isLooping) BOOL looping;
 @property(readonly) int now;
-@property(setter=set:) int max;
+@property(readwrite, setter=set:) int max;
 @end
