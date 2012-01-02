@@ -5,19 +5,16 @@ Heqet
 Description
 ---------------
 Heqet is an useful utility collection for game development.
-It extends cocos2d.
+It extends Kobold2D.
 
 Installation
 ---------------
 
 ::
 
-    cd your/cocos2d/project
-    git submodule add git@github.com:giginet/Heqet.git project/libs/
-    git submodule init
-    git submodule update
-
-
+    cd ~/Kobold2D/Kobold2D-x.y/__Kobold2D__/templates/project/
+    git clone git://github.com/giginet/Heqet.git _Kobold2D-With-Heqet-Template_
+    open ~/Kobold2D/Kobold2D-x.y/Kobold2D\ Project\ Starter.app
 
 Documentation
 ---------------
