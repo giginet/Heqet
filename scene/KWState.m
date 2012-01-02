@@ -11,7 +11,7 @@
 @implementation KWState
 
 + (id)state{
-  return [[[[self class] alloc] init] autorelease];
+  return [[[self class] alloc] init];
 }
 
 - (void)setUp:(NSDictionary *)userData{

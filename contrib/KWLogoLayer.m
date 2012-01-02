@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "KWLogoScene.h"
+#import "KWLogoLayer.h"
 
-@interface KWLogoScene()
+@interface KWLogoLayer()
 -(void)goToNext;
 @end
 
-@implementation KWLogoScene
+@implementation KWLogoLayer
 @synthesize nextScene=nextScene_;
 
 -(id)init{
@@ -34,14 +34,6 @@
     self.isTouchEnabled = YES;
   }
 	return self;
-}
-
-+ (CCScene*)sceneWithNextScene:(CCScene *)nextScene {
-  CCScene* scene = [CCScene node];
-  KWLogoScene* layer = [[self class] node];
-  layer.nextScene = nextScene;
-  [scene addChild:layer];
-  return scene;
 }
 
 -(void) registerWithTouchDispatcher{

@@ -7,7 +7,6 @@
 //
 
 #import "KWTimerLabel.h"
-#import "GameConfig.h"
 
 #ifndef FPS
 #define FPS 60
@@ -34,10 +33,6 @@
     [self setString:[self humalize]];
   }
   return self;
-}
-
-- (void)dealloc{
-  [super dealloc];
 }
 
 - (NSString*)humalize{

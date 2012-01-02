@@ -13,11 +13,11 @@
 @synthesize x=x_, y=y_;
 
 + (KWVector*)vector{
-  return [[[KWVector alloc] init] autorelease];
+  return [[KWVector alloc] init];
 }
 
 + (KWVector*)vectorWithPoint:(CGPoint)point{
-  return [[[KWVector alloc] initWithPoint:point] autorelease];
+  return [[KWVector alloc] initWithPoint:point];
 }
 
 - (id)init{

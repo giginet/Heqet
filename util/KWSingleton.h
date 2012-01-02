@@ -13,6 +13,7 @@
 
 @interface KWSingleton : NSObject {
 }
-+ (id)instance;
+
++ (id)shared;
 
 @end

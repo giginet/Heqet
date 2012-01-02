@@ -1,5 +1,5 @@
 //
-//  KWScene.h
+//  KWLayer.h
 //  Heqet
 //
 //  Created by giginet on 11/05/30.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface KWScene : CCLayer {
+@interface KWLayer : CCLayer {
  @private
   ccColor4B backgroundColor_;
 }

@@ -17,7 +17,7 @@
 @implementation KWMusicManager
 
 + (id)sharedManager{
-  return [KWMusicManager instance];
+  return [KWMusicManager shared];
 }
 
 - (id)init{
@@ -27,12 +27,6 @@
     introMusicCompletionSelector_ = nil;
   }
   return self;
-}
-
-- (void)dealloc{
-  [introMusic_ release];
-  [loopMusic_ release];
-  [super dealloc];
 }
 
 - (void)playMusic:(NSString *)file loop:(BOOL)loop{

@@ -1,19 +1,17 @@
 //
-//  KWLogoScene.h
+//  KWLogoLayer.h
 //  Heqet
 //
 //  Created by  on 12/01/01.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "KWScene.h"
+#import "KWLayer.h"
 #import "KWSprite.h"
 
-@interface KWLogoScene : KWScene{
+@interface KWLogoLayer : KWLayer{
   CCScene* nextScene_;
 }
-
-+ (CCScene*)sceneWithNextScene:(CCScene*)nextScene;
 
 @property(readwrite, retain) CCScene* nextScene;
 @end

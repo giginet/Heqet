@@ -1,15 +1,15 @@
 //
-//  KWScene.m
+//  KWLayer.m
 //  Heqet
 //
 //  Created by giginet on 11/05/30.
 //  Copyright 2011 Kawaz. All rights reserved.
 //
 
-#import "KWScene.h"
+#import "KWLayer.h"
 
 
-@implementation KWScene
+@implementation KWLayer
 @synthesize backgroundColor=backgroundColor_;
 
 - (id)init{

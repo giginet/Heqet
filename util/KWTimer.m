@@ -15,25 +15,29 @@
 @synthesize max=max_;
 
 + (KWTimer*)timer{
-  return [[[KWTimer alloc] init] autorelease];
+  return [[KWTimer alloc] init];
 }
 
 + (KWTimer*)timerWithMax:(int)max{
-  return [[[KWTimer alloc] initWithMax:max] autorelease];
+  return [[KWTimer alloc] initWithMax:max];
 }
 
 - (id)init{
-	[super init];
-	max_ = 0;
-	time_ = 0;
-	flagLoop_ = NO;
-	flagActive_ = NO;
+	self = [super init];
+  if(self) {
+    max_ = 0;
+    time_ = 0;
+    flagLoop_ = NO;
+    flagActive_ = NO;
+  }
 	return self;
 }
 
 - (id)initWithMax:(int)max{
-	[self init];
-	[self set:max];
+	self = [self init];
+	if(self) {
+    [self set:max];
+  }
 	return self;
 }
 

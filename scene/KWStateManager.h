@@ -22,5 +22,5 @@
 - (void)replaceState:(KWState*)state andArgs:(NSDictionary*)userData;
 - (void)popState;
 
-@property(readonly, assign) KWState* runningState;
+@property(readonly, retain) KWState* runningState;
 @end
