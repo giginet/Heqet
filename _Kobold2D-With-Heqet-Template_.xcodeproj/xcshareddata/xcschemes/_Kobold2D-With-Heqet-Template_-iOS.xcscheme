@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DCC1A0E213A94ED5005BD75D"
-               BuildableName = ".app"
+               BuildableName = "_Kobold2D-With-Heqet-Template_-iOS.app"
                BlueprintName = "_Kobold2D-With-Heqet-Template_-iOS"
                ReferencedContainer = "container:_Kobold2D-With-Heqet-Template_.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCC1A0E213A94ED5005BD75D"
-            BuildableName = ".app"
+            BuildableName = "_Kobold2D-With-Heqet-Template_-iOS.app"
             BlueprintName = "_Kobold2D-With-Heqet-Template_-iOS"
             ReferencedContainer = "container:_Kobold2D-With-Heqet-Template_.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCC1A0E213A94ED5005BD75D"
-            BuildableName = ".app"
+            BuildableName = "_Kobold2D-With-Heqet-Template_-iOS.app"
             BlueprintName = "_Kobold2D-With-Heqet-Template_-iOS"
             ReferencedContainer = "container:_Kobold2D-With-Heqet-Template_.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DCC1A0E213A94ED5005BD75D"
-            BuildableName = ".app"
+            BuildableName = "_Kobold2D-With-Heqet-Template_-iOS.app"
             BlueprintName = "_Kobold2D-With-Heqet-Template_-iOS"
             ReferencedContainer = "container:_Kobold2D-With-Heqet-Template_.xcodeproj">
          </BuildableReference>

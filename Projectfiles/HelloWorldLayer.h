@@ -5,9 +5,9 @@
  * Released under MIT License in Germany (LICENSE-Kobold2D.txt).
  */
 
-#import "cocos2d.h"
+#import "heqet.h"
 
-@interface HelloWorldLayer : CCLayer
+@interface HelloWorldLayer : KWLayer
 {
 	NSString* helloWorldString;
 	NSString* helloWorldFontName;

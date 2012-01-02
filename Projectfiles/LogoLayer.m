@@ -1,18 +1,19 @@
 //
-//  LogoScene.m
+//  LogoLayer.m
 //  Heqet
 //
 //  Created by  on 12/01/01.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
 //
 
-#import "KWLogoLayer.h"
+#import "LogoLayer.h"
+#import "HelloWorldLayer.h"
 
-@interface KWLogoLayer()
+@interface LogoLayer()
 -(void)goToNext;
 @end
 
-@implementation KWLogoLayer
+@implementation LogoLayer
 @synthesize nextScene=nextScene_;
 
 -(id)init{
@@ -32,6 +33,7 @@
     [logo runAction:seq];
     [self addChild:logo];
     self.isTouchEnabled = YES;
+    self.nextScene = [HelloWorldLayer scene];
   }
 	return self;
 }

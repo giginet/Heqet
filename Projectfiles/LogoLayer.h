@@ -1,5 +1,5 @@
 //
-//  KWLogoLayer.h
+//  LogoLayer.h
 //  Heqet
 //
 //  Created by  on 12/01/01.
@@ -9,7 +9,7 @@
 #import "KWLayer.h"
 #import "KWSprite.h"
 
-@interface KWLogoLayer : KWLayer{
+@interface LogoLayer : KWLayer{
   CCScene* nextScene_;
 }
 

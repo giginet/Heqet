@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F6D14B23C4B00C6FC96 /* LogoLayer.m */; };
+		07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */; };
+		07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F7014B23C7D00C6FC96 /* kawaz.png */; };
+		07831F9114B23CC400C6FC96 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7614B23CC400C6FC96 /* KWMusicManager.m */; };
+		07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7914B23CC400C6FC96 /* KWTimerLabel.m */; };
+		07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7E14B23CC400C6FC96 /* KWLayer.m */; };
+		07831F9414B23CC400C6FC96 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8014B23CC400C6FC96 /* KWState.m */; };
+		07831F9514B23CC400C6FC96 /* KWStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8214B23CC400C6FC96 /* KWStateManager.m */; };
+		07831F9614B23CC400C6FC96 /* KWAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8514B23CC400C6FC96 /* KWAnimation.m */; };
+		07831F9714B23CC400C6FC96 /* KWSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8714B23CC400C6FC96 /* KWSprite.m */; };
+		07831F9814B23CC400C6FC96 /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8A14B23CC400C6FC96 /* KWSingleton.m */; };
+		07831F9914B23CC400C6FC96 /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8C14B23CC400C6FC96 /* KWTimer.m */; };
+		07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8E14B23CC400C6FC96 /* KWVector.m */; };
+		07831F9B14B23CC400C6FC96 /* NSArray+NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */; };
 		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
@@ -65,6 +79,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07831F6C14B23C4B00C6FC96 /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoLayer.h; sourceTree = "<group>"; };
+		07831F6D14B23C4B00C6FC96 /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoLayer.m; sourceTree = "<group>"; };
+		07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kawaz-hd.png"; sourceTree = "<group>"; };
+		07831F7014B23C7D00C6FC96 /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
+		07831F7514B23CC400C6FC96 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
+		07831F7614B23CC400C6FC96 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
+		07831F7814B23CC400C6FC96 /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimerLabel.h; sourceTree = "<group>"; };
+		07831F7914B23CC400C6FC96 /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimerLabel.m; sourceTree = "<group>"; };
+		07831F7A14B23CC400C6FC96 /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
+		07831F7D14B23CC400C6FC96 /* KWLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLayer.h; sourceTree = "<group>"; };
+		07831F7E14B23CC400C6FC96 /* KWLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLayer.m; sourceTree = "<group>"; };
+		07831F7F14B23CC400C6FC96 /* KWState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWState.h; sourceTree = "<group>"; };
+		07831F8014B23CC400C6FC96 /* KWState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWState.m; sourceTree = "<group>"; };
+		07831F8114B23CC400C6FC96 /* KWStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWStateManager.h; sourceTree = "<group>"; };
+		07831F8214B23CC400C6FC96 /* KWStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWStateManager.m; sourceTree = "<group>"; };
+		07831F8414B23CC400C6FC96 /* KWAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWAnimation.h; sourceTree = "<group>"; };
+		07831F8514B23CC400C6FC96 /* KWAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWAnimation.m; sourceTree = "<group>"; };
+		07831F8614B23CC400C6FC96 /* KWSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSprite.h; sourceTree = "<group>"; };
+		07831F8714B23CC400C6FC96 /* KWSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSprite.m; sourceTree = "<group>"; };
+		07831F8914B23CC400C6FC96 /* KWSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSingleton.h; sourceTree = "<group>"; };
+		07831F8A14B23CC400C6FC96 /* KWSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSingleton.m; sourceTree = "<group>"; };
+		07831F8B14B23CC400C6FC96 /* KWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimer.h; sourceTree = "<group>"; };
+		07831F8C14B23CC400C6FC96 /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimer.m; sourceTree = "<group>"; };
+		07831F8D14B23CC400C6FC96 /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWVector.h; sourceTree = "<group>"; };
+		07831F8E14B23CC400C6FC96 /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVector.m; sourceTree = "<group>"; };
+		07831F8F14B23CC400C6FC96 /* NSArray+NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSArrayExtension.h"; sourceTree = "<group>"; };
+		07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSArrayExtension.m"; sourceTree = "<group>"; };
 		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +139,7 @@
 		DC9C33E713B5024400931BF2 /* BuildSettings-Debug-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E813B5024400931BF2 /* BuildSettings-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E913B5024400931BF2 /* BuildSettings-Release-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Release-Mac.xcconfig"; sourceTree = "<group>"; };
-		DCC1A0E313A94ED5005BD75D /* _Hello-Kobold2D-Template_-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-iOS.app"; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC1A0E313A94ED5005BD75D /* _Hello-Kobold2D-Template_-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-iOS.app"; path = "_Kobold2D-With-Heqet-Template_-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1A0F913A94ED5005BD75D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		DCC1A0FB13A94ED5005BD75D /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		DCC1A0FD13A94ED5005BD75D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
@@ -109,7 +150,7 @@
 		DCC1A10713A94ED5005BD75D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		DCC1A10913A94ED5005BD75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		DCC1A10A13A94ED5005BD75D /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
-		DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-Mac.app"; path = .app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-Mac.app"; path = "_Kobold2D-With-Heqet-Template_-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1A26813A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DCC1A26B13A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DCC1A26D13A94EE6005BD75D /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
@@ -167,6 +208,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07831F7314B23CC400C6FC96 /* Heqet */ = {
+			isa = PBXGroup;
+			children = (
+				07831F7414B23CC400C6FC96 /* audio */,
+				07831F7714B23CC400C6FC96 /* contrib */,
+				07831F7A14B23CC400C6FC96 /* heqet.h */,
+				07831F7B14B23CC400C6FC96 /* resources */,
+				07831F7C14B23CC400C6FC96 /* scene */,
+				07831F8314B23CC400C6FC96 /* sprite */,
+				07831F8814B23CC400C6FC96 /* util */,
+			);
+			path = Heqet;
+			sourceTree = "<group>";
+		};
+		07831F7414B23CC400C6FC96 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				07831F7514B23CC400C6FC96 /* KWMusicManager.h */,
+				07831F7614B23CC400C6FC96 /* KWMusicManager.m */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		07831F7714B23CC400C6FC96 /* contrib */ = {
+			isa = PBXGroup;
+			children = (
+				07831F7814B23CC400C6FC96 /* KWTimerLabel.h */,
+				07831F7914B23CC400C6FC96 /* KWTimerLabel.m */,
+			);
+			path = contrib;
+			sourceTree = "<group>";
+		};
+		07831F7B14B23CC400C6FC96 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		07831F7C14B23CC400C6FC96 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				07831F7D14B23CC400C6FC96 /* KWLayer.h */,
+				07831F7E14B23CC400C6FC96 /* KWLayer.m */,
+				07831F7F14B23CC400C6FC96 /* KWState.h */,
+				07831F8014B23CC400C6FC96 /* KWState.m */,
+				07831F8114B23CC400C6FC96 /* KWStateManager.h */,
+				07831F8214B23CC400C6FC96 /* KWStateManager.m */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		07831F8314B23CC400C6FC96 /* sprite */ = {
+			isa = PBXGroup;
+			children = (
+				07831F8414B23CC400C6FC96 /* KWAnimation.h */,
+				07831F8514B23CC400C6FC96 /* KWAnimation.m */,
+				07831F8614B23CC400C6FC96 /* KWSprite.h */,
+				07831F8714B23CC400C6FC96 /* KWSprite.m */,
+			);
+			path = sprite;
+			sourceTree = "<group>";
+		};
+		07831F8814B23CC400C6FC96 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				07831F8914B23CC400C6FC96 /* KWSingleton.h */,
+				07831F8A14B23CC400C6FC96 /* KWSingleton.m */,
+				07831F8B14B23CC400C6FC96 /* KWTimer.h */,
+				07831F8C14B23CC400C6FC96 /* KWTimer.m */,
+				07831F8D14B23CC400C6FC96 /* KWVector.h */,
+				07831F8E14B23CC400C6FC96 /* KWVector.m */,
+				07831F8F14B23CC400C6FC96 /* NSArray+NSArrayExtension.h */,
+				07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		DCC1A0D613A94EC0005BD75D = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +310,7 @@
 		DCC1A0E613A94ED5005BD75D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07831F7314B23CC400C6FC96 /* Heqet */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,6 +381,8 @@
 		DCC1A38C13A94F1A005BD75D /* Projectfiles */ = {
 			isa = PBXGroup;
 			children = (
+				07831F6C14B23C4B00C6FC96 /* LogoLayer.h */,
+				07831F6D14B23C4B00C6FC96 /* LogoLayer.m */,
 				DCC1A38F13A94F1A005BD75D /* HelloWorldLayer.h */,
 				DCC1A39013A94F1A005BD75D /* HelloWorldLayer.m */,
 				DCC1A38D13A94F1A005BD75D /* AppDelegate.h */,
@@ -274,6 +396,8 @@
 		DCC1A39413A94F1A005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */,
+				07831F7014B23C7D00C6FC96 /* kawaz.png */,
 				DCC1A39513A94F1A005BD75D /* config.lua */,
 				DC275D2A13B27DBF009C5098 /* Pow.caf */,
 				DC485B4713AA194F00F2BC70 /* ship.png */,
@@ -396,6 +520,8 @@
 				DC746EBD140EE73300B0BC06 /* koboldb.ttf in Resources */,
 				DC746EBE140EE73300B0BC06 /* koboldci.ttf in Resources */,
 				DC746EBF140EE73300B0BC06 /* koboldi.ttf in Resources */,
+				07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */,
+				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +550,18 @@
 				DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */,
 				DCC1A3AB13A94F1A005BD75D /* HelloWorldLayer.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
+				07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */,
+				07831F9114B23CC400C6FC96 /* KWMusicManager.m in Sources */,
+				07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */,
+				07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */,
+				07831F9414B23CC400C6FC96 /* KWState.m in Sources */,
+				07831F9514B23CC400C6FC96 /* KWStateManager.m in Sources */,
+				07831F9614B23CC400C6FC96 /* KWAnimation.m in Sources */,
+				07831F9714B23CC400C6FC96 /* KWSprite.m in Sources */,
+				07831F9814B23CC400C6FC96 /* KWSingleton.m in Sources */,
+				07831F9914B23CC400C6FC96 /* KWTimer.m in Sources */,
+				07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */,
+				07831F9B14B23CC400C6FC96 /* NSArray+NSArrayExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
