@@ -24,13 +24,6 @@
   return self;
 }
 
-+ (CCScene*)scene {
-  CCScene* scene = [CCScene node];
-  CCLayer* layer = [[self class] node];
-  [scene addChild:layer];
-  return scene;
-}
-
 -(void) registerWithTouchDispatcher{ 
   [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
                                                    priority:0 

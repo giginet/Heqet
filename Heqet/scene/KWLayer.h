@@ -14,7 +14,6 @@
   ccColor4B backgroundColor_;
 }
 
-+ (CCScene*)scene;
 - (void)update:(ccTime)dt;
 
 @property(readwrite) ccColor4B backgroundColor;

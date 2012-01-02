@@ -16,16 +16,16 @@
 @implementation LogoLayer
 @synthesize nextScene=nextScene_;
 
--(id)init{
+-(id)init {
 	self.backgroundColor = ccc4(255, 255, 255, 255);
   if( (self = [super init]) ) {
     self.nextScene = nil;
-    CGSize winSize = [[CCDirector sharedDirector] winSize];
+    CCDirector* director = [CCDirector sharedDirector];
     KWSprite* logo = [KWSprite spriteWithFile:@"kawaz.png"];
-    logo.position = ccp(winSize.width/2, winSize.height/2);
+    logo.position = director.screenCenter;
     logo.opacity = 0;
     id fadeIn = [CCFadeIn actionWithDuration:2];
-    id wait = [CCMoveBy actionWithDuration:2];
+    id wait = [CCDelayTime actionWithDuration:2];
     id fadeOut = [CCFadeOut actionWithDuration:2];
     id toNext = [CCCallFunc actionWithTarget:self 
                                     selector:@selector(goToNext)];
@@ -33,7 +33,7 @@
     [logo runAction:seq];
     [self addChild:logo];
     self.isTouchEnabled = YES;
-    self.nextScene = [HelloWorldLayer scene];
+    self.nextScene = [HelloWorldLayer nodeWithScene];
   }
 	return self;
 }
