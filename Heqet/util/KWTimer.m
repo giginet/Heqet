@@ -8,11 +8,17 @@
 
 #import "KWTimer.h"
 
+@interface KWTimer()
+- (void)tick:(ccTime)dt;
+- (void)onUpdate;
+- (void)onComplete;
+@end
 
 @implementation KWTimer
-@synthesize isActive=flagActive_, looping=flagLoop_;
-@synthesize now=time_;
-@synthesize max=max_;
+@synthesize active = active_;
+@synthesize looping = looping_;
+@synthesize now = now_;
+@synthesize max = max_;
 
 + (KWTimer*)timer{
   return [[KWTimer alloc] init];
@@ -26,9 +32,9 @@
 	self = [super init];
   if(self) {
     max_ = 0;
-    time_ = 0;
-    flagLoop_ = NO;
-    flagActive_ = NO;
+    now_ = 0;
+    looping_ = NO;
+    active_ = NO;
   }
 	return self;
 }
@@ -41,17 +47,13 @@
 	return self;
 }
 
-- (void)tick{
-	[self count];
-	if([self isOver]){
-		if(flagLoop_){
-			[self reset];
-		}
-	}
-}
-
 - (id)play{
-	flagActive_ = YES;
+	active_ = NO;
+  double fps = 60.0;
+  [[CCScheduler sharedScheduler] scheduleSelector:@selector(tick:) 
+                                        forTarget:self 
+                                         interval:1.0/fps 
+                                           paused:YES];
 	return self;
 }
 
@@ -62,29 +64,54 @@
 }
 
 - (id)pause{
-	flagActive_ = NO;
-	return self;
+	[[CCScheduler sharedScheduler] unscheduleSelector:@selector(tick:) forTarget:self];
+  return self;
 }
 
 - (id)reset{
-	time_ = 0;
+	now_ = 0;
 	return self;
 }
 
 - (void)count{
-	if(flagActive_) time_ += 1;
+	if(active_) now_ += 1;
 }
 
 - (id)move:(int)n{
-	time_ +=n;
-	if([self isOver] && flagLoop_){
-		time_ = time_ % max_;
-	}
-	return self;
+  if([self isOver]) return self;
+  [self onUpdate];
+  for (int i = 0; i < n; ++i) {
+    [self count];
+    if([self isOver]){
+      [self onComplete];
+      if(looping_){
+        [self reset];
+      }
+    }
+  }
+  return self;
 }
 
 - (BOOL)isOver{
-	return time_ >= max_;
+	return now_ >= max_;
+}
+
+- (void)setOnCompleteListener:(id)listener selector:(SEL)selector {
+  completeListener_ = listener;
+  completeSelector_ = selector;
+}
+
+- (void)setOnCompleteListenerWithBlock:(void (^)(id))block {
+  completeBlock_ = block;
+}
+
+- (void)setOnUpdateListener:(id)listener selector:(SEL)selector {
+  updateListener_ = listener;
+  updateSelector_ = selector;
+}
+
+- (void)setOnUpdateListenerWithBlock:(void (^)(id))block {
+  updateBlock_ = block;
 }
 
 - (int)max{
@@ -95,12 +122,41 @@
   max_ = max;
 }
 
-- (BOOL)isLooping{
-  return flagLoop_;
+- (void)tick:(ccTime)dt{
+	if([self isOver]) return;
+  [self onUpdate];
+  [self count];
+  if([self isOver]){
+    [self onComplete];
+		if(looping_){
+			[self reset];
+		}
+	}
 }
 
-- (void)setLooping:(BOOL)loop{
-  flagLoop_ = loop;
+- (void)onUpdate{
+  if (updateListener_ && updateSelector_) {
+    // http://stackoverflow.com/questions/8773226/performselector-warning
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    [updateListener_ performSelector:updateSelector_ withObject:self];
+    #pragma clang diagnostic pop
+  }
+  if (updateBlock_) {
+    updateBlock_(self);
+  }
+}
+
+- (void)onComplete{
+  if (completeListener_ && completeSelector_) {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    [completeListener_ performSelector:completeSelector_ withObject:self];
+    #pragma clang diagnostic pop
+  }
+  if (completeBlock_) {
+    completeBlock_(self);
+  }
 }
 
 @end

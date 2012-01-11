@@ -81,7 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		075A497514BD81BB0047AAD2 /* KWLoopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = KWLoopManager.h; sourceTree = "<group>"; };
+		075A497514BD81BB0047AAD2 /* KWLoopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLoopManager.h; sourceTree = "<group>"; };
 		075A497614BD81BB0047AAD2 /* KWLoopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLoopManager.m; sourceTree = "<group>"; };
 		075A497C14BD84530047AAD2 /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
 		075A497D14BD84530047AAD2 /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
@@ -621,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../__Kobold2D__/libs/GoogleAdMobAdsSDK\"",
@@ -632,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../__Kobold2D__/libs/GoogleAdMobAdsSDK\"",

@@ -24,7 +24,6 @@
 - (id)initWithPoint:(CGPoint)point;
 
 - (KWVector*)set:(CGPoint)point;
-- (KWVector*)clone;
 - (KWVector*)add:(KWVector*)v;
 - (KWVector*)sub:(KWVector*)v;
 - (CGFloat)scalar:(KWVector*)v;

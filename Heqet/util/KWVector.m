@@ -10,7 +10,8 @@
 
 @implementation KWVector
 
-@synthesize x=x_, y=y_;
+@synthesize x = x_;
+@synthesize y = y_;
 
 + (KWVector*)vector{
   return [[KWVector alloc] init];
@@ -44,7 +45,7 @@
 	return self;
 }
 
-- (KWVector*)clone{
+- (KWVector*)copy{
 	return [[KWVector alloc] initWithPoint:CGPointMake(x_, y_)];
 }
 
