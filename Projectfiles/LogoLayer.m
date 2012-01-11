@@ -8,7 +8,6 @@
 
 #import "LogoLayer.h"
 #import "HelloWorldLayer.h"
-
 @interface LogoLayer()
 -(void)goToNext;
 @end

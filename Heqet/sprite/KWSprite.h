@@ -12,7 +12,7 @@
 
 @interface KWSprite : CCSprite {
   // relative hitarea from 'anchor point'.
-  CGRect hitArea_;
+  CGRect hitBox_;
 }
 
 - (BOOL)collideWithPoint:(CGPoint)point;
@@ -21,9 +21,8 @@
 
 - (CGFloat)distance:(KWSprite*)sprite;
 
-@property(readwrite) CGRect hitArea;
-@property(readonly) CGRect absoluteHitArea;
-@property(readonly) CGPoint center;
+@property(readwrite) CGRect hitBox;
+@property(readonly) CGRect absoluteHitBox;
 @property(readwrite) double x;
 @property(readwrite) double y;
 @end

@@ -10,45 +10,32 @@
 #import "KWVector.h"
 
 @implementation KWSprite
-@synthesize hitArea=hitArea_;
+@synthesize hitBox=hitBox_;
 
 - (id)initWithTexture:(CCTexture2D *)texture rect:(CGRect)rect{
   self = [super initWithTexture:texture rect:rect];
   if(self){
-    hitArea_ = CGRectMake(0, 
-                          0, 
-                          self.contentSize.width, 
-                          self.contentSize.height);
+    CGFloat width = self.contentSize.width;
+    CGFloat height = self.contentSize.height;
+    self.hitBox = CGRectMake(-width / 2, 
+                             -height / 2, 
+                             width, 
+                             height);
   }
   return self;
 }
 
 - (BOOL)collideWithPoint:(CGPoint)point{
-  if(rotation_ == 0){
-    return CGRectContainsPoint(self.absoluteHitArea, point);
-  }else{
-    /*KWVector* vx = [KWVector vectorWithPoint:CGPointMake(self.absoluteHitArea.size.width, 0)];
-    KWVector* vy = [KWVector vectorWithPoint:CGPointMake(0, self.absoluteHitArea.size.height)];
-    KWVector* p = [[KWVector vectorWithPoint:point] sub:[KWVector vectorWithPoint:self.absoluteHitArea.origin]];
-    [vx rotate:rotation_];
-    [vy rotate:rotation_];
-    return fabs([vx scalar:p]/[vx scalar:vx]) <= 1 && fabs([vy scalar:p]/[vy scalar:vy]) <= 1;*/
-    return YES;
-  }
+  return CGRectContainsPoint(self.hitBox, point);
 }
 
 - (BOOL)collideWithSprite:(KWSprite*)sprite{
-  if(rotation_ == 0){
-    return CGRectContainsRect(self.absoluteHitArea, sprite.absoluteHitArea);
-  }else{
-    // have not implemented.
-    return YES;
-  }  
+  CGRect other = [sprite boundingBox];
+  return CGRectIntersectsRect(self.hitBox, other);
 }
 
 - (BOOL)collideWithCircle:(CGPoint)center:(CGFloat)radius{
-  // 後で載せる
-  return NO;
+  return hypot(center.x - self.position.x, center.y - self.position.y) < radius;
 }
 
 - (CGFloat)distance:(KWSprite*)sprite{
@@ -57,24 +44,20 @@
   return [this sub:other].length;
 }
 
-- (CGRect)absoluteHitArea{
-  CGPoint origin = [self convertToWorldSpaceAR:hitArea_.origin];
-  return CGRectMake(origin.x - hitArea_.size.width/2, 
-                    origin.y - hitArea_.size.height/2, 
-                    hitArea_.size.width, 
-                    hitArea_.size.height);
+- (CGRect)absoluteHitBox{
+  CGPoint origin = [self convertToWorldSpaceAR:self.hitBox.origin];
+  return CGRectMake(origin.x - self.hitBox.size.width/2, 
+                    origin.y - self.hitBox.size.height/2, 
+                    self.hitBox.size.width, 
+                    self.hitBox.size.height);
 }
 
-- (CGPoint)center{
-  return CGPointMake(position_.x + contentSize_.width/2, position_.y + contentSize_.height/2);
+- (double)x {
+  return self.position.x;
 }
 
-- (double)x{
-  return position_.x;
-}
-
-- (double)y{
-  return position_.y;
+- (double)y {
+  return self.position.y;
 }
 
 - (void)setX:(double)x{

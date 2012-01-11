@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWLoopManager.m */; };
+		075A497E14BD84530047AAD2 /* hurry_int.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075A497C14BD84530047AAD2 /* hurry_int.caf */; };
+		075A497F14BD84530047AAD2 /* hurry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075A497D14BD84530047AAD2 /* hurry.caf */; };
 		07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F6D14B23C4B00C6FC96 /* LogoLayer.m */; };
 		07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */; };
 		07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F7014B23C7D00C6FC96 /* kawaz.png */; };
-		07831F9114B23CC400C6FC96 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7614B23CC400C6FC96 /* KWMusicManager.m */; };
 		07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7914B23CC400C6FC96 /* KWTimerLabel.m */; };
 		07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7E14B23CC400C6FC96 /* KWLayer.m */; };
 		07831F9414B23CC400C6FC96 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8014B23CC400C6FC96 /* KWState.m */; };
@@ -19,7 +21,7 @@
 		07831F9814B23CC400C6FC96 /* KWSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8A14B23CC400C6FC96 /* KWSingleton.m */; };
 		07831F9914B23CC400C6FC96 /* KWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8C14B23CC400C6FC96 /* KWTimer.m */; };
 		07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8E14B23CC400C6FC96 /* KWVector.m */; };
-		07831F9B14B23CC400C6FC96 /* NSArray+NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */; };
+		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* KWSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* KWSprite.m */; };
 		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
@@ -79,12 +81,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075A497514BD81BB0047AAD2 /* KWLoopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = KWLoopManager.h; sourceTree = "<group>"; };
+		075A497614BD81BB0047AAD2 /* KWLoopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLoopManager.m; sourceTree = "<group>"; };
+		075A497C14BD84530047AAD2 /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
+		075A497D14BD84530047AAD2 /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
 		07831F6C14B23C4B00C6FC96 /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoLayer.h; sourceTree = "<group>"; };
 		07831F6D14B23C4B00C6FC96 /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoLayer.m; sourceTree = "<group>"; };
 		07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kawaz-hd.png"; sourceTree = "<group>"; };
 		07831F7014B23C7D00C6FC96 /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07831F7514B23CC400C6FC96 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
-		07831F7614B23CC400C6FC96 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
 		07831F7814B23CC400C6FC96 /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimerLabel.h; sourceTree = "<group>"; };
 		07831F7914B23CC400C6FC96 /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimerLabel.m; sourceTree = "<group>"; };
 		07831F7A14B23CC400C6FC96 /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
@@ -102,8 +106,8 @@
 		07831F8C14B23CC400C6FC96 /* KWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimer.m; sourceTree = "<group>"; };
 		07831F8D14B23CC400C6FC96 /* KWVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWVector.h; sourceTree = "<group>"; };
 		07831F8E14B23CC400C6FC96 /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVector.m; sourceTree = "<group>"; };
-		07831F8F14B23CC400C6FC96 /* NSArray+NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSArrayExtension.h"; sourceTree = "<group>"; };
-		07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSArrayExtension.m"; sourceTree = "<group>"; };
+		07831F8F14B23CC400C6FC96 /* NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExtension.h; sourceTree = "<group>"; };
+		07831F9014B23CC400C6FC96 /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
 		07831F9C14B2428D00C6FC96 /* KWSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSprite.h; sourceTree = "<group>"; };
 		07831F9D14B2428D00C6FC96 /* KWSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSprite.m; sourceTree = "<group>"; };
 		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
@@ -139,7 +143,7 @@
 		DC9C33E713B5024400931BF2 /* BuildSettings-Debug-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E813B5024400931BF2 /* BuildSettings-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E913B5024400931BF2 /* BuildSettings-Release-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Release-Mac.xcconfig"; sourceTree = "<group>"; };
-		DCC1A0E313A94ED5005BD75D /* _Hello-Kobold2D-Template_-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-iOS.app"; path = "_Kobold2D-With-Heqet-Template_-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC1A0E313A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "_Kobold2D-With-Heqet-Template_-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1A0F913A94ED5005BD75D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		DCC1A0FB13A94ED5005BD75D /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		DCC1A0FD13A94ED5005BD75D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
@@ -225,8 +229,8 @@
 		07831F7414B23CC400C6FC96 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				07831F7514B23CC400C6FC96 /* KWMusicManager.h */,
-				07831F7614B23CC400C6FC96 /* KWMusicManager.m */,
+				075A497514BD81BB0047AAD2 /* KWLoopManager.h */,
+				075A497614BD81BB0047AAD2 /* KWLoopManager.m */,
 			);
 			path = audio;
 			sourceTree = "<group>";
@@ -280,8 +284,8 @@
 				07831F8C14B23CC400C6FC96 /* KWTimer.m */,
 				07831F8D14B23CC400C6FC96 /* KWVector.h */,
 				07831F8E14B23CC400C6FC96 /* KWVector.m */,
-				07831F8F14B23CC400C6FC96 /* NSArray+NSArrayExtension.h */,
-				07831F9014B23CC400C6FC96 /* NSArray+NSArrayExtension.m */,
+				07831F8F14B23CC400C6FC96 /* NSArrayExtension.h */,
+				07831F9014B23CC400C6FC96 /* NSArrayExtension.m */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -301,7 +305,7 @@
 		DCC1A0E413A94ED5005BD75D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCC1A0E313A94ED5005BD75D /* _Hello-Kobold2D-Template_-iOS.app */,
+				DCC1A0E313A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS.app */,
 				DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */,
 			);
 			name = Products;
@@ -326,6 +330,8 @@
 		DCC1A0F813A94ED5005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				075A497C14BD84530047AAD2 /* hurry_int.caf */,
+				075A497D14BD84530047AAD2 /* hurry.caf */,
 				DC746EAA140EE4C200B0BC06 /* kobold.txt */,
 				DC746EB2140EE73300B0BC06 /* kobold3di.ttf */,
 				DC746EB3140EE73300B0BC06 /* kobold3d.ttf */,
@@ -446,7 +452,7 @@
 			);
 			name = "_Kobold2D-With-Heqet-Template_-iOS";
 			productName = "Hello-World-iOS";
-			productReference = DCC1A0E313A94ED5005BD75D /* _Hello-Kobold2D-Template_-iOS.app */;
+			productReference = DCC1A0E313A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DCC1A25913A94EE6005BD75D /* _Kobold2D-With-Heqet-Template_-Mac */ = {
@@ -522,6 +528,8 @@
 				DC746EBF140EE73300B0BC06 /* koboldi.ttf in Resources */,
 				07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */,
 				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
+				075A497E14BD84530047AAD2 /* hurry_int.caf in Resources */,
+				075A497F14BD84530047AAD2 /* hurry.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +559,6 @@
 				DCC1A3AB13A94F1A005BD75D /* HelloWorldLayer.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
 				07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */,
-				07831F9114B23CC400C6FC96 /* KWMusicManager.m in Sources */,
 				07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */,
 				07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */,
 				07831F9414B23CC400C6FC96 /* KWState.m in Sources */,
@@ -560,8 +567,9 @@
 				07831F9814B23CC400C6FC96 /* KWSingleton.m in Sources */,
 				07831F9914B23CC400C6FC96 /* KWTimer.m in Sources */,
 				07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */,
-				07831F9B14B23CC400C6FC96 /* NSArray+NSArrayExtension.m in Sources */,
+				07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */,
 				07831F9E14B2428D00C6FC96 /* KWSprite.m in Sources */,
+				075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

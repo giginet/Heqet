@@ -18,6 +18,6 @@
 #import "KWStateManager.h"
 #import "KWSprite.h"
 #import "KWAnimation.h"
-#import "KWMusicManager.h"
+#import "KWLoopManager.h"
 
 #import "KWTimerLabel.h"

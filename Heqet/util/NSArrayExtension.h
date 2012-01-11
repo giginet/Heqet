@@ -1,5 +1,5 @@
 //
-//  NSArray+NSArrayExtension.h
+//  NSArrayExtension.h
 //  Heqet
 //
 //  Created by  on 11/12/27.
@@ -11,6 +11,6 @@
 @interface NSArray (NSArrayExtension)
 
 - (id)at:(NSInteger)index;
-- (NSArray*)map:(void (^)(id obj, NSUInteger idx, BOOL *stop))block;
+- (NSArray*)mapUsingBlock:(void (^)(id))block;
 
 @end
