@@ -10,10 +10,10 @@
 
 @interface KWTimer : NSObject {
 @private
-	int now_;
-  int max_;
-  BOOL looping_;
+	BOOL looping_;
   BOOL active_;
+  ccTime now_;
+  ccTime max_;
   __weak id completeListener_;
   __weak id updateListener_;
   SEL completeSelector_;
@@ -24,8 +24,8 @@
 
 @property(readonly) BOOL active;
 @property(readwrite) BOOL looping;
-@property(readwrite, setter=set:) int max;
-@property(readonly) int now;
+@property(readwrite, setter=set:) ccTime max;
+@property(readonly) ccTime now;
 
 + (KWTimer*)timer;
 + (KWTimer*)timerWithMax:(int)max;
@@ -38,8 +38,8 @@
 - (id)pause;
 
 - (id)reset;
+- (id)rotate;
 
-- (void)count;
 - (id)move:(int)n;
 
 - (BOOL)isOver;

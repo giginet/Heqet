@@ -16,15 +16,14 @@ typedef struct{
 } Time;
 
 @interface KWTimerLabel : CCLabelTTF{
-  BOOL active_;
   BOOL displayMiliSecond_;
-  NSTimeInterval initial_;
-  NSTimeInterval current_;
+  KWTimer* timer_;
 }
 
 @property(readonly) BOOL active;
 @property(readwrite) BOOL displayMiliSecond;
 @property(readonly) NSTimeInterval leave;
+@property(readonly) KWTimer* timer;
 
 + (id)labelWithHour:(int)hour minute:(int)minute second:(int)second;
 + (id)labelWithSecond:(NSTimeInterval)second;

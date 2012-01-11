@@ -70,31 +70,30 @@
 }
 
 - (id)reset{
-	now_ = 0;
+	now_ = max_;
 	return self;
 }
 
-- (void)count{
-	if(active_) now_ += 1;
+- (id)rotate {
+  now_ = (int)(self.now + self.max) % (int)self.max;
+  return self;
 }
 
 - (id)move:(int)n{
   if([self isOver]) return self;
+  now_ -= n;
   [self onUpdate:0];
-  for (int i = 0; i < n; ++i) {
-    [self count];
-    if([self isOver]){
-      [self onComplete];
-      if(looping_){
-        [self reset];
-      }
+  if([self isOver]){
+    [self onComplete];
+    if(looping_){
+      [self rotate];
     }
   }
   return self;
 }
 
 - (BOOL)isOver{
-	return now_ >= max_;
+	return now_ <= 0;
 }
 
 - (void)setOnCompleteListener:(id)listener selector:(SEL)selector {
@@ -115,22 +114,23 @@
   updateBlock_ = block;
 }
 
-- (int)max{
+- (ccTime)max{
   return max_;
 }
 
-- (void)set:(int)max{
+- (void)set:(ccTime)max{
   max_ = max;
+  [self reset];
 }
 
 - (void)tick:(ccTime)dt{
 	if([self isOver]) return;
+  now_ -= dt;
   [self onUpdate:dt];
-  [self count];
   if([self isOver]){
     [self onComplete];
 		if(looping_){
-			[self reset];
+			[self rotate];
 		}
 	}
 }

@@ -21,8 +21,8 @@
 @end
 
 @implementation KWTimerLabel
-@synthesize active = active_;
 @synthesize displayMiliSecond = displayMiliSecond_;
+@synthesize timer = timer_;
 
 + (id)labelWithHour:(int)hour minute:(int)minute second:(int)second {
   return [[[self class] alloc] initWithHour:hour minute:minute second:second];
@@ -35,10 +35,10 @@
 - (id)init{
   self = [super initWithString:@"" fontName:@"helvetica" fontSize:13];
   if (self) {
-    active_ = NO;
     displayMiliSecond_ = NO;
+    timer_ = [[KWTimer alloc] init];
     [self setSecond:0];
-    [self schedule:@selector(tick:)];
+    [self.timer setOnUpdateListener:self selector:@selector(tick:)];
   }
   return self;
 }
@@ -69,34 +69,36 @@
 }
 
 - (void)setSecond:(int)second {
-  initial_ = second;
-  current_ = second;
+  [self.timer set:second];
 }
 
 - (void)play {
-  active_ = YES;
+  [self.timer play];
 }
 
 - (void)pause {
-  active_ = NO;
+  [self.timer pause];
 }
 
 - (void)stop {
-  [self pause];
-  [self setSecond:initial_];
+  [self.timer stop];
+}
+
+- (BOOL)active {
+  return self.timer.active;
 }
 
 - (BOOL)isOver {
-  return current_ <= 0;
+  return [self.timer isOver];
 }
 
 - (NSTimeInterval)leave {
-  return current_;
+  return self.timer.now;
 }
 
 - (NSString*)humalize {
-  Time time = [self convertToTime:current_];
-  Time initial = [self convertToTime:initial_];
+  Time time = [self convertToTime:self.timer.now];
+  Time initial = [self convertToTime:self.timer.max];
   int hour = time.hour;
   int minute = time.minute;
   int second = time.second;
@@ -119,16 +121,11 @@
 }
 
 - (void)tick:(ccTime)dt {
-  if (!self.active) return;
-  if ([self isOver]) {
-    current_ = 0;
-  } else {
-    current_ -= dt;
-  }
   [self setString:[self humalize]];
 }
 
 - (Time)convertToTime:(NSTimeInterval)second{
+  if(second < 0) second = 0;
   Time t;
   t.hour = second / 3600;
   t.minute = (second - t.hour * 3600) / 60;
