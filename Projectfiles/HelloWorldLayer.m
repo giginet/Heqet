@@ -88,12 +88,20 @@
     [tLabel play];
     tLabel.position = ccp(100, 100);
     tLabel.displayMiliSecond = YES;
+    chart_ = [KWPieChart chartWithRadius:30 color:ccc3(1, 0, 0)];
+    chart_.position = ccp(100, 100);
+    chart_.rate = 0.0;
+    [self addChild:chart_];
     glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
 }
 
 - (void)onEnterTransitionDidFinish {
+}
+
+- (void)update:(ccTime)dt {
+  chart_.rate += 0.01;
 }
 
 @end

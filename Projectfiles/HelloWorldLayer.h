@@ -7,11 +7,11 @@
 
 #import "heqet.h"
 
-@interface HelloWorldLayer : KWLayer
-{
+@interface HelloWorldLayer : KWLayer {
 	NSString* helloWorldString;
 	NSString* helloWorldFontName;
 	int helloWorldFontSize;
+  KWPieChart* chart_;
 }
 
 @property (nonatomic, copy) NSString* helloWorldString;

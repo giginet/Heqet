@@ -3,7 +3,7 @@
 //  Heqet
 //
 //  Created by  on 11/12/27.
-//  Copyright (c) 2011年 Kawaz. All rights reserved.
+//  Copyright (c) 2011 Kawaz. All rights reserved.
 //
 
 #import "NSArrayExtension.h"
