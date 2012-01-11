@@ -10,7 +10,7 @@
 
 @interface KWTimer()
 - (void)tick:(ccTime)dt;
-- (void)onUpdate;
+- (void)onUpdate:(ccTime)dt;
 - (void)onComplete;
 @end
 
@@ -48,12 +48,12 @@
 }
 
 - (id)play{
-	active_ = NO;
-  double fps = 60.0;
+	active_ = YES;
+  int fps = [[KKStartupConfig config] maxFrameRate];
   [[CCScheduler sharedScheduler] scheduleSelector:@selector(tick:) 
                                         forTarget:self 
                                          interval:1.0/fps 
-                                           paused:YES];
+                                           paused:NO];
 	return self;
 }
 
@@ -64,6 +64,7 @@
 }
 
 - (id)pause{
+  active_ = NO;
 	[[CCScheduler sharedScheduler] unscheduleSelector:@selector(tick:) forTarget:self];
   return self;
 }
@@ -79,7 +80,7 @@
 
 - (id)move:(int)n{
   if([self isOver]) return self;
-  [self onUpdate];
+  [self onUpdate:0];
   for (int i = 0; i < n; ++i) {
     [self count];
     if([self isOver]){
@@ -110,7 +111,7 @@
   updateSelector_ = selector;
 }
 
-- (void)setOnUpdateListenerWithBlock:(void (^)(id))block {
+- (void)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block {
   updateBlock_ = block;
 }
 
@@ -124,7 +125,7 @@
 
 - (void)tick:(ccTime)dt{
 	if([self isOver]) return;
-  [self onUpdate];
+  [self onUpdate:dt];
   [self count];
   if([self isOver]){
     [self onComplete];
@@ -134,7 +135,7 @@
 	}
 }
 
-- (void)onUpdate{
+- (void)onUpdate:(ccTime)dt{
   if (updateListener_ && updateSelector_) {
     // http://stackoverflow.com/questions/8773226/performselector-warning
     #pragma clang diagnostic push
@@ -143,7 +144,7 @@
     #pragma clang diagnostic pop
   }
   if (updateBlock_) {
-    updateBlock_(self);
+    updateBlock_(self, dt);
   }
 }
 

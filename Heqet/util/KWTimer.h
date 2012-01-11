@@ -19,7 +19,7 @@
   SEL completeSelector_;
   SEL updateSelector_;
   void (^completeBlock_)(id);
-  void (^updateBlock_)(id);
+  void (^updateBlock_)(id, ccTime);
 }
 
 @property(readonly) BOOL active;
@@ -47,6 +47,6 @@
 - (void)setOnCompleteListener:(id)listener selector:(SEL)selector;
 - (void)setOnCompleteListenerWithBlock:(void (^)(id))block;
 - (void)setOnUpdateListener:(id)listener selector:(SEL)selector;
-- (void)setOnUpdateListenerWithBlock:(void (^)(id))block;
+- (void)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block;
 
 @end

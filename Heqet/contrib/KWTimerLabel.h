@@ -18,19 +18,25 @@ typedef struct{
 @interface KWTimerLabel : CCLabelTTF{
   BOOL active_;
   BOOL displayMiliSecond_;
-  Time initial_;
-  Time current_;
-  id onFinishListener_;
-  SEL onFinishSelector_;
+  NSTimeInterval initial_;
+  NSTimeInterval current_;
 }
 
-- (void)play;
-- (void)stop;
-- (void)setTime:(int)hour minute:(int)minute second:(int)second;
-- (BOOL)isActive;
-- (int)leaveSecond;
-- (void)setTimerCompletionListener:(id)listener selector:(SEL)selector;
-
+@property(readonly) BOOL active;
 @property(readwrite) BOOL displayMiliSecond;
+@property(readonly) NSTimeInterval leave;
+
++ (id)labelWithHour:(int)hour minute:(int)minute second:(int)second;
++ (id)labelWithSecond:(NSTimeInterval)second;
+
+- (id)initWithHour:(int)hour minute:(int)minute second:(int)second;
+- (id)initWithSecond:(NSTimeInterval)second;
+
+- (void)setHour:(int)hour minute:(int)minute second:(int)second;
+- (void)setSecond:(int)second;
+- (void)play;
+- (void)pause;
+- (void)stop;
+- (BOOL)isOver;
 
 @end

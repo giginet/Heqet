@@ -13,113 +13,137 @@
 #endif
 
 @interface KWTimerLabel()
-- (void)tick:(ccTime)dt;
 - (NSString*)humalize;
+- (void)tick:(ccTime)dt;
 - (Time)convertToTime:(NSTimeInterval)second;
 - (NSTimeInterval)convertToSecond:(Time)time;
+- (double)fps;
 @end
 
 @implementation KWTimerLabel
-@synthesize displayMiliSecond=displayMiliSecond_;
+@synthesize active = active_;
+@synthesize displayMiliSecond = displayMiliSecond_;
+
++ (id)labelWithHour:(int)hour minute:(int)minute second:(int)second {
+  return [[[self class] alloc] initWithHour:hour minute:minute second:second];
+}
+
++ (id)labelWithSecond:(NSTimeInterval)second {
+  return [[[self class] alloc] initWithSecond:second];
+}
 
 - (id)init{
-  self = [super init];
+  self = [super initWithString:@"" fontName:@"helvetica" fontSize:13];
   if (self) {
     active_ = NO;
     displayMiliSecond_ = NO;
-    onFinishListener_ = nil;
-    onFinishSelector_ = nil;
-    [self setTime:0 minute:0 second:0];
-    [self setString:[self humalize]];
+    [self setSecond:0];
+    [self schedule:@selector(tick:)];
   }
   return self;
 }
 
-- (NSString*)humalize{
-  int hour = current_.hour;
-  int minute = current_.minute;
-  int second = current_.second;
+- (id)initWithHour:(int)hour minute:(int)minute second:(int)second {
+  self = [self init];
+  if (self) {
+    [self setHour:hour minute:minute second:second];
+  }
+  return self;
+}
+
+- (id)initWithSecond:(NSTimeInterval)second {
+  self = [self init];
+  if (self) {
+    [self setSecond:second];
+  }
+  return self;
+}
+
+- (void)setHour:(int)hour minute:(int)minute second:(int)second {
+  Time t;
+  t.hour = hour;
+  t.minute = minute;
+  t.second = second;
+  t.milisecond = 0;
+  [self setSecond:[self convertToSecond:t]];
+}
+
+- (void)setSecond:(int)second {
+  initial_ = second;
+  current_ = second;
+}
+
+- (void)play {
+  active_ = YES;
+}
+
+- (void)pause {
+  active_ = NO;
+}
+
+- (void)stop {
+  [self pause];
+  [self setSecond:initial_];
+}
+
+- (BOOL)isOver {
+  return current_ <= 0;
+}
+
+- (NSTimeInterval)leave {
+  return current_;
+}
+
+- (NSString*)humalize {
+  Time time = [self convertToTime:current_];
+  Time initial = [self convertToTime:initial_];
+  int hour = time.hour;
+  int minute = time.minute;
+  int second = time.second;
   NSMutableString* string = [NSMutableString string];
-  if (initial_.hour == 0) {
-    if(initial_.minute < 10){
+  if (initial.hour == 0) {
+    if (initial.minute < 10) {
       string = [NSMutableString stringWithFormat:@"%d:%02d", minute, second];
-    }else{
+    } else {
       string = [NSMutableString stringWithFormat:@"%02d:%02d", minute, second];
     }
-  }else if(initial_.minute == 0){
+  } else if(initial.minute == 0) {
     string = [NSMutableString stringWithFormat:@"%02d", second];
-  }else{
+  } else {
     string = [NSMutableString stringWithFormat:@"%02d:%02d:%02d", hour, minute, second];
   }
-  if(displayMiliSecond_){
-    [string appendFormat:@":%03d", current_.milisecond];
+  if (self.displayMiliSecond) {
+    [string appendFormat:@":%03d", time.milisecond];
   }
   return string;
 }
 
-- (void)play{
-  active_ = YES;
-  [self schedule:@selector(tick:) interval:1.0/FPS];
-}
-
-- (void)stop{
-  active_ = NO;
-  [self unschedule:@selector(tick:)];
-}
-
-- (void)setTime:(int)hour minute:(int)minute second:(int)second{
-  current_.hour = hour;
-  current_.minute = minute;
-  current_.second = second;
-  current_.milisecond = 0;
-  initial_.hour = hour;
-  initial_.minute = minute;
-  initial_.second = second;
-  initial_.milisecond = 0;
-  [self setString:[self humalize]];
-}
-
-- (BOOL)isActive{
-  return active_;
-}
-
-- (int)leaveSecond{
-  return [self convertToSecond:current_];
-}
-
-- (void)tick:(ccTime)dt{
-  if([self leaveSecond] > 0){
-    if(active_){
-      NSTimeInterval second = [self convertToSecond:current_];
-      second -= dt;
-      current_ = [self convertToTime:second];
-    }
-  }else{
-    if (onFinishSelector_ && active_) {
-      [onFinishListener_ performSelector:onFinishSelector_];
-    }	
-    active_ = NO;
+- (void)tick:(ccTime)dt {
+  if (!self.active) return;
+  if ([self isOver]) {
+    current_ = 0;
+  } else {
+    current_ -= dt;
   }
   [self setString:[self humalize]];
 }
 
 - (Time)convertToTime:(NSTimeInterval)second{
   Time t;
-  t.hour = second/3600;
-  t.minute = (second - t.hour*3600)/60;
-  t.second = second - t.hour*3600 - t.minute*60;
-  t.milisecond = (second - floor(second))*1000;
+  t.hour = second / 3600;
+  t.minute = (second - t.hour * 3600) / 60;
+  t.second = second - t.hour*3600 - t.minute * 60;
+  t.milisecond = (second - floor(second)) * 1000;
   return t;
 }
 
 - (NSTimeInterval)convertToSecond:(Time)time{
-  float ms = (double)(time.milisecond)/1000.0;
-  return 3600*time.hour + 60*time.minute + time.second + ms;
+  float ms = (double)(time.milisecond) / 1000.0;
+  return 3600 * time.hour + 60 * time.minute + time.second + ms;
 }
 
-- (void)setTimerCompletionListener:(id)listener selector:(SEL)selector{
-  onFinishListener_ = listener;
-  onFinishSelector_ = selector;
+- (double)fps {
+  return (double)[[KKStartupConfig config] maxFrameRate];
 }
 
 @end

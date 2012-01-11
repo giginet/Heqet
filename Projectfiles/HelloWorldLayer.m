@@ -82,14 +82,18 @@
                                           position:CGPointMake(0, 50)];
 		[platformLabel runAction:movePlatform];
     
-    [[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
-		glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
+    //[[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
+    KWTimerLabel* tLabel = [KWTimerLabel labelWithHour:0 minute:0 second:10];
+    [self addChild:tLabel];
+    [tLabel play];
+    tLabel.position = ccp(100, 100);
+    tLabel.displayMiliSecond = YES;
+    glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
 }
 
 - (void)onEnterTransitionDidFinish {
-  [(KWLoopManager*)[KWLoopManager shared] play];
 }
 
 @end
