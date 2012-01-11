@@ -18,13 +18,11 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   glDisableClientState(GL_COLOR_ARRAY);
   
   glVertexPointer(2, GL_FLOAT, 0, poli);
-  if( closePolygon )
-    // glDrawArrays(GL_LINE_LOOP, 0, points);
+  if(closePolygon) {
     glDrawArrays(GL_TRIANGLE_FAN, 0, points);
-  else
+  } else {
     glDrawArrays(GL_LINE_STRIP, 0, points);
-  
-  // restore default state
+  }
   glEnableClientState(GL_COLOR_ARRAY);
   glEnableClientState(GL_TEXTURE_COORD_ARRAY);
   glEnable(GL_TEXTURE_2D);
@@ -124,12 +122,12 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   segmentsDrawn_ = (int)(self.segments * self.rate) + 2;
 }
 
--(void)draw {
+- (void)draw {
   if (self.dirty) {
     [self updateVertices];
-    self.dirty = NO;
     glColor4f(self.color.r, self.color.g, self.color.b, 1);
     ccFillPoly(vertices_, segmentsDrawn_, YES);
+    self.dirty = NO;
   }
 } 
 

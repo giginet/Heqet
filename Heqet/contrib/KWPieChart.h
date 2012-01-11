@@ -14,6 +14,7 @@
   
   CGPoint* vertices_;
   BOOL reverse_;
+  BOOL initialized_;
   int segments_;
   int segmentsDrawn_;
 }
