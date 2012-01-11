@@ -16,9 +16,10 @@
   NSString* loopPath_;
 }
 
-+ (id)sharedManager;
-- (void)setWithIntro:(NSString*)introPath loopFile:(NSString*)loopPath;
-- (void)playLoop;
++ (KWLoopManager*)sharedManager;
+- (void)setWithIntroFile:(NSString*)introPath loopFile:(NSString*)loopPath;
+- (void)play;
+- (void)stop;
 
 @property(readonly) BOOL isIntro;
 @end

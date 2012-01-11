@@ -82,14 +82,14 @@
                                           position:CGPointMake(0, 50)];
 		[platformLabel runAction:movePlatform];
     
-    [[KWLoopManager shared] setWithIntro:@"hurry_int.caf" loopFile:@"hurry.caf"];
+    [[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
 		glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
 }
 
 - (void)onEnterTransitionDidFinish {
-  [[KWLoopManager shared] playLoop];
+  [(KWLoopManager*)[KWLoopManager shared] play];
 }
 
 @end

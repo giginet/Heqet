@@ -12,10 +12,10 @@
 @synthesize isIntro = isIntro_;
 
 + (id)sharedManager {
-  return [[self class] shared];
+  return (KWLoopManager*)[[self class] shared];
 }
 
-- (void)setWithIntro:(NSString *)introPath loopFile:(NSString *)loopPath {
+- (void)setWithIntroFile:(NSString *)introPath loopFile:(NSString *)loopPath {
   OALSimpleAudio* sa = [OALSimpleAudio sharedInstance];
   introPath_ = introPath;
   loopPath_ = loopPath;
@@ -25,9 +25,15 @@
   [sa preloadBg:introPath];
 }
 
-- (void)playLoop {
+- (void)play {
   OALSimpleAudio* sa = [OALSimpleAudio sharedInstance];
   [sa playBg:introPath_ loop:NO];
+}
+
+- (void)stop {
+  OALSimpleAudio* sa = [OALSimpleAudio sharedInstance];
+  [sa stopBg];
+  isIntro_ = false;
 }
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
