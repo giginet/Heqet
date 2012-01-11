@@ -8,7 +8,7 @@
 
 #import "math.h"
 @interface KWVector : NSObject {
-	CGFloat x_,y_;
+	CGFloat x_, y_;
 }
 
 @property(assign, readwrite) CGFloat x;
@@ -35,6 +35,7 @@
 - (KWVector*)rotate:(CGFloat)deg;
 - (KWVector*)reverse;
 - (KWVector*)zero;
+- (KWVector*)reflect:(KWVector*)normal;
 - (KWVector*)max:(CGFloat)max;
 - (KWVector*)min:(CGFloat)min;
 

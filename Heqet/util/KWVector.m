@@ -114,6 +114,11 @@
 	return [self set:CGPointMake(0, 0)];
 }
 
+- (KWVector*)reflect:(KWVector*)normal{
+  double t = -[self scalar:normal];
+  return [KWVector vectorWithPoint:CGPointMake(self.x + t * normal.x * 2.0, self.y + t * normal.y * 2.0)];
+}
+
 - (KWVector*)max:(CGFloat)max{
 	if([self length] > max){
 		[self resize:max]; 
