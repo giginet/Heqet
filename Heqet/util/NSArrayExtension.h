@@ -11,6 +11,8 @@
 @interface NSArray (NSArrayExtension)
 
 - (id)at:(NSInteger)index;
-- (NSArray*)mapUsingBlock:(void (^)(id))block;
+- (NSArray*)mapUsingBlock:(id (^)(id, int))__block block;
+- (NSArray*)filterUsingBlock:(BOOL (^)(id, int))block;
+- (id)reduceUsingBlock:(id (^)(id, int))block;
 
 @end

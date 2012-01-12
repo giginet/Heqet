@@ -12,6 +12,9 @@
 
 @synthesize x = x_;
 @synthesize y = y_;
+@dynamic angle;
+@dynamic length;
+@dynamic point;
 
 + (KWVector*)vector{
   return [[KWVector alloc] init];
@@ -23,7 +26,7 @@
 
 - (id)init{
 	self = [super init];
-  if(self) {
+  if (self) {
     x_ = 0;
     y_ = 0;
   }
@@ -32,7 +35,7 @@
 
 - (id)initWithPoint:(CGPoint)point{
 	self = [self init];
-  if(self){
+  if (self){
     x_ = point.x;
     y_ = point.y;
   }
@@ -80,13 +83,12 @@
 }
 
 - (KWVector*)normalize{
-	if([self length] == 0){
+	if ([self length] == 0) {
 		x_ = 0;
 		y_ = 0;
 		return self;
-	}else{
-		return [self scale:1/[self length]];
-	}
+	}	
+  return [self scale:1/[self length]];
 }
 
 - (KWVector*)resize:(CGFloat)n{
