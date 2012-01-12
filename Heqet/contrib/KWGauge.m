@@ -11,6 +11,7 @@
 
 @interface KWGauge()
 - (CCTexture2D*)generateTexture:(ccColor3B)gaugeColor backgroundColor:(ccColor4B)backgroundColor size:(CGSize)size rate:(CGFloat)rate;
+- (CCTexture2D*)generateTextureFromFile:(NSString*)filename backgroundColor:(ccColor4B)backgroundColor rate:(CGFloat)rate;
 - (void)updateTexture;
 @end
 
@@ -43,6 +44,14 @@
     self.gaugeColor = color;
     self.contentSize = size;
     [self updateTexture];
+  }
+  return self;
+}
+
+- (id)initWithFile:(NSString *)filename {
+  self = [self initWithTexture:[self generateTextureFromFile:filename backgroundColor:ccc4(0, 0, 0, 1) rate:1.0]];
+  if (self) {
+    gaugeImage_ = filename;
   }
   return self;
 }
@@ -119,11 +128,42 @@
   return tex.sprite.texture;
 }
 
+- (CCTexture2D*)generateTextureFromFile:(NSString *)filename backgroundColor:(ccColor4B)backgroundColor rate:(CGFloat)rate {
+  CCTexture2D* image = [[CCTexture2D alloc] initWithImage:[UIImage imageNamed:filename]];
+  CGSize size = image.contentSize;
+  CCRenderTexture* tex = [CCRenderTexture renderTextureWithWidth:size.width 
+                                                          height:size.height];
+  CGRect rect;
+  if(align_ == kwGaugeAlignHorizontally) {
+    rect = CGRectMake(0, 
+                      0, 
+                      size.width * rate,
+                      size.height);
+  } else {
+    rect = CGRectMake(0, 
+                      size.height - size.height * rate, 
+                      size.width, 
+                      size.height * rate);
+  }
+  [tex beginWithClear:backgroundColor.r 
+                    g:backgroundColor.g 
+                    b:backgroundColor.b 
+                    a:backgroundColor.a];
+  [image drawInRect:rect];
+  [tex end];
+  return tex.sprite.texture;
+}
+
 - (void)updateTexture {
-  CCTexture2D* tex = [self generateTexture:self.gaugeColor 
-                           backgroundColor:self.backgroundColor 
-                                      size:self.contentSize 
-                                      rate:self.rate];
+  CCTexture2D* tex;
+  if(gaugeImage_) {
+    tex = [self generateTextureFromFile:gaugeImage_ backgroundColor:self.backgroundColor rate:self.rate];
+  } else {
+    tex = [self generateTexture:self.gaugeColor 
+                backgroundColor:self.backgroundColor 
+                           size:self.contentSize 
+                           rate:self.rate];
+  }
   [self setTexture:tex];
   [self setTextureRect:CGRectMake(0, 0, tex.contentSize.width, tex.contentSize.height)];
 }

@@ -20,6 +20,7 @@ typedef enum {
   ccColor3B gaugeColor_;
   ccColor4B backgroundColor_;
   
+  NSString* gaugeImage_;
   CCTexture2D* gaugeTexture_;
 }
 

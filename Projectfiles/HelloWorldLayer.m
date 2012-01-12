@@ -92,8 +92,10 @@
     chart_.position = ccp(100, 100);
     chart_.rate = 0.0;
     [self addChild:chart_];
-    gauge_ = [[KWGauge alloc] initWithColor:ccc3(0, 1, 0) andSize:CGSizeMake(200, 20)];
-    gauge_.position = ccp(200, 100);
+    //gauge_ = [[KWGauge alloc] initWithColor:ccc3(0, 1, 0) andSize:CGSizeMake(200, 20)];
+    gauge_ = [[KWGauge alloc] initWithFile:@"gauge.png"];
+    gauge_.position = ccp(200, 200);
+    [gauge_ alignVertically];
     [self addChild:gauge_];
     glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }

@@ -28,6 +28,7 @@
 		07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8E14B23CC400C6FC96 /* KWVector.m */; };
 		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* KWSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* KWSprite.m */; };
+		07B6EDDF14BF84ED00725823 /* gauge.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6EDDE14BF84ED00725823 /* gauge.png */; };
 		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
@@ -121,6 +122,7 @@
 		07831F9014B23CC400C6FC96 /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
 		07831F9C14B2428D00C6FC96 /* KWSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSprite.h; sourceTree = "<group>"; };
 		07831F9D14B2428D00C6FC96 /* KWSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSprite.m; sourceTree = "<group>"; };
+		07B6EDDE14BF84ED00725823 /* gauge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge.png; sourceTree = "<group>"; };
 		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -347,6 +349,7 @@
 		DCC1A0F813A94ED5005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07B6EDDE14BF84ED00725823 /* gauge.png */,
 				075A497C14BD84530047AAD2 /* hurry_int.caf */,
 				075A497D14BD84530047AAD2 /* hurry.caf */,
 				DC746EAA140EE4C200B0BC06 /* kobold.txt */,
@@ -547,6 +550,7 @@
 				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
 				075A497E14BD84530047AAD2 /* hurry_int.caf in Resources */,
 				075A497F14BD84530047AAD2 /* hurry.caf in Resources */,
+				07B6EDDF14BF84ED00725823 /* gauge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
