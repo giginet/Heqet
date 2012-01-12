@@ -19,15 +19,17 @@ typedef enum {
   
   ccColor3B gaugeColor_;
   ccColor4B backgroundColor_;
+  
+  CCTexture2D* gaugeTexture_;
 }
 
 @property(readwrite) float rate;
 @property(readwrite) ccColor3B gaugeColor;
 @property(readwrite) ccColor4B backgroundColor;
 
-+ (id)gaugeWithSize:(CGSize)size;
++ (id)gaugeWithColor:(ccColor3B)color andSize:(CGSize)size;
 
-- (id)initWithSize:(CGSize)size;
+- (id)initWithColor:(ccColor3B)color andSize:(CGSize)size;
 
 - (void)alignHolizontally;
 - (void)alignVertically;

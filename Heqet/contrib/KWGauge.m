@@ -10,6 +10,7 @@
 #import "KWDrawingPrimitives.h"
 
 @interface KWGauge()
+- (CCTexture2D*)generateTexture:(ccColor3B)gaugeColor backgroundColor:(ccColor4B)backgroundColor size:(CGSize)size rate:(CGFloat)rate;
 - (void)updateTexture;
 @end
 
@@ -18,8 +19,8 @@
 @synthesize gaugeColor = gaugeColor_;
 @synthesize backgroundColor = backgroundColor_;
 
-+ (id)gaugeWithSize:(CGSize)size {
-  return [[KWGauge alloc] initWithSize:size];
++ (id)gaugeWithColor:(ccColor3B)color andSize:(CGSize)size {
+  return [[KWGauge alloc] initWithColor:color andSize:size];
 }
 
 - (id)initWithTexture:(CCTexture2D *)texture {
@@ -33,9 +34,13 @@
   return  self;
 }
 
-- (id)initWithSize:(CGSize)size {
-  self = [self initWithTexture:[[CCTexture2D alloc] init]];
+- (id)initWithColor:(ccColor3B)color andSize:(CGSize)size {
+  self = [self initWithTexture:[self generateTexture:color 
+                                     backgroundColor:ccc4(0, 0, 0, 0) 
+                                                size:size 
+                                                rate:1.0]];
   if (self) {
+    self.gaugeColor = color;
     self.contentSize = size;
     [self updateTexture];
   }
@@ -89,30 +94,38 @@
   [self updateTexture];
 }
 
-- (void)updateTexture {
-  CCRenderTexture* tex = [CCRenderTexture renderTextureWithWidth:self.contentSize.width 
-                                                          height:self.contentSize.height];
+- (CCTexture2D*)generateTexture:(ccColor3B)gaugeColor backgroundColor:(ccColor4B)backgroundColor size:(CGSize)size rate:(CGFloat)rate {
+  CCRenderTexture* tex = [CCRenderTexture renderTextureWithWidth:size.width 
+                                                          height:size.height];
   CGRect rect;
   if(align_ == kwGaugeAlignHorizontally) {
     rect = CGRectMake(0, 
                       0, 
-                      self.contentSize.width * 
-                      self.rate, self.contentSize.height);
+                      size.width * rate,
+                      size.height);
   } else {
     rect = CGRectMake(0, 
-                      self.contentSize.height - self.contentSize.height * self.rate, 
-                      self.contentSize.width, 
-                      self.contentSize.height * self.rate);
+                      size.height - size.height * rate, 
+                      size.width, 
+                      size.height * rate);
   }
-  [tex beginWithClear:self.backgroundColor.r 
-                    g:self.backgroundColor.g 
-                    b:self.backgroundColor.b 
-                    a:self.backgroundColor.a];
-  glColor4f(self.gaugeColor.r, self.gaugeColor.g, self.gaugeColor.b, 1);
+  [tex beginWithClear:backgroundColor.r 
+                    g:backgroundColor.g 
+                    b:backgroundColor.b 
+                    a:backgroundColor.a];
+  glColor4f(gaugeColor.r, gaugeColor.g, gaugeColor.b, 1);
   ccFillRect(rect);
   [tex end];
-  [self setTexture:tex.sprite.texture];
-  [self setTextureRect:tex.sprite.textureRect];
+  return tex.sprite.texture;
+}
+
+- (void)updateTexture {
+  CCTexture2D* tex = [self generateTexture:self.gaugeColor 
+                           backgroundColor:self.backgroundColor 
+                                      size:self.contentSize 
+                                      rate:self.rate];
+  [self setTexture:tex];
+  [self setTextureRect:CGRectMake(0, 0, tex.contentSize.width, tex.contentSize.height)];
 }
 
 @end
