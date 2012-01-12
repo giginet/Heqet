@@ -21,5 +21,6 @@
 
 #import "KWLoopManager.h"
 #import "KWPieChart.h"
+#import "KWGauge.h"
 
 #import "KWTimerLabel.h"

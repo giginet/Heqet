@@ -13,6 +13,8 @@
 		075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498114BDE58B0047AAD2 /* KWPieChart.m */; };
 		075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
 		075A498614BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
+		075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
+		075A498A14BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
 		07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F6D14B23C4B00C6FC96 /* LogoLayer.m */; };
 		07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */; };
 		07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F7014B23C7D00C6FC96 /* kawaz.png */; };
@@ -90,8 +92,10 @@
 		075A497D14BD84530047AAD2 /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
 		075A498014BDE58B0047AAD2 /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
 		075A498114BDE58B0047AAD2 /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
-		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
+		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
 		075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWDrawingPrimitives.m; sourceTree = "<group>"; };
+		075A498714BEB9B30047AAD2 /* KWGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGauge.h; sourceTree = "<group>"; };
+		075A498814BEB9B30047AAD2 /* KWGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGauge.m; sourceTree = "<group>"; };
 		07831F6C14B23C4B00C6FC96 /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoLayer.h; sourceTree = "<group>"; };
 		07831F6D14B23C4B00C6FC96 /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoLayer.m; sourceTree = "<group>"; };
 		07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kawaz-hd.png"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				07831F7914B23CC400C6FC96 /* KWTimerLabel.m */,
 				075A498014BDE58B0047AAD2 /* KWPieChart.h */,
 				075A498114BDE58B0047AAD2 /* KWPieChart.m */,
+				075A498714BEB9B30047AAD2 /* KWGauge.h */,
+				075A498814BEB9B30047AAD2 /* KWGauge.m */,
 			);
 			path = contrib;
 			sourceTree = "<group>";
@@ -583,6 +589,7 @@
 				075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */,
 				075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */,
 				075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
+				075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +601,7 @@
 				DCC1A3AC13A94F1A005BD75D /* HelloWorldLayer.m in Sources */,
 				DCC1A3AE13A94F1A005BD75D /* main.m in Sources */,
 				075A498614BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
+				075A498A14BEB9B30047AAD2 /* KWGauge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -92,6 +92,9 @@
     chart_.position = ccp(100, 100);
     chart_.rate = 0.0;
     [self addChild:chart_];
+    gauge_ = [[KWGauge alloc] initWithSize:CGSizeMake(200, 20)];
+    gauge_.position = ccp(200, 100);
+    [self addChild:gauge_];
     glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
@@ -103,6 +106,7 @@
 
 - (void)update:(ccTime)dt {
   chart_.rate += 0.01;
+  gauge_.rate -= 0.001;
 }
 
 @end

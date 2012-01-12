@@ -30,11 +30,11 @@
   self = [super initWithTexture:texture];
   if (self) {
     vertices_ = 0;
-    self.rate = 1.0;
-    self.radius = 0;
-    self.chartColor = ccc3(1, 1, 1);
-    self.backgroundColor = ccc4(0, 0, 0, 0);
-    self.reverse = NO;
+    rate_ = 1.0;
+    radius_ = 0;
+    chartColor_ = ccc3(1, 1, 1);
+    backgroundColor_ = ccc4(0, 0, 0, 0);
+    reverse_ = NO;
   }
   return self;
 }
@@ -46,9 +46,9 @@
 - (id)initWithRadius:(CGFloat)radius color:(ccColor3B)color {
   self = [self initWithTexture:[[CCTexture2D alloc] init]];
   if (self) {
-    self.rate = 1.0;
-    self.radius = radius;
-    self.chartColor = color;
+    rate_ = 1.0;
+    radius_ = radius;
+    chartColor_ = color;
     [self setSegments:MAX(self.radius, 30)];
   }
   return self;
@@ -64,7 +64,8 @@
     float x = self.radius + self.radius * cosf(i * coef + M_PI_2) * (-1 + 2 * (int)self.reverse);
     float y = self.radius + self.radius * sinf(i * coef + M_PI_2);
     *(vertices_ + i + 1) = CGPointMake(x, y);
-  } 
+  }
+  [self updateTexture];
 }  
 
 - (CGFloat)radius {
@@ -72,13 +73,12 @@
 }
 
 - (void)setRadius:(CGFloat)rad {
-  self.dirty = YES;
   float screenScale = 1.0f;  
   if ([UIScreen instancesRespondToSelector:@selector(scale)]) {  
     screenScale = [[UIScreen mainScreen] scale];  
   }
   radius_ = rad * screenScale;
-  [self updateTexture];
+  [self updateVertices];
 }
 
 - (int)segments {
@@ -90,12 +90,11 @@
   
   segments_ = segs;
   segmentsDrawn_ = (int)(segs * self.rate) + 2;
-  self.dirty = YES;
   float numVertexBytes = sizeof(CGPoint) * (segs + 2);
   
   vertices_ = realloc(vertices_, numVertexBytes);  
   assert(vertices_ != 0);
-  [self updateTexture];
+  [self updateVertices];
 }
 
 - (CGFloat)rate {
@@ -103,14 +102,27 @@
 }
 
 - (void)setRate:(CGFloat)rate {
-  if (rate > 1) {
-    rate = 1.0;
-  } else if (rate < 0) {
-    rate = 0;
-  }
-  self.dirty = YES;
+  rate = MAX(0, MIN(1, rate));
   rate_ = rate;
   segmentsDrawn_ = (int)(self.segments * self.rate) + 2;
+  [self updateTexture];
+}
+
+- (ccColor3B)chartColor {
+  return chartColor_;
+}
+
+- (void)setChartColor:(ccColor3B)chartColor {
+  chartColor_ = chartColor;
+  [self updateTexture];
+}
+
+- (ccColor4B)backgroundColor {
+  return backgroundColor_;
+}
+
+- (void)setBackgroundColor:(ccColor4B)backgroundColor {
+  backgroundColor_ = backgroundColor;
   [self updateTexture];
 }
 
@@ -118,7 +130,6 @@
   if(!vertices_) return;
   CCRenderTexture* tex = [CCRenderTexture renderTextureWithWidth:self.radius * 2 
                                                           height:self.radius * 2];
-  [self updateVertices];
   [tex beginWithClear:0 g:0 b:0 a:0];
   glColor4f(self.backgroundColor.r, self.backgroundColor.g, self.backgroundColor.b, self.backgroundColor.a);
   ccFillCircle(CGPointMake(self.radius, self.radius), self.radius - 1, 0, self.segments, NO);

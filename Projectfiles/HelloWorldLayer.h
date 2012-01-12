@@ -12,6 +12,7 @@
 	NSString* helloWorldFontName;
 	int helloWorldFontSize;
   KWPieChart* chart_;
+  KWGauge* gauge_;
 }
 
 @property (nonatomic, copy) NSString* helloWorldString;

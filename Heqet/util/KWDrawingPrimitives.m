@@ -171,5 +171,5 @@ void ccFillRect(CGRect rect) {
   vertices[1] = ccpAdd(rect.origin, CGPointMake(rect.size.width, 0));
   vertices[2] = ccpAdd(rect.origin, CGPointMake(rect.size.width, rect.size.height));
   vertices[3] = ccpAdd(rect.origin, CGPointMake(0, rect.size.height));
-  ccFillPoly(vertices, 4, NO);
+  ccFillPoly(vertices, 4, YES);
 }
