@@ -1,6 +1,6 @@
 //
 //  KWLoopManager.h
-//  _Kobold2D-With-Heqet-Template_
+//  Heqet
 //
 //  Created by  on 12/01/11.
 //  Copyright (c) 2012 Kawaz. All rights reserved.

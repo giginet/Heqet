@@ -1,6 +1,6 @@
 //
 //  KWPieChart.m
-//  _Kobold2D-With-Heqet-Template_
+//  Heqet
 //
 //  Created by  on 12/01/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
