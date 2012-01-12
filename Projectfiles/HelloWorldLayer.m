@@ -82,7 +82,7 @@
                                           position:CGPointMake(0, 50)];
 		[platformLabel runAction:movePlatform];
     
-    //[[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
+    [[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
     KWTimerLabel* tLabel = [KWTimerLabel labelWithHour:0 minute:0 second:10];
     [self addChild:tLabel];
     [tLabel play];
@@ -98,6 +98,7 @@
 }
 
 - (void)onEnterTransitionDidFinish {
+  [[KWLoopManager sharedManager] play];
 }
 
 - (void)update:(ccTime)dt {

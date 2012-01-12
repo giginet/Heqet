@@ -16,7 +16,6 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   glDisable(GL_TEXTURE_2D);
   glDisableClientState(GL_TEXTURE_COORD_ARRAY);
   glDisableClientState(GL_COLOR_ARRAY);
-  
   glVertexPointer(2, GL_FLOAT, 0, poli);
   if(closePolygon) {
     glDrawArrays(GL_TRIANGLE_FAN, 0, points);
@@ -30,6 +29,7 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
 
 @interface KWPieChart()
 - (void) updateVertices;  
+- (void) updateTexture;
 @end
 
 @implementation KWPieChart
@@ -37,29 +37,30 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
 @synthesize segments = segments_;
 @synthesize rate = rate_;
 @synthesize radius = radius_;
+@synthesize chartColor = chartColor_;
 
 + (id)chartWithRadius:(CGFloat)radius color:(ccColor3B)color {
   return [[[self class] alloc] initWithRadius:radius color:color];
 }
 
-- (id)init {
-  self = [super init];
+- (id)initWithTexture:(CCTexture2D *)texture {
+  self = [super initWithTexture:texture];
   if (self) {
     vertices_ = 0;
     self.rate = 1.0;
     self.radius = 0;
-    self.color = ccc3(1, 1, 1);
+    self.chartColor = ccc3(1, 1, 1);
     self.reverse = NO;
   }
   return self;
 }
 
 - (id)initWithRadius:(CGFloat)radius color:(ccColor3B)color {
-  self = [self init];
+  self = [self initWithTexture:[[CCTexture2D alloc] init]];
   if (self) {
     self.rate = 1.0;
     self.radius = radius;
-    self.color = color;
+    self.chartColor = color;
     [self setSegments:MAX(self.radius, 30)];
   }
   return self;
@@ -70,10 +71,10 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   memset( vertices_, 0, numVertexBytes);  
   
   float coef = (2.0f * (float)M_PI) / segments_;  
-  *vertices_ = self.position;
+  *vertices_ = CGPointMake(self.radius, self.radius);
   for(int i = 0; i < segmentsDrawn_ - 1; ++i) {
-    float x = self.position.x + self.radius * cosf(i * coef + M_PI_2) * (-1 + 2 * (int)self.reverse);
-    float y = self.position.y + self.radius * sinf(i * coef + M_PI_2);
+    float x = self.radius + self.radius * cosf(i * coef + M_PI_2) * (-1 + 2 * (int)self.reverse);
+    float y = self.radius + self.radius * sinf(i * coef + M_PI_2);
     *(vertices_ + i + 1) = CGPointMake(x, y);
   } 
 }  
@@ -88,7 +89,8 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   if ([UIScreen instancesRespondToSelector:@selector(scale)]) {  
     screenScale = [[UIScreen mainScreen] scale];  
   }
-  radius_ = rad * screenScale;  
+  radius_ = rad * screenScale;
+  [self updateTexture];
 }
 
 - (int)segments {
@@ -104,7 +106,8 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   float numVertexBytes = sizeof(CGPoint) * (segs + 2);
   
   vertices_ = realloc(vertices_, numVertexBytes);  
-  assert(vertices_ != 0);  
+  assert(vertices_ != 0);
+  [self updateTexture];
 }
 
 - (CGFloat)rate {
@@ -120,15 +123,23 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
   self.dirty = YES;
   rate_ = rate;
   segmentsDrawn_ = (int)(self.segments * self.rate) + 2;
+  [self updateTexture];
 }
 
-- (void)draw {
-  if (self.dirty) {
-    [self updateVertices];
-    glColor4f(self.color.r, self.color.g, self.color.b, 1);
-    ccFillPoly(vertices_, segmentsDrawn_, YES);
-    self.dirty = NO;
-  }
-} 
+- (void)updateTexture {
+  if(!vertices_) return;
+  CCRenderTexture* tex = [CCRenderTexture renderTextureWithWidth:self.radius * 2 
+                                                          height:self.radius * 2];
+  [self updateVertices];
+  [tex beginWithClear:0 g:0 b:0 a:0];
+  glColor4f(self.chartColor.r, self.chartColor.g, self.chartColor.b, 1);
+  ccFillPoly(vertices_, segmentsDrawn_, YES);
+  [tex end];
+  CCTexture2D* texture = tex.sprite.texture;
+  CGRect rect = tex.sprite.textureRect;
+  [self setTexture:texture];
+  [self setTextureRect:rect];
+}
+
 
 @end
