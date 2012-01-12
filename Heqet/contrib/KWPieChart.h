@@ -9,14 +9,14 @@
 #import "cocos2d.h"
 
 @interface KWPieChart : CCSprite {
+  BOOL reverse_;
   int segments_;
   int segmentsDrawn_;
   CGFloat rate_;
   CGFloat radius_;
   CGPoint* vertices_;
   ccColor3B chartColor_;
-  
-  BOOL reverse_;
+  ccColor4B backgroundColor_;
 }
 
 @property(readwrite) BOOL reverse;
@@ -24,6 +24,7 @@
 @property(readwrite) CGFloat rate;
 @property(readwrite) CGFloat radius;
 @property(readwrite) ccColor3B chartColor;
+@property(readwrite) ccColor4B backgroundColor;
 
 + (id)chartWithRadius:(CGFloat)radius color:(ccColor3B)color;
 

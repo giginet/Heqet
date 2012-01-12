@@ -7,25 +7,7 @@
 //
 
 #import "KWPieChart.h"
-
-void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
-  // Ref : http://www.cocos2d-iphone.org/forum/topic/848
-  // Default GL states: GL_TEXTURE_2D, GL_VERTEX_ARRAY, GL_COLOR_ARRAY, GL_TEXTURE_COORD_ARRAY
-  // Needed states: GL_VERTEX_ARRAY,
-  // Unneeded states: GL_TEXTURE_2D, GL_TEXTURE_COORD_ARRAY, GL_COLOR_ARRAY
-  glDisable(GL_TEXTURE_2D);
-  glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-  glDisableClientState(GL_COLOR_ARRAY);
-  glVertexPointer(2, GL_FLOAT, 0, poli);
-  if(closePolygon) {
-    glDrawArrays(GL_TRIANGLE_FAN, 0, points);
-  } else {
-    glDrawArrays(GL_LINE_STRIP, 0, points);
-  }
-  glEnableClientState(GL_COLOR_ARRAY);
-  glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-  glEnable(GL_TEXTURE_2D);
-}
+#import "KWDrawingPrimitives.h"
 
 @interface KWPieChart()
 - (void) updateVertices;  
@@ -38,6 +20,7 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
 @synthesize rate = rate_;
 @synthesize radius = radius_;
 @synthesize chartColor = chartColor_;
+@synthesize backgroundColor = backgroundColor_;
 
 + (id)chartWithRadius:(CGFloat)radius color:(ccColor3B)color {
   return [[[self class] alloc] initWithRadius:radius color:color];
@@ -50,9 +33,14 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
     self.rate = 1.0;
     self.radius = 0;
     self.chartColor = ccc3(1, 1, 1);
+    self.backgroundColor = ccc4(0, 0, 0, 0);
     self.reverse = NO;
   }
   return self;
+}
+
+- (void)dealloc {
+  free(vertices_);
 }
 
 - (id)initWithRadius:(CGFloat)radius color:(ccColor3B)color {
@@ -132,6 +120,8 @@ void ccFillPoly( CGPoint *poli, int points, BOOL closePolygon ) {
                                                           height:self.radius * 2];
   [self updateVertices];
   [tex beginWithClear:0 g:0 b:0 a:0];
+  glColor4f(self.backgroundColor.r, self.backgroundColor.g, self.backgroundColor.b, self.backgroundColor.a);
+  ccFillCircle(CGPointMake(self.radius, self.radius), self.radius - 1, 0, self.segments, NO);
   glColor4f(self.chartColor.r, self.chartColor.g, self.chartColor.b, 1);
   ccFillPoly(vertices_, segmentsDrawn_, YES);
   [tex end];
