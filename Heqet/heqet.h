@@ -9,10 +9,17 @@
 // you have to import 'heqet.h' to use Heqet game-framework.
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "kobold2d.h"
+#import "ObjectAL.h"
+#import "SneakyJoystick.h"
+#import "SneakyButton.h"
+#import "SneakyButtonSkinnedBase.h"
+#import "SneakyJoystickSkinnedBase.h"
+
 #import "KWSingleton.h"
 #import "KWTimer.h"
 #import "KWVector.h"
+
 #import "KWLayer.h"
 #import "KWState.h"
 #import "KWStateManager.h"
@@ -20,7 +27,7 @@
 #import "KWAnimation.h"
 
 #import "KWLoopManager.h"
-#import "KWPieChart.h"
-#import "KWGauge.h"
 
 #import "KWTimerLabel.h"
+#import "KWPieChart.h"
+#import "KWGauge.h"

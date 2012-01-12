@@ -30,6 +30,10 @@
                                             swallowsTouches:YES];
 }
 
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+  return YES;
+}
+
 - (void)update:(ccTime)dt{
 }
 
