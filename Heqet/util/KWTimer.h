@@ -38,15 +38,14 @@
 - (id)pause;
 
 - (id)reset;
-- (id)rotate;
 
 - (id)move:(int)n;
 
 - (BOOL)isOver;
 
-- (void)setOnCompleteListener:(id)listener selector:(SEL)selector;
-- (void)setOnCompleteListenerWithBlock:(void (^)(id))block;
-- (void)setOnUpdateListener:(id)listener selector:(SEL)selector;
-- (void)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block;
+- (id)setOnCompleteListener:(id)listener selector:(SEL)selector;
+- (id)setOnCompleteListenerWithBlock:(void (^)(id))block;
+- (id)setOnUpdateListener:(id)listener selector:(SEL)selector;
+- (id)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block;
 
 @end

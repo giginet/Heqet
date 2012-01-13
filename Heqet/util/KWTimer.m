@@ -9,6 +9,7 @@
 #import "KWTimer.h"
 
 @interface KWTimer()
+- (void)rotate;
 - (void)tick:(ccTime)dt;
 - (void)onUpdate:(ccTime)dt;
 - (void)onComplete;
@@ -74,20 +75,12 @@
 	return self;
 }
 
-- (id)rotate {
-  now_ = (int)(self.now + self.max) % (int)self.max;
-  return self;
-}
-
 - (id)move:(int)n{
   if([self isOver]) return self;
-  now_ -= n;
+  now_ = MIN(max_, now_ - n);
   [self onUpdate:0];
   if([self isOver]){
     [self onComplete];
-    if(looping_){
-      [self rotate];
-    }
   }
   return self;
 }
@@ -96,22 +89,26 @@
 	return now_ <= 0;
 }
 
-- (void)setOnCompleteListener:(id)listener selector:(SEL)selector {
+- (id)setOnCompleteListener:(id)listener selector:(SEL)selector {
   completeListener_ = listener;
   completeSelector_ = selector;
+  return self;
 }
 
-- (void)setOnCompleteListenerWithBlock:(void (^)(id))block {
+- (id)setOnCompleteListenerWithBlock:(void (^)(id))block {
   completeBlock_ = block;
+  return self;
 }
 
-- (void)setOnUpdateListener:(id)listener selector:(SEL)selector {
+- (id)setOnUpdateListener:(id)listener selector:(SEL)selector {
   updateListener_ = listener;
   updateSelector_ = selector;
+  return self;
 }
 
-- (void)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block {
+- (id)setOnUpdateListenerWithBlock:(void (^)(id, ccTime))block {
   updateBlock_ = block;
+  return self;
 }
 
 - (ccTime)max{
@@ -123,15 +120,16 @@
   [self reset];
 }
 
+- (void)rotate {
+  now_ = (int)(self.now + self.max) % (int)self.max;
+}
+
 - (void)tick:(ccTime)dt{
 	if([self isOver]) return;
   now_ -= dt;
   [self onUpdate:dt];
   if([self isOver]){
     [self onComplete];
-		if(looping_){
-			[self rotate];
-		}
 	}
 }
 
@@ -149,6 +147,9 @@
 }
 
 - (void)onComplete{
+  if(looping_){
+    [self rotate];
+  }
   if (completeListener_ && completeSelector_) {
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
