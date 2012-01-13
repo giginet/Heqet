@@ -8,7 +8,7 @@
 
 #import "NSArrayExtension.h"
 
-@implementation NSArray (NSArrayExtension)
+@implementation NSArray (KWNSArrayExtension)
 
 - (id)at:(NSInteger)index {
   if (index < 0) {

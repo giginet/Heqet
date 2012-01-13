@@ -48,7 +48,7 @@
 }
 
 + (id)spriteWithSpriteFrames:(NSArray *)frames delay:(float)delay {
-  KWSprite* sprite = [KWSprite spriteWithSpriteFrame:[frames objectAtIndex:0]];
+  CCSprite* sprite = [CCSprite spriteWithSpriteFrame:[frames objectAtIndex:0]];
   CCAnimation* animation = [CCAnimation animationWithFrames:frames delay:delay];
   CCAnimate* animate = [CCAnimate actionWithAnimation:animation restoreOriginalFrame:NO];
   CCSequence* seq = [CCSequence actions:animate, nil];

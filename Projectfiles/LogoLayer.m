@@ -20,7 +20,7 @@
   if( (self = [super init]) ) {
     self.nextScene = nil;
     CCDirector* director = [CCDirector sharedDirector];
-    KWSprite* logo = [KWSprite spriteWithFile:@"kawaz.png"];
+    CCSprite* logo = [CCSprite spriteWithFile:@"kawaz.png"];
     logo.position = director.screenCenter;
     logo.opacity = 0;
     id fadeIn = [CCFadeIn actionWithDuration:2];

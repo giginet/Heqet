@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (NSArrayExtension)
+@interface NSArray (KWNSArrayExtension)
 
 - (id)at:(NSInteger)index;
 - (NSArray *)mapUsingBlock:(id (^)(id, int))__block block;
