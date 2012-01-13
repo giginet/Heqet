@@ -13,7 +13,7 @@ typedef enum {
   kwGaugeAlignHorizontally
 } kwGaugeAlign;
 
-@interface KWGauge : CCSprite {
+@interface KWGauge : CCNode {
   float rate_;
   kwGaugeAlign align_;
   
@@ -21,6 +21,8 @@ typedef enum {
   ccColor4B backgroundColor_;
   
   NSString* gaugeImage_;
+  
+  CCTexture2D* texture_;
   CCTexture2D* gaugeTexture_;
 }
 
@@ -29,8 +31,10 @@ typedef enum {
 @property(readwrite) ccColor4B backgroundColor;
 
 + (id)gaugeWithColor:(ccColor3B)color andSize:(CGSize)size;
++ (id)gaugeWithFile:(NSString *)filename;
 
 - (id)initWithColor:(ccColor3B)color andSize:(CGSize)size;
+- (id)initWithFile:(NSString *)filename;
 
 - (void)alignHolizontally;
 - (void)alignVertically;

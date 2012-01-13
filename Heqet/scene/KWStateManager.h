@@ -10,7 +10,7 @@
 
 @interface KWStateManager : NSObject{
   NSMutableArray* stateStack_;
-  KWState* runningState_;
+  __weak KWState* runningState_;
 }
 
 - (id)initWithInitialState:(KWState*)state;
@@ -22,5 +22,5 @@
 - (void)replaceState:(KWState*)state andArgs:(NSDictionary*)userData;
 - (void)popState;
 
-@property(readonly, retain) KWState* runningState;
+@property(readonly, weak) KWState* runningState;
 @end

@@ -142,7 +142,7 @@
 }
 
 - (void)draw {
-  [texture_ drawInRect:CGRectMake(0, 0, texture_.contentSize.width, texture_.contentSize.height)];
+  [texture_ drawInRect:CGRectMake(-self.radius, -self.radius, self.contentSize.width, self.contentSize.height)];
 }
 
 

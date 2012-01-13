@@ -24,34 +24,37 @@
   return [[KWGauge alloc] initWithColor:color andSize:size];
 }
 
-- (id)initWithTexture:(CCTexture2D *)texture {
-  self = [super initWithTexture:texture];
++ (id)gaugeWithFile:(NSString *)filename {
+  return [[KWGauge alloc] initWithFile:filename];
+}
+
+- (id)init {
+  self = [super init];
   if (self) {
     rate_ = 1.0;
     align_ = kwGaugeAlignHorizontally;
     gaugeColor_ = ccc3(1, 1, 1);
     backgroundColor_ = ccc4(0, 0, 0, 1);
+    texture_ = [[CCTexture2D alloc] init];
   }
-  return  self;
+  return self;
 }
 
 - (id)initWithColor:(ccColor3B)color andSize:(CGSize)size {
-  self = [self initWithTexture:[self generateTexture:color 
-                                     backgroundColor:ccc4(0, 0, 0, 0) 
-                                                size:size 
-                                                rate:1.0]];
+  self = [self init];
   if (self) {
-    self.gaugeColor = color;
-    self.contentSize = size;
+    gaugeColor_ = color;
+    contentSize_ = size;
     [self updateTexture];
   }
   return self;
 }
 
 - (id)initWithFile:(NSString *)filename {
-  self = [self initWithTexture:[self generateTextureFromFile:filename backgroundColor:ccc4(0, 0, 0, 1) rate:1.0]];
+  self = [self init];
   if (self) {
     gaugeImage_ = filename;
+    [self updateTexture];
   }
   return self;
 }
@@ -155,17 +158,23 @@
 }
 
 - (void)updateTexture {
-  CCTexture2D* tex;
   if(gaugeImage_) {
-    tex = [self generateTextureFromFile:gaugeImage_ backgroundColor:self.backgroundColor rate:self.rate];
+    texture_ = [self generateTextureFromFile:gaugeImage_ backgroundColor:self.backgroundColor rate:self.rate];
   } else {
-    tex = [self generateTexture:self.gaugeColor 
+    texture_ = [self generateTexture:self.gaugeColor 
                 backgroundColor:self.backgroundColor 
                            size:self.contentSize 
                            rate:self.rate];
   }
-  [self setTexture:tex];
-  [self setTextureRect:CGRectMake(0, 0, tex.contentSize.width, tex.contentSize.height)];
+  contentSize_ = texture_.contentSize;
+  contentSizeInPixels_ = texture_.contentSizeInPixels;
+}
+
+- (void)draw {
+  [texture_ drawInRect:CGRectMake(-self.contentSize.width / 2, 
+                                  -self.contentSize.height / 2, 
+                                  self.contentSize.width, 
+                                  self.contentSize.height)];
 }
 
 @end
