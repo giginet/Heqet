@@ -26,8 +26,8 @@
   return [[[self class] alloc] initWithRadius:radius color:color];
 }
 
-- (id)initWithTexture:(CCTexture2D *)texture {
-  self = [super initWithTexture:texture];
+- (id)init {
+  self = [super init];
   if (self) {
     vertices_ = 0;
     rate_ = 1.0;
@@ -44,7 +44,7 @@
 }
 
 - (id)initWithRadius:(CGFloat)radius color:(ccColor3B)color {
-  self = [self initWithTexture:[[CCTexture2D alloc] init]];
+  self = [self init];
   if (self) {
     rate_ = 1.0;
     radius_ = radius;
@@ -136,10 +136,13 @@
   glColor4f(self.chartColor.r, self.chartColor.g, self.chartColor.b, 1);
   ccFillPoly(vertices_, segmentsDrawn_, YES);
   [tex end];
-  CCTexture2D* texture = tex.sprite.texture;
-  CGRect rect = tex.sprite.textureRect;
-  [self setTexture:texture];
-  [self setTextureRect:rect];
+  texture_ = tex.sprite.texture;
+  self.contentSize = texture_.contentSize;
+  self.contentSizeInPixels = texture_.contentSizeInPixels;
+}
+
+- (void)draw {
+  [texture_ drawInRect:CGRectMake(0, 0, texture_.contentSize.width, texture_.contentSize.height)];
 }
 
 

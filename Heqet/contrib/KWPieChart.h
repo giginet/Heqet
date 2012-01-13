@@ -8,7 +8,7 @@
 
 #import "cocos2d.h"
 
-@interface KWPieChart : CCSprite {
+@interface KWPieChart : CCNode {
   BOOL reverse_;
   int segments_;
   int segmentsDrawn_;
@@ -17,6 +17,8 @@
   CGPoint* vertices_;
   ccColor3B chartColor_;
   ccColor4B backgroundColor_;
+  
+  CCTexture2D* texture_;
 }
 
 @property(readwrite) BOOL reverse;
