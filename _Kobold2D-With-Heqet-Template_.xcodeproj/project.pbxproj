@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWLoopManager.m */; };
-		075A497E14BD84530047AAD2 /* hurry_int.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075A497C14BD84530047AAD2 /* hurry_int.caf */; };
-		075A497F14BD84530047AAD2 /* hurry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 075A497D14BD84530047AAD2 /* hurry.caf */; };
 		075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498114BDE58B0047AAD2 /* KWPieChart.m */; };
 		075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
 		075A498614BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
@@ -28,7 +26,6 @@
 		07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8E14B23CC400C6FC96 /* KWVector.m */; };
 		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */; };
-		07B6EDDF14BF84ED00725823 /* gauge.png in Resources */ = {isa = PBXBuildFile; fileRef = 07B6EDDE14BF84ED00725823 /* gauge.png */; };
 		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
 		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
@@ -89,8 +86,6 @@
 /* Begin PBXFileReference section */
 		075A497514BD81BB0047AAD2 /* KWLoopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLoopManager.h; sourceTree = "<group>"; };
 		075A497614BD81BB0047AAD2 /* KWLoopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLoopManager.m; sourceTree = "<group>"; };
-		075A497C14BD84530047AAD2 /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
-		075A497D14BD84530047AAD2 /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
 		075A498014BDE58B0047AAD2 /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
 		075A498114BDE58B0047AAD2 /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
 		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
@@ -120,9 +115,8 @@
 		07831F8E14B23CC400C6FC96 /* KWVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWVector.m; sourceTree = "<group>"; };
 		07831F8F14B23CC400C6FC96 /* NSArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayExtension.h; sourceTree = "<group>"; };
 		07831F9014B23CC400C6FC96 /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
-		07831F9C14B2428D00C6FC96 /* CCSpriteExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CCSpriteExtension.h; sourceTree = "<group>"; };
+		07831F9C14B2428D00C6FC96 /* CCSpriteExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtension.h; sourceTree = "<group>"; };
 		07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
-		07B6EDDE14BF84ED00725823 /* gauge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge.png; sourceTree = "<group>"; };
 		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,9 +222,9 @@
 		07831F7314B23CC400C6FC96 /* Heqet */ = {
 			isa = PBXGroup;
 			children = (
+				07831F7A14B23CC400C6FC96 /* heqet.h */,
 				07831F7414B23CC400C6FC96 /* audio */,
 				07831F7714B23CC400C6FC96 /* contrib */,
-				07831F7A14B23CC400C6FC96 /* heqet.h */,
 				07831F7B14B23CC400C6FC96 /* resources */,
 				07831F7C14B23CC400C6FC96 /* scene */,
 				07831F8314B23CC400C6FC96 /* sprite */,
@@ -349,9 +343,6 @@
 		DCC1A0F813A94ED5005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				07B6EDDE14BF84ED00725823 /* gauge.png */,
-				075A497C14BD84530047AAD2 /* hurry_int.caf */,
-				075A497D14BD84530047AAD2 /* hurry.caf */,
 				DC746EAA140EE4C200B0BC06 /* kobold.txt */,
 				DC746EB2140EE73300B0BC06 /* kobold3di.ttf */,
 				DC746EB3140EE73300B0BC06 /* kobold3d.ttf */,
@@ -548,9 +539,6 @@
 				DC746EBF140EE73300B0BC06 /* koboldi.ttf in Resources */,
 				07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */,
 				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
-				075A497E14BD84530047AAD2 /* hurry_int.caf in Resources */,
-				075A497F14BD84530047AAD2 /* hurry.caf in Resources */,
-				07B6EDDF14BF84ED00725823 /* gauge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

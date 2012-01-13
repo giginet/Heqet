@@ -82,31 +82,9 @@
                                           position:CGPointMake(0, 50)];
 		[platformLabel runAction:movePlatform];
     
-    [[KWLoopManager shared] setWithIntroFile:@"hurry_int.caf" loopFile:@"hurry.caf"];
-    KWTimerLabel* tLabel = [KWTimerLabel labelWithHour:0 minute:0 second:10];
-    [self addChild:tLabel];
-    [tLabel play];
-    tLabel.position = ccp(100, 100);
-    tLabel.displayMiliSecond = YES;
-    chart_ = [KWPieChart chartWithRadius:30 color:ccc3(1, 0, 0)];
-    chart_.position = ccp(100, 100);
-    chart_.rate = 0.0;
-    [self addChild:chart_];
-    gauge_ = [[KWGauge alloc] initWithColor:ccc3(0, 1, 0) andSize:CGSizeMake(200, 20)];
-    gauge_.position = ccp(200, 200);
-    [self addChild:gauge_];
     glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
-}
-
-- (void)onEnterTransitionDidFinish {
-  //[[KWLoopManager sharedManager] play];
-}
-
-- (void)update:(ccTime)dt {
-  chart_.rate += 0.01;
-  gauge_.rate -= 0.001;
 }
 
 @end
