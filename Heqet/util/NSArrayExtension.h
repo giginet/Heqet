@@ -11,8 +11,12 @@
 @interface NSArray (NSArrayExtension)
 
 - (id)at:(NSInteger)index;
-- (NSArray*)mapUsingBlock:(id (^)(id, int))__block block;
-- (NSArray*)filterUsingBlock:(BOOL (^)(id, int))block;
-- (id)reduceUsingBlock:(id (^)(id, int))block;
+- (NSArray *)mapUsingBlock:(id (^)(id, int))__block block;
+- (NSArray *)filterUsingBlock:(BOOL (^)(id, int))block;
+- (id)reduceUsingBlock:(id (^)(id, id, int))block;
+- (NSArray *)shuffle;
+- (id)objectAtRandom;
+- (NSArray *)objectsAtRandom:(int)k;
+- (NSString *)joinObjects:(NSString *)separator;
 
 @end

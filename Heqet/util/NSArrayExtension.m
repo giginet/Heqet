@@ -23,7 +23,7 @@
     id obj = block(item, idx);
     [newArray addObject:obj];
   }];
-  return [NSArray arrayWithArray:newArray];
+  return newArray;
 }
 
 - (NSArray *)filterUsingBlock:(BOOL (^)(id, int))block {
@@ -35,16 +35,44 @@
       [newArray addObject:[self objectAtIndex:i]];
     }
   }
-  return [NSArray arrayWithArray:newArray];
+  return newArray;
 }
 
-- (id)reduceUsingBlock:(id (^)(id, int))block {
+- (id)reduceUsingBlock:(id (^)(id, id, int))block {
   NSAssert1([self count] > 0, @"Array is Empty: %@", self);
   id result = [self objectAtIndex:0];
   for (int i = 1; i < (int)[self count]; i++) {
-    result = block([self objectAtIndex:i], i);
+    result = block(result, [self objectAtIndex:i], i);
   }
   return result;
+}
+
+- (NSArray *)shuffle {
+  NSMutableArray* newArray = [NSMutableArray arrayWithArray:self];
+  int count = [self count];
+  for (int i = 0; i < count; ++i) {
+    int index = rand() % count;
+    [newArray exchangeObjectAtIndex:i withObjectAtIndex:index];
+  }
+  return newArray;
+}
+
+- (id)objectAtRandom {
+  int index = rand() % [self count];
+  return [self objectAtIndex:index];
+}
+
+- (NSArray *)objectsAtRandom:(int)k {
+  NSMutableArray* newArray = [NSMutableArray arrayWithArray:[self shuffle]];
+  [newArray removeObjectsInRange:NSMakeRange(k, (int)[self count] - 1)];
+  return newArray;
+}
+
+- (NSString *)joinObjects:(NSString *)separator {
+  return (NSString*)[self reduceUsingBlock:^(id result, id obj, int idx) {
+    NSString* description = [obj description];
+    return [NSString stringWithFormat:@"%@%@%@", result, separator, description];
+  }];
 }
 
 @end

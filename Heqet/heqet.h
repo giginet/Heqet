@@ -16,6 +16,8 @@
 #import "SneakyButtonSkinnedBase.h"
 #import "SneakyJoystickSkinnedBase.h"
 
+#import "NSArrayExtension.h"
+
 #import "KWSingleton.h"
 #import "KWTimer.h"
 #import "KWVector.h"
