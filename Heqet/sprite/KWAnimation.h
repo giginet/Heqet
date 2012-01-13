@@ -11,10 +11,10 @@
 @interface KWAnimation : NSObject {
 }
 
-+ (id)spriteWithArray:(NSArray*)textures andAPS:(float)aps;
-+ (id)spriteWithFiles:(NSArray*)files andAPS:(float)aps;
-+ (id)spriteWithFile:(NSString *)filename andSize:(CGSize)size andAPS:(float)aps;
-+ (id)spriteWithTextureAtlas:(CCTexture2D *)texture andSize:(CGSize)size andAPS:(float)aps;
-+ (id)spriteWithSpriteFrames:(NSArray*)frames andAPS:(float)aps;
++ (id)spriteWithArray:(NSArray*)textures delay:(float)delay;
++ (id)spriteWithFile:(NSString *)filename size:(CGSize)size delay:(float)delay;
++ (id)spriteWithFiles:(NSArray*)files delay:(float)delay;
++ (id)spriteWithTextureAtlas:(CCTexture2D *)texture size:(CGSize)size delay:(float)delay;
++ (id)spriteWithSpriteFrames:(NSArray*)frames delay:(float)delay;
 
 @end
