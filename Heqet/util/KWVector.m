@@ -35,7 +35,7 @@
 
 - (id)initWithPoint:(CGPoint)point{
 	self = [self init];
-  if (self){
+  if (self) {
     x_ = point.x;
     y_ = point.y;
   }
@@ -53,29 +53,27 @@
 }
 
 - (KWVector*)add:(KWVector *)v{
-	x_ += v.x;
-	y_ += v.y;
-	return self;
+  KWVector* vector = [KWVector vector];
+	[vector set:CGPointMake(self.x + v.x, self.y + v.y)];
+  return vector;
 }
 
 - (KWVector*)sub:(KWVector *)v{
-	x_ -= v.x;
-	y_ -= v.y;
-	return self;
+  KWVector* vector = [KWVector vector];
+	[vector set:CGPointMake(self.x - v.x, self.y - v.y)];
+  return vector;
 }
 
 - (CGFloat)scalar:(KWVector *)v{
-	return x_ * v.x + y_ * v.y;
+	return self.x * v.x + self.y * v.y;
 }
 
 - (CGFloat)cross:(KWVector *)v{
-	return x_ * v.y - y_ * v.x;
+	return self.x * v.y - self.y * v.x;
 }
 
 - (KWVector*)scale:(CGFloat)n{
-	x_ *= n;
-	y_ *= n;
-	return self;
+  return [KWVector vectorWithPoint:CGPointMake(self.x * n, self.y * n)];
 }
 
 - (CGFloat)length{
@@ -84,33 +82,29 @@
 
 - (KWVector*)normalize{
 	if ([self length] == 0) {
-		x_ = 0;
-		y_ = 0;
-		return self;
+		return [KWVector vector];
 	}	
-  return [self scale:1/[self length]];
+  return [[self copy] scale:1/[self length]];
 }
 
 - (KWVector*)resize:(CGFloat)n{
-	return [[self normalize] scale:n];
+	return [[[self copy] normalize] scale:n];
 }
 
 - (CGFloat)angle{
-	return atan2(y_, x_);
+	return atan2(self.y, self.x);
 }
 
 - (KWVector*)rotate:(CGFloat)deg{
 	CGFloat rad = M_PI*deg/180;
-	CGFloat tmpx = x_;
-	x_ = sin(rad) * y_ + cos(rad) * x_;
-	y_ = cos(rad) * y_ - sin(rad) * tmpx;
-	return self;
+	CGFloat tmpx = self.x;
+	CGFloat x = sin(rad) * self.y + cos(rad) * self.x;
+	CGFloat y = cos(rad) * self.y - sin(rad) * tmpx;
+	return [KWVector vectorWithPoint:CGPointMake(x, y)];
 }
 
 - (KWVector*)reverse{
-	x_ *= -1;
-	y_ *= -1;
-	return self;
+	return [KWVector vectorWithPoint:CGPointMake(self.x * -1, self.y * -1)];
 }
 
 - (KWVector*)zero{
@@ -124,29 +118,29 @@
 
 - (KWVector*)max:(CGFloat)max{
 	if([self length] > max){
-		[self resize:max]; 
+		[[self copy] resize:max]; 
 	}
 	return self;
 }
 
 - (KWVector*)min:(CGFloat)min{
 	if([self length] < min){
-		[self resize:min]; 
+		[[self copy] resize:min]; 
 	}
 	return self;
 }
 
 - (CGPoint)point{
-  return CGPointMake(x_, y_);
+  return CGPointMake(self.x, self.y);
 }
 
 - (BOOL)isEqual:(id)object{
   KWVector* v = (KWVector*)object;
-  return v.x == x_ && v.y == y_;
+  return v.x == self.x && v.y == self.y;
 }
 
 - (NSString*)description{
-  return [NSString stringWithFormat:@"(%f, %f)", x_, y_];
+  return [NSString stringWithFormat:@"(%f, %f)", self.x, self.y];
 }
 
 @end
