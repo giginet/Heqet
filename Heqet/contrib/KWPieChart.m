@@ -74,9 +74,6 @@
 
 - (void)setRadius:(CGFloat)rad {
   float screenScale = 1.0f;  
-  if ([UIScreen instancesRespondToSelector:@selector(scale)]) {  
-    screenScale = [[UIScreen mainScreen] scale];  
-  }
   radius_ = rad * screenScale;
   [self updateVertices];
 }

@@ -10,11 +10,13 @@
 
 #import <Foundation/Foundation.h>
 #import "kobold2d.h"
+
 #import "ObjectAL.h"
 #import "SneakyJoystick.h"
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
 #import "SneakyJoystickSkinnedBase.h"
+#import "KWLoopManager.h"
 
 #import "NSArrayExtension.h"
 
@@ -27,8 +29,6 @@
 #import "KWStateManager.h"
 #import "CCSpriteExtension.h"
 #import "KWAnimation.h"
-
-#import "KWLoopManager.h"
 
 #import "KWTimerLabel.h"
 #import "KWPieChart.h"

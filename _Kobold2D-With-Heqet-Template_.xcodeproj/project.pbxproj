@@ -10,9 +10,7 @@
 		075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWLoopManager.m */; };
 		075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498114BDE58B0047AAD2 /* KWPieChart.m */; };
 		075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
-		075A498614BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
 		075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
-		075A498A14BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
 		07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F6D14B23C4B00C6FC96 /* LogoLayer.m */; };
 		07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */; };
 		07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F7014B23C7D00C6FC96 /* kawaz.png */; };
@@ -27,14 +25,8 @@
 		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */; };
 		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
-		DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
-		DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */; };
-		DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */; };
-		DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */; };
 		DC485B4813AA194F00F2BC70 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4713AA194F00F2BC70 /* ship.png */; };
-		DC485B4913AA194F00F2BC70 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4713AA194F00F2BC70 /* ship.png */; };
 		DC485B4B13AA1C0E00F2BC70 /* ship-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */; };
-		DC485B4C13AA1C0E00F2BC70 /* ship-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */; };
 		DC65615C13A969B600A7AC53 /* libbox2d-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615013A969B600A7AC53 /* libbox2d-ios.a */; };
 		DC65615D13A969B600A7AC53 /* libchipmunk-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615113A969B600A7AC53 /* libchipmunk-ios.a */; };
 		DC65615E13A969B600A7AC53 /* libchipmunk-spacemanager-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615213A969B600A7AC53 /* libchipmunk-spacemanager-ios.a */; };
@@ -55,8 +47,6 @@
 		DC746EBD140EE73300B0BC06 /* koboldb.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC746EB6140EE73300B0BC06 /* koboldb.ttf */; };
 		DC746EBE140EE73300B0BC06 /* koboldci.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC746EB7140EE73300B0BC06 /* koboldci.ttf */; };
 		DC746EBF140EE73300B0BC06 /* koboldi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC746EB8140EE73300B0BC06 /* koboldi.ttf */; };
-		DC979E3E13B35F8800656CB9 /* libcocos2d-extensions-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC979E3D13B35F8800656CB9 /* libcocos2d-extensions-mac.a */; };
-		DC979E5A13B3607E00656CB9 /* libchipmunk-spacemanager-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC979E5913B3607E00656CB9 /* libchipmunk-spacemanager-mac.a */; };
 		DCC1A0FA13A94ED5005BD75D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0F913A94ED5005BD75D /* Default.png */; };
 		DCC1A0FC13A94ED5005BD75D /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0FB13A94ED5005BD75D /* fps_images.png */; };
 		DCC1A0FE13A94ED5005BD75D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A0FD13A94ED5005BD75D /* Icon-72.png */; };
@@ -66,21 +56,10 @@
 		DCC1A10613A94ED5005BD75D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A10513A94ED5005BD75D /* Icon.png */; };
 		DCC1A10813A94ED5005BD75D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A10713A94ED5005BD75D /* Icon@2x.png */; };
 		DCC1A10B13A94ED5005BD75D /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A10A13A94ED5005BD75D /* iTunesArtwork */; };
-		DCC1A26913A94EE6005BD75D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A26713A94EE6005BD75D /* InfoPlist.strings */; };
-		DCC1A26C13A94EE6005BD75D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A26A13A94EE6005BD75D /* MainMenu.xib */; };
-		DCC1A26E13A94EE6005BD75D /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A26D13A94EE6005BD75D /* fps_images.png */; };
-		DCC1A27013A94EE6005BD75D /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A26F13A94EE6005BD75D /* icon.icns */; };
 		DCC1A3A913A94F1A005BD75D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A38E13A94F1A005BD75D /* AppDelegate.m */; };
-		DCC1A3AA13A94F1A005BD75D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A38E13A94F1A005BD75D /* AppDelegate.m */; };
 		DCC1A3AB13A94F1A005BD75D /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A39013A94F1A005BD75D /* HelloWorldLayer.m */; };
-		DCC1A3AC13A94F1A005BD75D /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A39013A94F1A005BD75D /* HelloWorldLayer.m */; };
 		DCC1A3AD13A94F1A005BD75D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A39113A94F1A005BD75D /* main.m */; };
-		DCC1A3AE13A94F1A005BD75D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC1A39113A94F1A005BD75D /* main.m */; };
 		DCC1A3AF13A94F1A005BD75D /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A39513A94F1A005BD75D /* config.lua */; };
-		DCC1A3B013A94F1A005BD75D /* config.lua in Resources */ = {isa = PBXBuildFile; fileRef = DCC1A39513A94F1A005BD75D /* config.lua */; };
-		DCF95CD213A97EC500AE3B80 /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF95CC913A97EC500AE3B80 /* libcocos2d-mac.a */; };
-		DCF95CD413A97EC500AE3B80 /* libkobold2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF95CCB13A97EC500AE3B80 /* libkobold2d-mac.a */; };
-		DCF95CD513A97EC500AE3B80 /* libwax-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF95CCC13A97EC500AE3B80 /* libwax-mac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,9 +98,6 @@
 		07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
 		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
-		DC485B0D13AA0E5600F2BC70 /* libchipmunk-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC485B1613AA0EBB00F2BC70 /* libbox2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC485B4513AA18A600F2BC70 /* libcocosdenshion-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libcocosdenshion-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC485B4713AA194F00F2BC70 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ship-hd.png"; sourceTree = "<group>"; };
 		DC65615013A969B600A7AC53 /* libbox2d-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libbox2d-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,8 +121,6 @@
 		DC746EB6140EE73300B0BC06 /* koboldb.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koboldb.ttf; sourceTree = "<group>"; };
 		DC746EB7140EE73300B0BC06 /* koboldci.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koboldci.ttf; sourceTree = "<group>"; };
 		DC746EB8140EE73300B0BC06 /* koboldi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = koboldi.ttf; sourceTree = "<group>"; };
-		DC979E3D13B35F8800656CB9 /* libcocos2d-extensions-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libcocos2d-extensions-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC979E5913B3607E00656CB9 /* libchipmunk-spacemanager-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libchipmunk-spacemanager-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9C33E713B5024400931BF2 /* BuildSettings-Debug-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E813B5024400931BF2 /* BuildSettings-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Mac.xcconfig"; sourceTree = "<group>"; };
 		DC9C33E913B5024400931BF2 /* BuildSettings-Release-Mac.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Release-Mac.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +135,6 @@
 		DCC1A10713A94ED5005BD75D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		DCC1A10913A94ED5005BD75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		DCC1A10A13A94ED5005BD75D /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
-		DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "_Hello-Kobold2D-Template_-Mac.app"; path = "_Kobold2D-With-Heqet-Template_-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1A26813A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DCC1A26B13A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DCC1A26D13A94EE6005BD75D /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
@@ -175,9 +148,6 @@
 		DCC1A39213A94F1A005BD75D /* Prefix-iOS.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-iOS.pch"; sourceTree = "<group>"; };
 		DCC1A39313A94F1A005BD75D /* Prefix-Mac.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Prefix-Mac.pch"; sourceTree = "<group>"; };
 		DCC1A39513A94F1A005BD75D /* config.lua */ = {isa = PBXFileReference; explicitFileType = sourcecode.applescript; fileEncoding = 4; path = config.lua; sourceTree = "<group>"; };
-		DCF95CC913A97EC500AE3B80 /* libcocos2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libcocos2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCF95CCB13A97EC500AE3B80 /* libkobold2d-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libkobold2d-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCF95CCC13A97EC500AE3B80 /* libwax-mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libwax-mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFA90EF13B4F6F7009DD35A /* BuildSettings-Debug-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Debug-iOS.xcconfig"; sourceTree = "<group>"; };
 		DCFA90F013B4F811009DD35A /* BuildSettings-Release-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-Release-iOS.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,21 +168,6 @@
 				DC65616513A969B600A7AC53 /* libobjectal-ios.a in Frameworks */,
 				DC65616613A969B600A7AC53 /* libsneakyinput-ios.a in Frameworks */,
 				DC65616713A969B600A7AC53 /* libwax-ios.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCC1A25713A94EE6005BD75D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC979E5A13B3607E00656CB9 /* libchipmunk-spacemanager-mac.a in Frameworks */,
-				DC979E3E13B35F8800656CB9 /* libcocos2d-extensions-mac.a in Frameworks */,
-				DC485B4613AA18A600F2BC70 /* libcocosdenshion-mac.a in Frameworks */,
-				DC485B1713AA0EBB00F2BC70 /* libbox2d-mac.a in Frameworks */,
-				DC485B1113AA0E5600F2BC70 /* libchipmunk-mac.a in Frameworks */,
-				DCF95CD213A97EC500AE3B80 /* libcocos2d-mac.a in Frameworks */,
-				DCF95CD413A97EC500AE3B80 /* libkobold2d-mac.a in Frameworks */,
-				DCF95CD513A97EC500AE3B80 /* libwax-mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				DCC1A0E313A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS.app */,
-				DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,23 +420,6 @@
 			productReference = DCC1A0E313A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DCC1A25913A94EE6005BD75D /* _Kobold2D-With-Heqet-Template_-Mac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DCC1A38913A94EE7005BD75D /* Build configuration list for PBXNativeTarget "_Kobold2D-With-Heqet-Template_-Mac" */;
-			buildPhases = (
-				DCC1A25613A94EE6005BD75D /* Sources */,
-				DCC1A25713A94EE6005BD75D /* Frameworks */,
-				DCC1A25813A94EE6005BD75D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "_Kobold2D-With-Heqet-Template_-Mac";
-			productName = "Hello-World-Mac";
-			productReference = DCC1A25A13A94EE6005BD75D /* _Hello-Kobold2D-Template_-Mac.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -505,7 +442,6 @@
 			projectRoot = "";
 			targets = (
 				DCC1A0E213A94ED5005BD75D /* _Kobold2D-With-Heqet-Template_-iOS */,
-				DCC1A25913A94EE6005BD75D /* _Kobold2D-With-Heqet-Template_-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -542,21 +478,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCC1A25813A94EE6005BD75D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCC1A26913A94EE6005BD75D /* InfoPlist.strings in Resources */,
-				DCC1A26C13A94EE6005BD75D /* MainMenu.xib in Resources */,
-				DCC1A26E13A94EE6005BD75D /* fps_images.png in Resources */,
-				DCC1A27013A94EE6005BD75D /* icon.icns in Resources */,
-				DCC1A3B013A94F1A005BD75D /* config.lua in Resources */,
-				DC485B4913AA194F00F2BC70 /* ship.png in Resources */,
-				DC485B4C13AA1C0E00F2BC70 /* ship-hd.png in Resources */,
-				DC275D2C13B27DBF009C5098 /* Pow.caf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -582,18 +503,6 @@
 				075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */,
 				075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
 				075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCC1A25613A94EE6005BD75D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCC1A3AA13A94F1A005BD75D /* AppDelegate.m in Sources */,
-				DCC1A3AC13A94F1A005BD75D /* HelloWorldLayer.m in Sources */,
-				DCC1A3AE13A94F1A005BD75D /* main.m in Sources */,
-				075A498614BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
-				075A498A14BEB9B30047AAD2 /* KWGauge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,20 +564,6 @@
 			};
 			name = Release;
 		};
-		DCC1A38A13A94EE7005BD75D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC9C33E713B5024400931BF2 /* BuildSettings-Debug-Mac.xcconfig */;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		DCC1A38B13A94EE7005BD75D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC9C33E913B5024400931BF2 /* BuildSettings-Release-Mac.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -686,15 +581,6 @@
 			buildConfigurations = (
 				DCC1A25413A94ED7005BD75D /* Debug */,
 				DCC1A25513A94ED7005BD75D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DCC1A38913A94EE7005BD75D /* Build configuration list for PBXNativeTarget "_Kobold2D-With-Heqet-Template_-Mac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DCC1A38A13A94EE7005BD75D /* Debug */,
-				DCC1A38B13A94EE7005BD75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,9 +11,9 @@
 @interface NSArray (KWNSArrayExtension)
 
 - (id)at:(NSInteger)index;
-- (NSArray *)mapUsingBlock:(id (^)(id, int))__block block;
-- (NSArray *)filterUsingBlock:(BOOL (^)(id, int))block;
-- (id)reduceUsingBlock:(id (^)(id, id, int))block;
+- (NSArray *)mapUsingBlock:(id (^)(id, NSUInteger))__block block;
+- (NSArray *)filterUsingBlock:(BOOL (^)(id, NSUInteger))block;
+- (id)reduceUsingBlock:(id (^)(id, id, NSUInteger))block;
 - (NSArray *)shuffle;
 - (id)objectAtRandom;
 - (NSArray *)objectsAtRandom:(int)k;

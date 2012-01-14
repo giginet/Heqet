@@ -8,16 +8,11 @@
 
 #import "KWTimerLabel.h"
 
-#ifndef FPS
-#define FPS 60
-#endif
-
 @interface KWTimerLabel()
 - (NSString*)humalize;
 - (void)tick:(ccTime)dt;
 - (Time)convertToTime:(NSTimeInterval)second;
 - (NSTimeInterval)convertToSecond:(Time)time;
-- (double)fps;
 @end
 
 @implementation KWTimerLabel
@@ -137,10 +132,6 @@
 - (NSTimeInterval)convertToSecond:(Time)time{
   float ms = (double)(time.milisecond) / 1000.0;
   return 3600 * time.hour + 60 * time.minute + time.second + ms;
-}
-
-- (double)fps {
-  return (double)[[KKStartupConfig config] maxFrameRate];
 }
 
 @end

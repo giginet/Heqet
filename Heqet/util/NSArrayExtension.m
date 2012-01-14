@@ -17,7 +17,7 @@
   return [self objectAtIndex:index];
 }
 
-- (NSArray *)mapUsingBlock:(id (^)(id, int))__block block {
+- (NSArray *)mapUsingBlock:(id (^)(id, NSUInteger))__block block {
   NSMutableArray* newArray = [NSMutableArray array];
   [self enumerateObjectsUsingBlock:^(id item, NSUInteger idx, BOOL *stop){
     id obj = block(item, idx);
@@ -26,8 +26,8 @@
   return newArray;
 }
 
-- (NSArray *)filterUsingBlock:(BOOL (^)(id, int))block {
-  int count = [self count];
+- (NSArray *)filterUsingBlock:(BOOL (^)(id, NSUInteger))block {
+  int count = (int)[self count];
   NSMutableArray* newArray = [NSMutableArray array];
   for (int i = 0; i < count; ++i) {
     id obj = [self objectAtIndex:i];
@@ -38,7 +38,7 @@
   return newArray;
 }
 
-- (id)reduceUsingBlock:(id (^)(id, id, int))block {
+- (id)reduceUsingBlock:(id (^)(id, id, NSUInteger))block {
   NSAssert1([self count] > 0, @"Array is Empty: %@", self);
   id result = [self objectAtIndex:0];
   for (int i = 1; i < (int)[self count]; i++) {
@@ -49,16 +49,16 @@
 
 - (NSArray *)shuffle {
   NSMutableArray* newArray = [NSMutableArray arrayWithArray:self];
-  int count = [self count];
-  for (int i = 0; i < count; ++i) {
-    int index = rand() % count;
+  NSUInteger count = [self count];
+  for (NSUInteger i = 0; i < count; ++i) {
+    int index = (int)(rand() % count);
     [newArray exchangeObjectAtIndex:i withObjectAtIndex:index];
   }
   return newArray;
 }
 
 - (id)objectAtRandom {
-  int index = rand() % [self count];
+  int index = (int)(rand() % [self count]);
   return [self objectAtIndex:index];
 }
 
@@ -69,7 +69,7 @@
 }
 
 - (NSString *)joinObjects:(NSString *)separator {
-  return (NSString*)[self reduceUsingBlock:^(id result, id obj, int idx) {
+  return (NSString*)[self reduceUsingBlock:^(id result, id obj, NSUInteger idx) {
     NSString* description = [obj description];
     return [NSString stringWithFormat:@"%@%@%@", result, separator, description];
   }];
