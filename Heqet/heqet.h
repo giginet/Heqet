@@ -16,7 +16,7 @@
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
 #import "SneakyJoystickSkinnedBase.h"
-#import "KWLoopManager.h"
+#import "KWMusicManager.h"
 
 #import "NSArrayExtension.h"
 

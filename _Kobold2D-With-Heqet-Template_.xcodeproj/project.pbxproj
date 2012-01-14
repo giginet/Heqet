@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWLoopManager.m */; };
+		075A497714BD81BB0047AAD2 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWMusicManager.m */; };
 		075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498114BDE58B0047AAD2 /* KWPieChart.m */; };
 		075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
 		075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
@@ -25,7 +25,8 @@
 		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */; };
 		07EC8A5714C22F9700C388AD /* KWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EC8A5614C22F9700C388AD /* KWUtility.m */; };
-		DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */ = {isa = PBXBuildFile; fileRef = DC275D2A13B27DBF009C5098 /* Pow.caf */; };
+		07EC8A5B14C2458F00C388AD /* hurry_int.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5914C2458F00C388AD /* hurry_int.caf */; };
+		07EC8A5C14C2458F00C388AD /* hurry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5A14C2458F00C388AD /* hurry.caf */; };
 		DC485B4813AA194F00F2BC70 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4713AA194F00F2BC70 /* ship.png */; };
 		DC485B4B13AA1C0E00F2BC70 /* ship-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */; };
 		DC65615C13A969B600A7AC53 /* libbox2d-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615013A969B600A7AC53 /* libbox2d-ios.a */; };
@@ -64,11 +65,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		075A497514BD81BB0047AAD2 /* KWLoopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLoopManager.h; sourceTree = "<group>"; };
-		075A497614BD81BB0047AAD2 /* KWLoopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLoopManager.m; sourceTree = "<group>"; };
+		075A497514BD81BB0047AAD2 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
+		075A497614BD81BB0047AAD2 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
 		075A498014BDE58B0047AAD2 /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
 		075A498114BDE58B0047AAD2 /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
-		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
+		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
 		075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWDrawingPrimitives.m; sourceTree = "<group>"; };
 		075A498714BEB9B30047AAD2 /* KWGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGauge.h; sourceTree = "<group>"; };
 		075A498814BEB9B30047AAD2 /* KWGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGauge.m; sourceTree = "<group>"; };
@@ -99,7 +100,8 @@
 		07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
 		07EC8A5514C22F9700C388AD /* KWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWUtility.h; sourceTree = "<group>"; };
 		07EC8A5614C22F9700C388AD /* KWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWUtility.m; sourceTree = "<group>"; };
-		DC275D2A13B27DBF009C5098 /* Pow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pow.caf; sourceTree = "<group>"; };
+		07EC8A5914C2458F00C388AD /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
+		07EC8A5A14C2458F00C388AD /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B4713AA194F00F2BC70 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ship-hd.png"; sourceTree = "<group>"; };
@@ -138,11 +140,6 @@
 		DCC1A10713A94ED5005BD75D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		DCC1A10913A94ED5005BD75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		DCC1A10A13A94ED5005BD75D /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
-		DCC1A26813A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DCC1A26B13A94EE6005BD75D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		DCC1A26D13A94EE6005BD75D /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
-		DCC1A26F13A94EE6005BD75D /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = icon.icns; path = Resources/icon.icns; sourceTree = "<group>"; };
-		DCC1A27113A94EE6005BD75D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		DCC1A38D13A94F1A005BD75D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCC1A38E13A94F1A005BD75D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DCC1A38F13A94F1A005BD75D /* HelloWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
@@ -194,8 +191,8 @@
 		07831F7414B23CC400C6FC96 /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				075A497514BD81BB0047AAD2 /* KWLoopManager.h */,
-				075A497614BD81BB0047AAD2 /* KWLoopManager.m */,
+				075A497514BD81BB0047AAD2 /* KWMusicManager.h */,
+				075A497614BD81BB0047AAD2 /* KWMusicManager.m */,
 			);
 			path = audio;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 			children = (
 				DCC1A38C13A94F1A005BD75D /* Projectfiles */,
 				DCC1A0F713A94ED5005BD75D /* Projectfiles-iOS */,
-				DCC1A26413A94EE6005BD75D /* Projectfiles-Mac */,
 				DCFA90ED13B4F6A0009DD35A /* BuildSettings */,
 				DCC1A0E613A94ED5005BD75D /* Frameworks */,
 				DCC1A0E413A94ED5005BD75D /* Products */,
@@ -326,34 +322,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		DCC1A26413A94EE6005BD75D /* Projectfiles-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				DCC1A26513A94EE6005BD75D /* Resources */,
-			);
-			path = "Projectfiles-Mac";
-			sourceTree = "<group>";
-		};
-		DCC1A26513A94EE6005BD75D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DCC1A26D13A94EE6005BD75D /* fps_images.png */,
-				DCC1A26F13A94EE6005BD75D /* icon.icns */,
-				DCC1A27113A94EE6005BD75D /* Info.plist */,
-				DCC1A26613A94EE6005BD75D /* English.lproj */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		DCC1A26613A94EE6005BD75D /* English.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DCC1A26713A94EE6005BD75D /* InfoPlist.strings */,
-				DCC1A26A13A94EE6005BD75D /* MainMenu.xib */,
-			);
-			name = English.lproj;
-			sourceTree = "<group>";
-		};
 		DCC1A38C13A94F1A005BD75D /* Projectfiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,10 +340,11 @@
 		DCC1A39413A94F1A005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				07EC8A5914C2458F00C388AD /* hurry_int.caf */,
+				07EC8A5A14C2458F00C388AD /* hurry.caf */,
 				07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */,
 				07831F7014B23C7D00C6FC96 /* kawaz.png */,
 				DCC1A39513A94F1A005BD75D /* config.lua */,
-				DC275D2A13B27DBF009C5098 /* Pow.caf */,
 				DC485B4713AA194F00F2BC70 /* ship.png */,
 				DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */,
 			);
@@ -468,7 +437,6 @@
 				DCC1A3AF13A94F1A005BD75D /* config.lua in Resources */,
 				DC485B4813AA194F00F2BC70 /* ship.png in Resources */,
 				DC485B4B13AA1C0E00F2BC70 /* ship-hd.png in Resources */,
-				DC275D2B13B27DBF009C5098 /* Pow.caf in Resources */,
 				DC746EAD140EE4C200B0BC06 /* kobold.ttf in Resources */,
 				DC746EB1140EE72400B0BC06 /* koboldc.ttf in Resources */,
 				DC746EB9140EE73300B0BC06 /* kobold3di.ttf in Resources */,
@@ -480,6 +448,8 @@
 				DC746EBF140EE73300B0BC06 /* koboldi.ttf in Resources */,
 				07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */,
 				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
+				07EC8A5B14C2458F00C388AD /* hurry_int.caf in Resources */,
+				07EC8A5C14C2458F00C388AD /* hurry.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +474,7 @@
 				07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */,
 				07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */,
 				07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */,
-				075A497714BD81BB0047AAD2 /* KWLoopManager.m in Sources */,
+				075A497714BD81BB0047AAD2 /* KWMusicManager.m in Sources */,
 				075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */,
 				075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
 				075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */,
@@ -513,25 +483,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DCC1A26713A94EE6005BD75D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCC1A26813A94EE6005BD75D /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DCC1A26A13A94EE6005BD75D /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCC1A26B13A94EE6005BD75D /* English */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DCC1A0DD13A94EC0005BD75D /* Debug */ = {
