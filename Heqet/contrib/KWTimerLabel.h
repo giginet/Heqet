@@ -15,14 +15,21 @@ typedef struct{
   int milisecond;
 } Time;
 
+typedef enum {
+  KWTimerLabelDisplayClock,
+  KWTimerLabelDisplaySecond
+} KWTimerLabelDisplay;
+
 @interface KWTimerLabel : CCLabelTTF{
   BOOL displayMiliSecond_;
+  KWTimerLabelDisplay displayMode_;
   KWTimer* timer_;
 }
 
 @property(readonly) BOOL active;
+@property(readonly) NSTimeInterval now;
 @property(readwrite) BOOL displayMiliSecond;
-@property(readonly) NSTimeInterval leave;
+@property(readwrite) KWTimerLabelDisplay displayMode;
 @property(readonly) KWTimer* timer;
 
 + (id)labelWithHour:(int)hour minute:(int)minute second:(int)second;

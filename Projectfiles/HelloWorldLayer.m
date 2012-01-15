@@ -81,7 +81,6 @@
 		id movePlatform = [CCMoveBy actionWithDuration:0.2f 
                                           position:CGPointMake(0, 50)];
 		[platformLabel runAction:movePlatform];
-    
     glClearColor(0.2f, 0.2f, 0.4f, 1.0f);
   }
 	return self;
