@@ -32,11 +32,14 @@ typedef enum {
 @property(readwrite) KWTimerLabelDisplay displayMode;
 @property(readonly) KWTimer* timer;
 
-+ (id)labelWithHour:(int)hour minute:(int)minute second:(int)second;
-+ (id)labelWithSecond:(NSTimeInterval)second;
++ (id)timerLabelWithHour:(int)hour minute:(int)minute second:(int)second;
++ (id)timerLabelWithSecond:(NSTimeInterval)second;
++ (id)timerLabelWithSecond:(NSTimeInterval)second fontName:(NSString *)name fontSize:(CGFloat)size;
 
 - (id)initWithHour:(int)hour minute:(int)minute second:(int)second;
 - (id)initWithSecond:(NSTimeInterval)second;
+- (id)initWithSecond:(NSTimeInterval)second fontName:(NSString *)name fontSize:(CGFloat)size;
+
 
 - (void)setHour:(int)hour minute:(int)minute second:(int)second;
 - (void)setSecond:(int)second;

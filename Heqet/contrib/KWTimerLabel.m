@@ -23,12 +23,16 @@
 @synthesize displayMode = displayMode_;
 @synthesize timer = timer_;
 
-+ (id)labelWithHour:(int)hour minute:(int)minute second:(int)second {
++ (id)timerLabelWithHour:(int)hour minute:(int)minute second:(int)second {
   return [[[self class] alloc] initWithHour:hour minute:minute second:second];
 }
 
-+ (id)labelWithSecond:(NSTimeInterval)second {
++ (id)timerLabelWithSecond:(NSTimeInterval)second {
   return [[[self class] alloc] initWithSecond:second];
+}
+
++ (id)timerLabelWithSecond:(NSTimeInterval)second fontName:(NSString *)name fontSize:(CGFloat)size {
+  return [[[self class] alloc] initWithSecond:second fontName:name fontSize:size];
 }
 
 - (id)init{
@@ -53,6 +57,14 @@
     [self setup];
   }
 	return self;
+}
+
+- (id)initWithSecond:(NSTimeInterval)second fontName:(NSString *)name fontSize:(CGFloat)size {
+  self = [super initWithString:@"" fontName:name fontSize:size];
+  if (self) {
+    [self setup];
+  }
+  return self;
 }
 
 - (id)initWithHour:(int)hour minute:(int)minute second:(int)second {
