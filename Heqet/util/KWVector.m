@@ -120,14 +120,14 @@
 	if([self length] > max){
 		[[self copy] resize:max]; 
 	}
-	return self;
+	return [self copy];
 }
 
 - (KWVector*)min:(CGFloat)min{
 	if([self length] < min){
 		[[self copy] resize:min]; 
 	}
-	return self;
+	return [self copy];
 }
 
 - (CGPoint)point{

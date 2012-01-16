@@ -11,8 +11,8 @@
 	CGFloat x_, y_;
 }
 
-@property(assign, readwrite) CGFloat x;
-@property(assign, readwrite) CGFloat y;
+@property(readwrite) CGFloat x;
+@property(readwrite) CGFloat y;
 @property(readonly) CGFloat length;
 @property(readonly) CGFloat angle;
 @property(readonly) CGPoint point;
