@@ -16,19 +16,20 @@
 #import "SneakyButton.h"
 #import "SneakyButtonSkinnedBase.h"
 #import "SneakyJoystickSkinnedBase.h"
-#import "KWMusicManager.h"
 
 #import "NSArrayExtension.h"
 
 #import "KWSingleton.h"
 #import "KWTimer.h"
 #import "KWVector.h"
+#import "KWRandom.h"
 
 #import "KWLayer.h"
 #import "KWState.h"
 #import "KWStateManager.h"
 #import "CCSpriteExtension.h"
 #import "KWAnimation.h"
+#import "KWMusicManager.h"
 
 #import "KWTimerLabel.h"
 #import "KWPieChart.h"

@@ -27,6 +27,8 @@
 		07EC8A5714C22F9700C388AD /* KWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EC8A5614C22F9700C388AD /* KWUtility.m */; };
 		07EC8A5B14C2458F00C388AD /* hurry_int.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5914C2458F00C388AD /* hurry_int.caf */; };
 		07EC8A5C14C2458F00C388AD /* hurry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5A14C2458F00C388AD /* hurry.caf */; };
+		07F20B8114C4EB59003D6237 /* tinymt32.c in Sources */ = {isa = PBXBuildFile; fileRef = 07F20B7F14C4EB59003D6237 /* tinymt32.c */; };
+		07F20B8414C4EC07003D6237 /* KWRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F20B8314C4EC07003D6237 /* KWRandom.m */; };
 		DC485B4813AA194F00F2BC70 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4713AA194F00F2BC70 /* ship.png */; };
 		DC485B4B13AA1C0E00F2BC70 /* ship-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */; };
 		DC65615C13A969B600A7AC53 /* libbox2d-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC65615013A969B600A7AC53 /* libbox2d-ios.a */; };
@@ -102,6 +104,10 @@
 		07EC8A5614C22F9700C388AD /* KWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWUtility.m; sourceTree = "<group>"; };
 		07EC8A5914C2458F00C388AD /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
 		07EC8A5A14C2458F00C388AD /* hurry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry.caf; sourceTree = "<group>"; };
+		07F20B7F14C4EB59003D6237 /* tinymt32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tinymt32.c; sourceTree = "<group>"; };
+		07F20B8014C4EB59003D6237 /* tinymt32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinymt32.h; sourceTree = "<group>"; };
+		07F20B8214C4EC07003D6237 /* KWRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWRandom.h; sourceTree = "<group>"; };
+		07F20B8314C4EC07003D6237 /* KWRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWRandom.m; sourceTree = "<group>"; };
 		DC3BE97813B4FB71003739CC /* BuildSettings-iOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BuildSettings-iOS.xcconfig"; sourceTree = "<group>"; };
 		DC485B4713AA194F00F2BC70 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		DC485B4A13AA1C0E00F2BC70 /* ship-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ship-hd.png"; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		07831F7314B23CC400C6FC96 /* Heqet */ = {
 			isa = PBXGroup;
 			children = (
+				07F20B7E14C4EB59003D6237 /* libs */,
 				07831F7A14B23CC400C6FC96 /* heqet.h */,
 				07831F7414B23CC400C6FC96 /* audio */,
 				07831F7714B23CC400C6FC96 /* contrib */,
@@ -256,8 +263,19 @@
 				075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */,
 				07EC8A5514C22F9700C388AD /* KWUtility.h */,
 				07EC8A5614C22F9700C388AD /* KWUtility.m */,
+				07F20B8214C4EC07003D6237 /* KWRandom.h */,
+				07F20B8314C4EC07003D6237 /* KWRandom.m */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		07F20B7E14C4EB59003D6237 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				07F20B8014C4EB59003D6237 /* tinymt32.h */,
+				07F20B7F14C4EB59003D6237 /* tinymt32.c */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 		DCC1A0D613A94EC0005BD75D = {
@@ -479,6 +497,8 @@
 				075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
 				075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */,
 				07EC8A5714C22F9700C388AD /* KWUtility.m in Sources */,
+				07F20B8114C4EB59003D6237 /* tinymt32.c in Sources */,
+				07F20B8414C4EC07003D6237 /* KWRandom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
