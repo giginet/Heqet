@@ -1,6 +1,6 @@
 //
 //  KWRandom.m
-//  _Kobold2D-With-Heqet-Template_
+//  Heqet
 //
 //  Created by  on 2012/1/17.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
@@ -28,8 +28,6 @@
 - (id)init {
   uint32_t s = (u_int32_t)time(NULL);
   self = [self initWithSeed:s];
-  if (self) {
-  }
   return self;
 }
 

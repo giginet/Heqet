@@ -1,6 +1,6 @@
 //
 //  KWUtility.m
-//  _Kobold2D-With-Heqet-Template_
+//  Heqet
 //
 //  Created by  on 1/15/12.
 //  Copyright (c) 2012 Kawaz. All rights reserved.
