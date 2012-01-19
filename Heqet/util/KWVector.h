@@ -8,7 +8,7 @@
 
 #import "math.h"
 @interface KWVector : NSObject {
-	CGFloat x_, y_;
+  CGFloat x_, y_;
 }
 
 @property(readwrite) CGFloat x;

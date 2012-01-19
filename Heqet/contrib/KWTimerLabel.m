@@ -44,19 +44,19 @@
 }
 
 - (id) initWithString:(NSString*)str dimensions:(CGSize)dimensions alignment:(CCTextAlignment)alignment lineBreakMode:(CCLineBreakMode)lineBreakMode fontName:(NSString*)name fontSize:(CGFloat)size {
-	self = [super initWithString:@"0" dimensions:dimensions alignment:alignment lineBreakMode:lineBreakMode fontName:name fontSize:size];
+  self = [super initWithString:@"0" dimensions:dimensions alignment:alignment lineBreakMode:lineBreakMode fontName:name fontSize:size];
   if(self) {
     [self setup];
   }
-	return self;
+  return self;
 }
 
 - (id) initWithString:(NSString*)str fontName:(NSString*)name fontSize:(CGFloat)size {
-	self = [super initWithString:@"0" fontName:name fontSize:size];
+  self = [super initWithString:@"0" fontName:name fontSize:size];
   if(self) {
     [self setup];
   }
-	return self;
+  return self;
 }
 
 - (id)initWithSecond:(NSTimeInterval)second fontName:(NSString *)name fontSize:(CGFloat)size {

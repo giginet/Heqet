@@ -13,13 +13,13 @@
 #import <Foundation/Foundation.h>
 
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
-#import <CoreGraphics/CGGeometry.h>	// for CGPoint
+#import <CoreGraphics/CGGeometry.h>  // for CGPoint
 #endif
 
 
 #ifdef __cplusplus
 extern "C" {
-#endif	
+#endif  
   
   void ccFillPoly( const CGPoint *vertices, NSUInteger numOfVertices, BOOL closePolygon );
   void ccFillCircle( CGPoint center, float radius, float angle, NSUInteger segments, BOOL drawLineToCenter);

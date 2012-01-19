@@ -66,18 +66,18 @@
 }
 
 - (bool)playBg:(NSString*) filePath
-         volume:(float) volume
-            pan:(float) pan
-           loop:(bool) loop
+        volume:(float) volume
+           pan:(float) pan
+          loop:(bool) loop
 {
   isIntro_ = NO;
-	loopPath_ = nil;
+  loopPath_ = nil;
   introPath_ = nil;
   return [super playBg:filePath volume:volume pan:pan loop:loop];
 }
 
 - (bool) playBg {
-	return [self playBgWithLoop:YES];
+  return [self playBgWithLoop:YES];
 }
 
 - (void)stopBg {

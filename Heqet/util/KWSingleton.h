@@ -7,7 +7,7 @@
 //
 // ref: http://journal.mycom.co.jp/column/objc/050/index.html
 // Usage: 
-//		SubSingleton* instance = [SubSingleton instance];
+// SubSingleton* instance = [SubSingleton instance];
 
 #import <Foundation/Foundation.h>
 

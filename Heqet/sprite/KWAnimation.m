@@ -28,10 +28,10 @@
 + (id)spriteWithFiles:(NSArray *)files delay:(float)delay {
   NSMutableArray* sprites = [NSMutableArray arrayWithCapacity:[files count]];
   for(NSString* file in files) {
-		CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:file];
+    CCTexture2D* texture = [[CCTextureCache sharedTextureCache] addImage:file];
     [sprites addObject:texture];
-	}
-	return [KWAnimation spriteWithArray:sprites delay:delay];
+  }
+  return [KWAnimation spriteWithArray:sprites delay:delay];
 }
 
 + (id)spriteWithTextureAtlas:(CCTexture2D *)texture size:(CGSize)size delay:(float)delay {

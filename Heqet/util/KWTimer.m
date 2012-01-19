@@ -30,49 +30,49 @@
 }
 
 - (id)init{
-	self = [super init];
+  self = [super init];
   if(self) {
     max_ = 0;
     now_ = 0;
     looping_ = NO;
     active_ = NO;
   }
-	return self;
+  return self;
 }
 
 - (id)initWithMax:(int)max{
-	self = [self init];
-	if(self) {
+  self = [self init];
+  if(self) {
     [self set:max];
   }
-	return self;
+  return self;
 }
 
 - (id)play{
-	active_ = YES;
+  active_ = YES;
   int fps = [[KKStartupConfig config] maxFrameRate];
   [[CCScheduler sharedScheduler] scheduleSelector:@selector(tick:) 
                                         forTarget:self 
                                          interval:1.0/fps 
                                            paused:NO];
-	return self;
+  return self;
 }
 
 - (id)stop{
-	[self pause];
-	[self reset];
-	return self;
+  [self pause];
+  [self reset];
+  return self;
 }
 
 - (id)pause{
   active_ = NO;
-	[[CCScheduler sharedScheduler] unscheduleSelector:@selector(tick:) forTarget:self];
+  [[CCScheduler sharedScheduler] unscheduleSelector:@selector(tick:) forTarget:self];
   return self;
 }
 
 - (id)reset{
-	now_ = max_;
-	return self;
+  now_ = max_;
+  return self;
 }
 
 - (id)move:(int)n{
@@ -86,7 +86,7 @@
 }
 
 - (BOOL)isOver{
-	return now_ <= 0;
+  return now_ <= 0;
 }
 
 - (id)setOnCompleteListener:(id)listener selector:(SEL)selector {
@@ -125,12 +125,12 @@
 }
 
 - (void)tick:(ccTime)dt{
-	if([self isOver]) return;
+  if([self isOver]) return;
   now_ -= dt;
   [self onUpdate:dt];
   if([self isOver]){
     [self onComplete];
-	}
+  }
 }
 
 - (void)onUpdate:(ccTime)dt{

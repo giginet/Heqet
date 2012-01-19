@@ -10,7 +10,7 @@
 
 @interface KWTimer : NSObject {
 @private
-	BOOL looping_;
+  BOOL looping_;
   BOOL active_;
   ccTime now_;
   ccTime max_;
