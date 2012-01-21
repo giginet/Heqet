@@ -8,9 +8,9 @@
 #import "heqet.h"
 
 @interface HelloWorldLayer : KWLayer {
-	NSString* helloWorldString;
-	NSString* helloWorldFontName;
-	int helloWorldFontSize;
+  NSString* helloWorldString;
+  NSString* helloWorldFontName;
+  int helloWorldFontSize;
 }
 
 @property (nonatomic, copy) NSString* helloWorldString;

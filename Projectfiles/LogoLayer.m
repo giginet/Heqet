@@ -16,7 +16,7 @@
 @synthesize nextScene=nextScene_;
 
 -(id)init {
-	self.backgroundColor = ccc4(255, 255, 255, 255);
+  self.backgroundColor = ccc4(255, 255, 255, 255);
   if( (self = [super init]) ) {
     self.nextScene = nil;
     CCDirector* director = [CCDirector sharedDirector];
@@ -34,7 +34,7 @@
     self.isTouchEnabled = YES;
     self.nextScene = [HelloWorldLayer nodeWithScene];
   }
-	return self;
+  return self;
 }
 
 -(void) registerWithTouchDispatcher{

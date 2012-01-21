@@ -34,3 +34,4 @@
 #import "KWTimerLabel.h"
 #import "KWPieChart.h"
 #import "KWGauge.h"
+#import "KWScrollLayer.h"

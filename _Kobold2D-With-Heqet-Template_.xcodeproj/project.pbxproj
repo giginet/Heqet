@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0707D6FD14CB41C800A29F4C /* game_bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0707D6FB14CB41C700A29F4C /* game_bg-hd.png */; };
+		0707D6FE14CB41C800A29F4C /* game_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0707D6FC14CB41C700A29F4C /* game_bg.png */; };
 		075A497714BD81BB0047AAD2 /* KWMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A497614BD81BB0047AAD2 /* KWMusicManager.m */; };
-		075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498114BDE58B0047AAD2 /* KWPieChart.m */; };
 		075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */; };
-		075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 075A498814BEB9B30047AAD2 /* KWGauge.m */; };
 		07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F6D14B23C4B00C6FC96 /* LogoLayer.m */; };
 		07831F7114B23C7D00C6FC96 /* kawaz-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */; };
 		07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */ = {isa = PBXBuildFile; fileRef = 07831F7014B23C7D00C6FC96 /* kawaz.png */; };
-		07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7914B23CC400C6FC96 /* KWTimerLabel.m */; };
 		07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F7E14B23CC400C6FC96 /* KWLayer.m */; };
 		07831F9414B23CC400C6FC96 /* KWState.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8014B23CC400C6FC96 /* KWState.m */; };
 		07831F9514B23CC400C6FC96 /* KWStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8214B23CC400C6FC96 /* KWStateManager.m */; };
@@ -24,6 +23,10 @@
 		07831F9A14B23CC400C6FC96 /* KWVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F8E14B23CC400C6FC96 /* KWVector.m */; };
 		07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9014B23CC400C6FC96 /* NSArrayExtension.m */; };
 		07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */; };
+		07D643FE14CB2DC900B0910C /* KWScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D643FD14CB2DC900B0910C /* KWScrollLayer.m */; };
+		07D6440714CB2E7B00B0910C /* KWGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6440214CB2E7B00B0910C /* KWGauge.m */; };
+		07D6440814CB2E7B00B0910C /* KWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6440414CB2E7B00B0910C /* KWPieChart.m */; };
+		07D6440914CB2E7B00B0910C /* KWTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D6440614CB2E7B00B0910C /* KWTimerLabel.m */; };
 		07EC8A5714C22F9700C388AD /* KWUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EC8A5614C22F9700C388AD /* KWUtility.m */; };
 		07EC8A5B14C2458F00C388AD /* hurry_int.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5914C2458F00C388AD /* hurry_int.caf */; };
 		07EC8A5C14C2458F00C388AD /* hurry.caf in Resources */ = {isa = PBXBuildFile; fileRef = 07EC8A5A14C2458F00C388AD /* hurry.caf */; };
@@ -67,20 +70,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0707D6FB14CB41C700A29F4C /* game_bg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game_bg-hd.png"; sourceTree = "<group>"; };
+		0707D6FC14CB41C700A29F4C /* game_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_bg.png; sourceTree = "<group>"; };
 		075A497514BD81BB0047AAD2 /* KWMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMusicManager.h; sourceTree = "<group>"; };
 		075A497614BD81BB0047AAD2 /* KWMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMusicManager.m; sourceTree = "<group>"; };
-		075A498014BDE58B0047AAD2 /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
-		075A498114BDE58B0047AAD2 /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
 		075A498314BEB3690047AAD2 /* KWDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWDrawingPrimitives.h; sourceTree = "<group>"; };
 		075A498414BEB36A0047AAD2 /* KWDrawingPrimitives.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWDrawingPrimitives.m; sourceTree = "<group>"; };
-		075A498714BEB9B30047AAD2 /* KWGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGauge.h; sourceTree = "<group>"; };
-		075A498814BEB9B30047AAD2 /* KWGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGauge.m; sourceTree = "<group>"; };
 		07831F6C14B23C4B00C6FC96 /* LogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoLayer.h; sourceTree = "<group>"; };
 		07831F6D14B23C4B00C6FC96 /* LogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoLayer.m; sourceTree = "<group>"; };
 		07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kawaz-hd.png"; sourceTree = "<group>"; };
 		07831F7014B23C7D00C6FC96 /* kawaz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kawaz.png; sourceTree = "<group>"; };
-		07831F7814B23CC400C6FC96 /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimerLabel.h; sourceTree = "<group>"; };
-		07831F7914B23CC400C6FC96 /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimerLabel.m; sourceTree = "<group>"; };
 		07831F7A14B23CC400C6FC96 /* heqet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = heqet.h; sourceTree = "<group>"; };
 		07831F7D14B23CC400C6FC96 /* KWLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLayer.h; sourceTree = "<group>"; };
 		07831F7E14B23CC400C6FC96 /* KWLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLayer.m; sourceTree = "<group>"; };
@@ -100,6 +99,14 @@
 		07831F9014B23CC400C6FC96 /* NSArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtension.m; sourceTree = "<group>"; };
 		07831F9C14B2428D00C6FC96 /* CCSpriteExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSpriteExtension.h; sourceTree = "<group>"; };
 		07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSpriteExtension.m; sourceTree = "<group>"; };
+		07D643FC14CB2DC900B0910C /* KWScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWScrollLayer.h; sourceTree = "<group>"; };
+		07D643FD14CB2DC900B0910C /* KWScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWScrollLayer.m; sourceTree = "<group>"; };
+		07D6440114CB2E7B00B0910C /* KWGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGauge.h; sourceTree = "<group>"; };
+		07D6440214CB2E7B00B0910C /* KWGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGauge.m; sourceTree = "<group>"; };
+		07D6440314CB2E7B00B0910C /* KWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPieChart.h; sourceTree = "<group>"; };
+		07D6440414CB2E7B00B0910C /* KWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPieChart.m; sourceTree = "<group>"; };
+		07D6440514CB2E7B00B0910C /* KWTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimerLabel.h; sourceTree = "<group>"; };
+		07D6440614CB2E7B00B0910C /* KWTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimerLabel.m; sourceTree = "<group>"; };
 		07EC8A5514C22F9700C388AD /* KWUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWUtility.h; sourceTree = "<group>"; };
 		07EC8A5614C22F9700C388AD /* KWUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWUtility.m; sourceTree = "<group>"; };
 		07EC8A5914C2458F00C388AD /* hurry_int.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hurry_int.caf; sourceTree = "<group>"; };
@@ -186,7 +193,6 @@
 				07F20B7E14C4EB59003D6237 /* libs */,
 				07831F7A14B23CC400C6FC96 /* heqet.h */,
 				07831F7414B23CC400C6FC96 /* audio */,
-				07831F7714B23CC400C6FC96 /* contrib */,
 				07831F7B14B23CC400C6FC96 /* resources */,
 				07831F7C14B23CC400C6FC96 /* scene */,
 				07831F8314B23CC400C6FC96 /* sprite */,
@@ -202,19 +208,6 @@
 				075A497614BD81BB0047AAD2 /* KWMusicManager.m */,
 			);
 			path = audio;
-			sourceTree = "<group>";
-		};
-		07831F7714B23CC400C6FC96 /* contrib */ = {
-			isa = PBXGroup;
-			children = (
-				07831F7814B23CC400C6FC96 /* KWTimerLabel.h */,
-				07831F7914B23CC400C6FC96 /* KWTimerLabel.m */,
-				075A498014BDE58B0047AAD2 /* KWPieChart.h */,
-				075A498114BDE58B0047AAD2 /* KWPieChart.m */,
-				075A498714BEB9B30047AAD2 /* KWGauge.h */,
-				075A498814BEB9B30047AAD2 /* KWGauge.m */,
-			);
-			path = contrib;
 			sourceTree = "<group>";
 		};
 		07831F7B14B23CC400C6FC96 /* resources */ = {
@@ -240,10 +233,18 @@
 		07831F8314B23CC400C6FC96 /* sprite */ = {
 			isa = PBXGroup;
 			children = (
+				07D6440114CB2E7B00B0910C /* KWGauge.h */,
+				07D6440214CB2E7B00B0910C /* KWGauge.m */,
+				07D6440314CB2E7B00B0910C /* KWPieChart.h */,
+				07D6440414CB2E7B00B0910C /* KWPieChart.m */,
+				07D6440514CB2E7B00B0910C /* KWTimerLabel.h */,
+				07D6440614CB2E7B00B0910C /* KWTimerLabel.m */,
 				07831F9C14B2428D00C6FC96 /* CCSpriteExtension.h */,
 				07831F9D14B2428D00C6FC96 /* CCSpriteExtension.m */,
 				07831F8414B23CC400C6FC96 /* KWAnimation.h */,
 				07831F8514B23CC400C6FC96 /* KWAnimation.m */,
+				07D643FC14CB2DC900B0910C /* KWScrollLayer.h */,
+				07D643FD14CB2DC900B0910C /* KWScrollLayer.m */,
 			);
 			path = sprite;
 			sourceTree = "<group>";
@@ -358,6 +359,8 @@
 		DCC1A39413A94F1A005BD75D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0707D6FC14CB41C700A29F4C /* game_bg.png */,
+				0707D6FB14CB41C700A29F4C /* game_bg-hd.png */,
 				07EC8A5914C2458F00C388AD /* hurry_int.caf */,
 				07EC8A5A14C2458F00C388AD /* hurry.caf */,
 				07831F6F14B23C7D00C6FC96 /* kawaz-hd.png */,
@@ -468,6 +471,8 @@
 				07831F7214B23C7D00C6FC96 /* kawaz.png in Resources */,
 				07EC8A5B14C2458F00C388AD /* hurry_int.caf in Resources */,
 				07EC8A5C14C2458F00C388AD /* hurry.caf in Resources */,
+				0707D6FD14CB41C800A29F4C /* game_bg-hd.png in Resources */,
+				0707D6FE14CB41C800A29F4C /* game_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +487,6 @@
 				DCC1A3AB13A94F1A005BD75D /* HelloWorldLayer.m in Sources */,
 				DCC1A3AD13A94F1A005BD75D /* main.m in Sources */,
 				07831F6E14B23C4B00C6FC96 /* LogoLayer.m in Sources */,
-				07831F9214B23CC400C6FC96 /* KWTimerLabel.m in Sources */,
 				07831F9314B23CC400C6FC96 /* KWLayer.m in Sources */,
 				07831F9414B23CC400C6FC96 /* KWState.m in Sources */,
 				07831F9514B23CC400C6FC96 /* KWStateManager.m in Sources */,
@@ -493,12 +497,14 @@
 				07831F9B14B23CC400C6FC96 /* NSArrayExtension.m in Sources */,
 				07831F9E14B2428D00C6FC96 /* CCSpriteExtension.m in Sources */,
 				075A497714BD81BB0047AAD2 /* KWMusicManager.m in Sources */,
-				075A498214BDE58B0047AAD2 /* KWPieChart.m in Sources */,
 				075A498514BEB36A0047AAD2 /* KWDrawingPrimitives.m in Sources */,
-				075A498914BEB9B30047AAD2 /* KWGauge.m in Sources */,
 				07EC8A5714C22F9700C388AD /* KWUtility.m in Sources */,
 				07F20B8114C4EB59003D6237 /* tinymt32.c in Sources */,
 				07F20B8414C4EC07003D6237 /* KWRandom.m in Sources */,
+				07D643FE14CB2DC900B0910C /* KWScrollLayer.m in Sources */,
+				07D6440714CB2E7B00B0910C /* KWGauge.m in Sources */,
+				07D6440814CB2E7B00B0910C /* KWPieChart.m in Sources */,
+				07D6440914CB2E7B00B0910C /* KWTimerLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
