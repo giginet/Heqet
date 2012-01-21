@@ -10,14 +10,15 @@
 
 #import "KWVector.h"
 
-@interface KWScrollLayer : CCSprite {
+@interface KWScrollLayer : CCLayer {
   CGPoint current_;
   KWVector* velocity_;
-  CCTexture2D* background_;
+  CCTexture2D* original_;
+  NSMutableArray* backgrounds_;
 }
 
 @property(readwrite, strong) KWVector* velocity;
-@property(readwrite, strong) CCTexture2D* background;
+@property(readwrite, strong) CCTexture2D* original;
 
 + (id)layerWithFile:(NSString*)file;
 + (id)layerWithTexture:(CCTexture2D*)texture;
