@@ -21,6 +21,9 @@
     CCLOG(@"%@ init", NSStringFromClass([self class]));
     
     CCDirector* director = [CCDirector sharedDirector];
+    KWScrollLayer* bg = [KWScrollLayer layerWithFile:@"game_bg.png"];
+    [self addChild:bg];
+    bg.velocity.x = -2.0;
     
     CCSprite* sprite = [CCSprite spriteWithFile:@"ship.png"];
     sprite.position = director.screenCenter;
@@ -81,9 +84,6 @@
     id movePlatform = [CCMoveBy actionWithDuration:0.2f 
                                           position:CGPointMake(0, 50)];
     [platformLabel runAction:movePlatform];
-    KWScrollLayer* bg = [KWScrollLayer layerWithFile:@"game_bg.png"];
-    [self addChild:bg];
-    bg.velocity.x = 2.0;
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
   }
   return self;
