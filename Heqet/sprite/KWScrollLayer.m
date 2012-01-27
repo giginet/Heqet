@@ -12,7 +12,7 @@
 
 @interface KWScrollLayer()
 - (void)scrollBackground:(ccTime)dt;
-- (CCTexture2D*)generateTexture:(CCTexture2D*)texture;
+- (CCSpriteBatchNode*)generateSprites:(CCTexture2D*)texture;
 @end
 
 @implementation KWScrollLayer
@@ -30,6 +30,8 @@
 - (id)init {
   self = [super init];
   if (self) {
+    row_ = 1;
+    col_ = 1;
     self.velocity = [KWVector vector];
     backgrounds_ = [NSMutableArray array];
     int fps = [[KKStartupConfig config] maxFrameRate];
@@ -47,42 +49,74 @@
 - (id)initWithTexture:(CCTexture2D *)texture {
   self = [self init];
   if (self) {
-    [backgrounds_ addObject:[CCSprite spriteWithTexture:texture]];
-    [backgrounds_ addObject:[CCSprite spriteWithTexture:texture]];
-    [self addChild:[backgrounds_ objectAtIndex:0]];
-    [self addChild:[backgrounds_ objectAtIndex:1]];
+    CCSpriteBatchNode* batch = [self generateSprites:texture];
+    [self addChild:batch];
   }
   return self;
 }
 
 - (void)scrollBackground:(ccTime)dt {
-  CGSize screenSize = [[CCDirector sharedDirector] screenSizeInPixels];
-  current_.x = (int)((current_.x - velocity_.x)) % (int)screenSize.width;
-  for(int i = 0; i < 2; ++i) {
-    CCSprite* sprite = [backgrounds_ objectAtIndex:i];
-    sprite.position = CGPointMake(screenSize.width / 2 + screenSize.width * i - current_.x - 1, screenSize.height / 2);
+  CGSize screenSize = [[CCDirector sharedDirector] screenSize];
+  current_.x = current_.x + velocity_.x;
+  if (current_.x > screenSize.width) {
+    current_.x = current_.x - screenSize.width;
+  } else if(current_.x < -screenSize.width) {
+    current_.x = screenSize.width + current_.x;
   }
-  NSLog(@"%f", screenSize.width / 2 + screenSize.width * 0 - current_.x);
-}
-
-- (CCTexture2D*)generateTexture:(CCTexture2D *)texture {
-  CGSize original = texture.contentSizeInPixels;
-  CGSize screenSize = [[CCDirector sharedDirector] screenSizeInPixels];
-  int col = ceil(screenSize.width / original.width);
-  int row = ceil(screenSize.height / original.height);
-  CCRenderTexture* rt = [CCRenderTexture renderTextureWithWidth:col * original.width
-                                                         height:row * original.height];
-  [rt begin];
-  for(int x = 0; x <= col; ++x) {
-    for(int y = 0; y <= row; ++y) {
-      [texture drawInRect:CGRectMake(original.width * x, 
-                                     original.height * y,
-                                     original.width,
-                                     original.height)];
+  
+  current_.y = current_.y - velocity_.y;
+  if (current_.y > screenSize.height) {
+    current_.y = current_.y + screenSize.height;
+  } else if(current_.y < -screenSize.height) {
+    current_.y = screenSize.height + current_.y;
+  }
+  
+  int x = 0 > velocity_.x ? 1 : -1;
+  int y = 0 > velocity_.y ? 1 : -1;
+  
+  for (CCSprite* background in backgrounds_) {
+    background.position = ccpAdd(background.position, self.velocity.point);
+    if (abs(background.position.x) > screenSize.width) {
+      background.position = ccp(background.position.x + x * (background.textureRect.size.width * col_ - 1), 
+                                background.position.y);
+    }
+    if (abs(background.position.y) > screenSize.height) {
+      background.position = ccp(background.position.x,
+                                background.position.y + y * (background.textureRect.size.height * row_ - 1));
     }
   }
-  [rt end];
-  return  rt.sprite.texture;
+}
+
+- (CCSpriteBatchNode*)generateSprites:(CCTexture2D *)texture {
+  original_ = texture;
+  CGSize original = texture.contentSize;
+  CGSize screenSize = [[CCDirector sharedDirector] screenSize];
+  col_ = ceil(screenSize.width / original.width) + 1;
+  row_ = ceil(screenSize.height / original.height) + 1;
+  CCSpriteBatchNode* batch = [CCSpriteBatchNode batchNodeWithTexture:texture];
+  for(int x = 0; x < col_; ++x) {
+    for(int y = 0; y < row_; ++y) {
+      CCSprite* sprite = [CCSprite spriteWithTexture:texture];
+      [backgrounds_ addObject:sprite];
+      sprite.anchorPoint = ccp(0, 0);
+      sprite.position = ccp(original.width * x, 
+                            original.height * y);
+      [batch addChild:sprite];
+    }
+  }
+  return batch;
+}
+
+- (KWVector*)velocity {
+  return velocity_;
+}
+
+- (void)setVelocity:(KWVector *)velocity {
+  CGSize size = original_.contentSize;
+  int x = MIN(MAX(velocity.x, -size.width), size.width);
+  int y = MIN(MAX(velocity.y, -size.height), size.height);
+  velocity_ = velocity;
+  [velocity_ set:CGPointMake(x, y)];
 }
 
 @end

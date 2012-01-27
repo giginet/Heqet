@@ -11,6 +11,8 @@
 #import "KWVector.h"
 
 @interface KWScrollLayer : CCLayer {
+  int row_;
+  int col_;
   CGPoint current_;
   KWVector* velocity_;
   CCTexture2D* original_;

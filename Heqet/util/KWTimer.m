@@ -121,11 +121,11 @@
 }
 
 - (void)rotate {
-  now_ = (int)(self.now + self.max) % (int)self.max;
+  now_ = MAX(self.now + self.max, self.max);
 }
 
 - (void)tick:(ccTime)dt{
-  if([self isOver]) return;
+  if([self isOver] && !looping_) return;
   now_ -= dt;
   [self onUpdate:dt];
   if([self isOver]){

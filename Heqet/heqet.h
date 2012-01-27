@@ -28,7 +28,7 @@
 #import "KWState.h"
 #import "KWStateManager.h"
 #import "CCSpriteExtension.h"
-#import "KWAnimation.h"
+#import "CCAnimationExtension.h"
 #import "KWMusicManager.h"
 
 #import "KWTimerLabel.h"

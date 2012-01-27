@@ -8,7 +8,7 @@
 
 #import "KWState.h"
 
-@interface KWStateManager : NSObject{
+@interface KWStateManager : NSObject {
   NSMutableArray* stateStack_;
   __weak KWState* runningState_;
 }
