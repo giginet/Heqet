@@ -62,7 +62,6 @@
     CCSprite* sprite = [backgrounds_ objectAtIndex:i];
     sprite.position = CGPointMake(screenSize.width / 2 + screenSize.width * i - current_.x - 1, screenSize.height / 2);
   }
-  NSLog(@"%f", screenSize.width / 2 + screenSize.width * 0 - current_.x);
 }
 
 - (CCTexture2D*)generateTexture:(CCTexture2D *)texture {
