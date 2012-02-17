@@ -17,6 +17,8 @@
 @property(readwrite) double x;
 @property(readwrite) double y;
 
++ (id)spriteWithAnimation:(CCAnimation*)animation;
+
 - (BOOL)collideWithPoint:(CGPoint)point;
 - (BOOL)collideWithSprite:(CCSprite*)sprite;
 

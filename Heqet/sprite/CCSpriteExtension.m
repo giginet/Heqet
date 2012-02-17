@@ -20,6 +20,14 @@
 @dynamic x;
 @dynamic y;
 
++ (id)spriteWithAnimation:(CCAnimation *)animation {
+  NSArray* frames = animation.frames;
+  CCSprite* sprite = [[self class] spriteWithSpriteFrame:[frames objectAtIndex:0]];
+  CCAnimate* animate = [CCAnimate actionWithAnimation:animation restoreOriginalFrame:YES];
+  [sprite runAction:[CCRepeatForever actionWithAction:animate]];
+  return sprite;
+}
+
 - (BOOL)collideWithPoint:(CGPoint)point{
   return CGRectContainsPoint(self.absoluteHitBox, point);
 }
