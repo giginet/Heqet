@@ -28,10 +28,11 @@
 #import "KWState.h"
 #import "KWStateManager.h"
 #import "CCSpriteExtension.h"
-#import "CCAnimationExtension.h"
+#import "KWAnimation.h"
 #import "KWMusicManager.h"
 
 #import "KWTimerLabel.h"
 #import "KWPieChart.h"
 #import "KWGauge.h"
 #import "KWScrollLayer.h"
+#import "KWShadowLabelTTF.h"

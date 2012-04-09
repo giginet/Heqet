@@ -13,7 +13,7 @@
 @end
 
 @implementation KWStateManager
-@synthesize runningState = runningState_;
+@synthesize runningState=runningState_;
 
 - (id)init{
   self = [super init];

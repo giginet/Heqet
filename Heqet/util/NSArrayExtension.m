@@ -17,7 +17,7 @@
   return [self objectAtIndex:index];
 }
 
-- (NSArray *)mapUsingBlock:(id (^)(id, NSUInteger))__block block {
+- (NSArray *)mapUsingBlock:(id (^)(id, NSUInteger)) block {
   NSMutableArray* newArray = [NSMutableArray array];
   [self enumerateObjectsUsingBlock:^(id item, NSUInteger idx, BOOL *stop){
     id obj = block(item, idx);

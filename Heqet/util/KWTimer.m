@@ -136,10 +136,10 @@
 - (void)onUpdate:(ccTime)dt{
   if (updateListener_ && updateSelector_) {
     // http://stackoverflow.com/questions/8773226/performselector-warning
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [updateListener_ performSelector:updateSelector_ withObject:self];
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
   }
   if (updateBlock_) {
     updateBlock_(self, dt);
@@ -151,10 +151,10 @@
     [self rotate];
   }
   if (completeListener_ && completeSelector_) {
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [completeListener_ performSelector:completeSelector_ withObject:self];
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
   }
   if (completeBlock_) {
     completeBlock_(self);

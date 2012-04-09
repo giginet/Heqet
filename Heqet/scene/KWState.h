@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCLayer.h"
 
-@interface KWState : CCLayer {
+@interface KWState : NSObject{
 }
 
 + (id)state;
