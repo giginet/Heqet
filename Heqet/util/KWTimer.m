@@ -25,7 +25,7 @@
   return [[KWTimer alloc] init];
 }
 
-+ (KWTimer*)timerWithMax:(int)max{
++ (KWTimer*)timerWithMax:(float)max{
   return [[KWTimer alloc] initWithMax:max];
 }
 
@@ -40,7 +40,7 @@
   return self;
 }
 
-- (id)initWithMax:(int)max{
+- (id)initWithMax:(float)max{
   self = [self init];
   if(self) {
     [self set:max];

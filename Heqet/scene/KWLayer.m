@@ -19,7 +19,7 @@
                                               width:winSize.width
                                              height:winSize.height];
     [self addChild:bg];
-    [self schedule:@selector(update:)];
+    [self scheduleUpdate];
   }
   return self;
 }

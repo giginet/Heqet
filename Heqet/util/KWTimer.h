@@ -28,10 +28,10 @@
 @property(readonly) ccTime now;
 
 + (KWTimer*)timer;
-+ (KWTimer*)timerWithMax:(int)max;
++ (KWTimer*)timerWithMax:(float)max;
 
 - (id)init;
-- (id)initWithMax:(int)max;
+- (id)initWithMax:(float)max;
 
 - (id)play;
 - (id)stop;
