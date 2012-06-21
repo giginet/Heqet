@@ -19,6 +19,7 @@
 
 + (KWVector*)vector;
 + (KWVector*)vectorWithPoint:(CGPoint)point;
++ (KWVector*)vectorAtRandom;
 
 - (id)init;
 - (id)initWithPoint:(CGPoint)point;

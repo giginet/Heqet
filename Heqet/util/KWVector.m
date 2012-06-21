@@ -7,6 +7,7 @@
 //
 
 #import "KWVector.h"
+#import "KWRandom.h"
 
 @implementation KWVector
 
@@ -22,6 +23,14 @@
 
 + (KWVector*)vectorWithPoint:(CGPoint)point{
   return [[KWVector alloc] initWithPoint:point];
+}
+
++ (KWVector*)vectorAtRandom {
+  KWRandom* random = [KWRandom random];
+  float x = [random nextFloat];
+  float y = [random nextFloat];
+  KWVector* v = [KWVector vectorWithPoint:ccp(x, y)];
+  return [v normalize];
 }
 
 - (id)init{
