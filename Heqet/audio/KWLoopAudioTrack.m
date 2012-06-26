@@ -39,7 +39,7 @@
 }
 
 - (OALAudioTrack*)track {
-  return introTrack.playing ? introTrack : loopTrack;
+  return intro ? introTrack : loopTrack;
 }
 
 - (bool)play {
