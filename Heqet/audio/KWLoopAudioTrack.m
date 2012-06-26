@@ -26,6 +26,7 @@
     [introTrack preloadFile:introFile];
     loopTrack = [OALAudioTrack track];
     [loopTrack preloadFile:loopFile];
+    loopTrack.numberOfLoops = -1;
     introTrack.delegate = self;
     intro = YES;
   }
@@ -38,7 +39,7 @@
 }
 
 - (OALAudioTrack*)track {
-  return intro ? introTrack : loopTrack;
+  return introTrack.playing ? introTrack : loopTrack;
 }
 
 - (bool)play {
