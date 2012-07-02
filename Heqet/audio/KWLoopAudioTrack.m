@@ -27,7 +27,6 @@
     loopTrack = [OALAudioTrack track];
     [loopTrack preloadFile:loopFile];
     loopTrack.numberOfLoops = -1;
-    introTrack.delegate = self;
     intro = YES;
   }
   return self;
@@ -43,6 +42,9 @@
 }
 
 - (bool)play {
+  if (intro) {
+    [loopTrack playAfterTrack:introTrack timeAdjust:0.1];
+  }
   return [self.track play];
 }
 
