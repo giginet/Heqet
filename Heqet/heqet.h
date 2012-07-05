@@ -36,3 +36,4 @@
 #import "KWGauge.h"
 #import "KWScrollLayer.h"
 #import "KWShadowLabelTTF.h"
+#import "CCSuicide.h"
