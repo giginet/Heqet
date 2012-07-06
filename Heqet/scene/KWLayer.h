@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "kobold2d.h"
 
 @interface KWLayer : CCLayer {
  @private
