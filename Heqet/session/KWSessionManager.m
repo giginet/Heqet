@@ -9,6 +9,7 @@
 #import "KWSessionManager.h"
 
 @implementation KWSessionManager
+@synthesize session = _session;
 
 const NSTimeInterval kDefaultConnectionTimeoutInterval = 5.0f;
 const NSTimeInterval kDefaultDisconnectionTimeoutInterval = 5.0f;
@@ -92,6 +93,15 @@ const NSTimeInterval kDefaultDisconnectionTimeoutInterval = 5.0f;
 
 - (void)setDisconnectionTimeoutInterval:(NSTimeInterval)disconnectionTimeoutInterval {
   _session.disconnectTimeout = disconnectionTimeoutInterval;
+}
+
+- (id<KWSessionDelegate>)delegate {
+  return _delegate;
+}
+
+- (void)setDelegate:(id<KWSessionDelegate>)delegate {
+  _session.delegate = delegate;
+  [_session setDataReceiveHandler:delegate withContext:nil];
 }
 
 @end

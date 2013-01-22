@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KWSessionDelegate.h"
 
 @interface KWSessionManager : NSObject {
-  GKSession* _session;
   BOOL _initialize;
+  id<KWSessionDelegate> _delegate;
 }
 
 + (id)sharedManager;
@@ -30,5 +31,6 @@
 @property(readonly, strong) NSArray* availablePeers;
 @property(readonly, strong) NSArray* connectedPeers;
 @property(readonly, strong) GKSession* session;
+@property(readwrite, weak) id<KWSessionDelegate> delegate;
 
 @end
