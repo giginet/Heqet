@@ -27,7 +27,6 @@
 #import "KWLayer.h"
 #import "KWState.h"
 #import "KWStateManager.h"
-#import "CCSpriteExtension.h"
 #import "KWAnimation.h"
 #import "KWMusicManager.h"
 

@@ -61,6 +61,10 @@ const NSTimeInterval kDefaultDisconnectionTimeoutInterval = 5.0f;
   [_session disconnectPeerFromAllPeers:peerID];
 }
 
+- (void)acceptConnectionFromPeer:(NSString *)peerID {
+  [_session acceptConnectionFromPeer:peerID error:nil];
+}
+
 - (NSError*)sendDataToPeer:(NSData *)data to:(NSString *)peerID mode:(GKSendDataMode)mode {
   NSError* err = nil;
   [_session sendData:data toPeers:[NSArray arrayWithObject:peerID] withDataMode:mode error:&err];

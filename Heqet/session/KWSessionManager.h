@@ -20,6 +20,7 @@
 - (void)disable;
 - (void)connectToPeer:(NSString*)peerID;
 - (void)disconnectFromPeer:(NSString*)peerID;
+- (void)acceptConnectionFromPeer:(NSString*)peerID;
 - (NSError*)sendDataToPeer:(NSData*)data to:(NSString*)peerID mode:(GKSendDataMode)mode;
 - (NSError*)broadCastData:(NSData*)data mode:(GKSendDataMode)mode;
 - (NSError*)sendStringToPeer:(NSString*)string to:(NSString*)peerID mode:(GKSendDataMode)mode;
