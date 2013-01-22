@@ -1,0 +1,3 @@
+[submodule "Heqet/libs/extensions"]
+	path = Heqet/libs/extensions
+	url = git://github.com/cocos2d/cocos2d-iphone-extensions.git
