@@ -6,8 +6,15 @@
 //
 //
 
-#import "KWLayer.h"
+#import "KWLogoLayer.h"
+#import "CCVideoPlayer.h"
 
-@interface KWMovieLogoLayer : KWLayer
+/*
+ Kawazサウンドロゴを組み込んだロゴテンプレートです
+ 別途、cocos2d-extentionsのCCVideoPlayerの導入が必要です。
+ */
+@interface KWMovieLogoLayer : KWLogoLayer <CCVideoPlayerDelegate> {
+  CCVideoPlayer* _player;
+}
 
 @end

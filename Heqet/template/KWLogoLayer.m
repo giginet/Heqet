@@ -9,37 +9,37 @@
 #import "kobold2d.h"
 #import "KWLogoLayer.h"
 
-@interface KWLogoLayer()
-- (void)goToNext;
-@end
-
 @implementation KWLogoLayer
 @synthesize nextLayerClass;
 
 - (id)initWithNext:(Class)next {
   self.backgroundColor = ccc4(255, 255, 255, 255);
   if( (self = [super init]) ) {
-    CCDirector* director = [CCDirector sharedDirector];
-    NSString* logoFile = @"kawaz.png";
-    if (director.currentDeviceIsIPad) logoFile = @"kawaz-ipad.png";
-    CCSprite* logo = [CCSprite spriteWithFile:logoFile];
-    logo.position = director.screenCenter;
-    logo.opacity = 0;
-    id fadeIn = [CCFadeIn actionWithDuration:2];
-    id wait = [CCDelayTime actionWithDuration:2];
-    id fadeOut = [CCFadeOut actionWithDuration:2];
-    id toNext = [CCCallFunc actionWithTarget:self 
-                                    selector:@selector(goToNext)];
-    CCSequence* seq = [CCSequence actions:fadeIn, wait, fadeOut, toNext, nil];
-    [logo runAction:seq];
-    [self addChild:logo];
+    [self buildLogo];
     self.isTouchEnabled = YES;
     self.nextLayerClass = next;
   }
   return self;
 }
 
--(void) registerWithTouchDispatcher{
+- (void)buildLogo {
+  CCDirector* director = [CCDirector sharedDirector];
+  NSString* logoFile = @"kawaz.png";
+  if (director.currentDeviceIsIPad) logoFile = @"kawaz-ipad.png";
+  CCSprite* logo = [CCSprite spriteWithFile:logoFile];
+  logo.position = director.screenCenter;
+  logo.opacity = 0;
+  id fadeIn = [CCFadeIn actionWithDuration:2];
+  id wait = [CCDelayTime actionWithDuration:2];
+  id fadeOut = [CCFadeOut actionWithDuration:2];
+  id toNext = [CCCallFunc actionWithTarget:self
+                                  selector:@selector(goToNext)];
+  CCSequence* seq = [CCSequence actions:fadeIn, wait, fadeOut, toNext, nil];
+  [logo runAction:seq];
+  [self addChild:logo];
+}
+
+- (void) registerWithTouchDispatcher{
   [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
                                                    priority:0 
                                             swallowsTouches:YES];

@@ -14,5 +14,7 @@
 @property(readwrite, strong) Class nextLayerClass;
 
 - (id)initWithNext:(Class)next;
+- (void)buildLogo;
+- (void)goToNext;
 
 @end

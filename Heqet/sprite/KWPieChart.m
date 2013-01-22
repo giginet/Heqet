@@ -135,7 +135,6 @@
   [tex end];
   texture_ = tex.sprite.texture;
   self.contentSize = texture_.contentSize;
-  self.contentSizeInPixels = texture_.contentSizeInPixels;
 }
 
 - (void)draw {
