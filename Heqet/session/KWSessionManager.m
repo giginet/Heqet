@@ -41,6 +41,13 @@ const NSTimeInterval kDefaultDisconnectionTimeoutInterval = 5.0f;
   }
 }
 
+- (void)stopSession {
+  if (_initialize) {
+    _session = nil;
+    _initialize = NO;
+  }
+}
+
 - (void)available {
   if (_initialize) {
     _session.available = YES;

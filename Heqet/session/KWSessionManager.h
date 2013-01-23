@@ -16,6 +16,7 @@
 
 + (id)sharedManager;
 - (void)startSession:(NSString*)sessionID sessionMode:(GKSendDataMode)mode;
+- (void)stopSession;
 - (void)available;
 - (void)disable;
 - (void)connectToPeer:(NSString*)peerID;
