@@ -40,9 +40,9 @@
 }
 
 - (void) registerWithTouchDispatcher{
-  [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
-                                                   priority:0 
-                                            swallowsTouches:YES];
+  [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self
+                                                            priority:0
+                                                     swallowsTouches:YES];
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
