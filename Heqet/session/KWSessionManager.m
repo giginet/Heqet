@@ -108,4 +108,12 @@ const NSTimeInterval kDefaultDisconnectionTimeoutInterval = 5.0f;
   [_session setDataReceiveHandler:delegate withContext:nil];
 }
 
+- (NSArray*)connectedPeers {
+  return [_session peersWithConnectionState:GKPeerStateConnected];
+}
+
+- (NSArray*)availablePeers {
+  return [_session peersWithConnectionState:GKPeerStateAvailable];
+}
+
 @end

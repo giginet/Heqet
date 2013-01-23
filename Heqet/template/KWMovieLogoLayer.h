@@ -15,6 +15,7 @@
  */
 @interface KWMovieLogoLayer : KWLogoLayer <CCVideoPlayerDelegate> {
   CCVideoPlayer* _player;
+  BOOL _rotated;
 }
 
 @end
