@@ -9,6 +9,7 @@
 #import "KWTimer.h"
 
 @interface KWTimer()
+- (void)update:(ccTime)dt;
 - (void)rotate;
 - (void)tick:(ccTime)dt;
 - (void)onUpdate:(ccTime)dt;
@@ -50,12 +51,12 @@
 
 - (id)play{
   active_ = YES;
-  int fps = [[KKStartupConfig config] maxFrameRate];
-  [[CCDirector sharedDirector].scheduler scheduleSelector:@selector(tick:)
-                                        forTarget:self 
-                                         interval:1.0/fps 
-                                           paused:NO];
+  [[CCDirector sharedDirector].scheduler scheduleUpdateForTarget:self priority:0 paused:YES];
   return self;
+}
+
+- (void)update:(ccTime)dt {
+  [self tick:dt];
 }
 
 - (id)stop{
