@@ -139,6 +139,11 @@
   return [self copy];
 }
 
+- (KWVector*)lerp:(KWVector*)to t:(float)t {
+  KWVector* sub = [to sub:self];
+  return [self add:[sub scale:t]];
+}
+
 - (CGPoint)point{
   return CGPointMake(self.x, self.y);
 }

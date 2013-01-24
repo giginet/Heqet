@@ -38,5 +38,6 @@
 - (KWVector*)reflect:(KWVector*)normal;
 - (KWVector*)max:(CGFloat)max;
 - (KWVector*)min:(CGFloat)min;
+- (KWVector*)lerp:(KWVector*)to t:(float)t;
 
 @end
