@@ -51,7 +51,7 @@
 - (id)play{
   active_ = YES;
   int fps = [[KKStartupConfig config] maxFrameRate];
-  [[CCScheduler sharedScheduler] scheduleSelector:@selector(tick:) 
+  [[CCDirector sharedDirector].scheduler scheduleSelector:@selector(tick:)
                                         forTarget:self 
                                          interval:1.0/fps 
                                            paused:NO];
@@ -66,7 +66,7 @@
 
 - (id)pause{
   active_ = NO;
-  [[CCScheduler sharedScheduler] unscheduleSelector:@selector(tick:) forTarget:self];
+  [[CCDirector sharedDirector].scheduler unscheduleSelector:@selector(tick:) forTarget:self];
   return self;
 }
 
