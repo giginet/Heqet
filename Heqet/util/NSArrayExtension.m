@@ -7,6 +7,7 @@
 //
 
 #import "NSArrayExtension.h"
+#import "KWRandom.h"
 
 @implementation NSArray (KWNSArrayExtension)
 
@@ -48,17 +49,19 @@
 }
 
 - (NSArray *)shuffle {
+  KWRandom* random = [KWRandom random];
   NSMutableArray* newArray = [NSMutableArray arrayWithArray:self];
   NSUInteger count = [self count];
   for (NSUInteger i = 0; i < count; ++i) {
-    int index = (int)(rand() % count);
+    int index = (int)([random nextInt] % count);
     [newArray exchangeObjectAtIndex:i withObjectAtIndex:index];
   }
   return newArray;
 }
 
 - (id)objectAtRandom {
-  int index = (int)(rand() % [self count]);
+  KWRandom* random = [KWRandom random];
+  int index = (int)([random nextInt] % [self count]);
   return [self objectAtIndex:index];
 }
 
