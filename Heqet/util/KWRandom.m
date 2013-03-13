@@ -13,6 +13,15 @@
 @synthesize seed = seed_;
 @synthesize state = state_;
 
+static KWRandom* defaultRandom_ = nil;
+
++ (id)defaultRandom {
+  if (!defaultRandom_) {
+    defaultRandom_ = [KWRandom random];
+  }
+  return defaultRandom_;
+}
+
 + (id)random {
   return [[[self class] alloc] init];
 }

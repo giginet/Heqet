@@ -16,12 +16,9 @@
 #import "Platforms/CCGL.h"
 #import "CCDrawingPrimitives.h"
 
-static BOOL initialized = NO;
 static CCGLProgram *shader_ = nil;
 static int colorLocation_ = -1;
 static ccColor4F color_ = {1,1,1,1};
-static int pointSizeLocation_ = -1;
-static GLfloat pointSize_ = 1;
 
 void ccFillPoly( const CGPoint *vertices, NSUInteger numOfVertices, BOOL closePolygon ) {
   NSLog(@"Please use CCFillSolidPoly.");
@@ -29,18 +26,7 @@ void ccFillPoly( const CGPoint *vertices, NSUInteger numOfVertices, BOOL closePo
 
 void ccFillCircle( CGPoint center, float r, float a, NSUInteger segs, BOOL drawLineToCenter)
 {
-  if( ! initialized ) {
-    
-    //
-    // Position and 1 color passed as a uniform (to similate glColor4ub )
-    //
-    shader_ = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_Position_uColor];
-    
-    colorLocation_ = glGetUniformLocation( shader_->program_, "u_color");
-    pointSizeLocation_ = glGetUniformLocation( shader_->program_, "u_pointSize");
-    
-    initialized = YES;
-  }
+  lazy_init();
   
   int additionalSegment = 1;
   if (drawLineToCenter)
@@ -64,13 +50,13 @@ void ccFillCircle( CGPoint center, float r, float a, NSUInteger segs, BOOL drawL
   vertices[(segs+1)*2+1] = center.y;
   
   [shader_ use];
-  [shader_ setUniformForModelViewProjectionMatrix];
+  [shader_ setUniformsForBuiltins];
   [shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
   
   ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
   
   glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
-  glDrawArrays(GL_TRIANGLE_FAN, 0, (GLsizei) segs+additionalSegment);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, (GLsizei) segs+additionalSegment);
   
   free( vertices );
   
@@ -79,18 +65,7 @@ void ccFillCircle( CGPoint center, float r, float a, NSUInteger segs, BOOL drawL
 
 void ccFillQuadBezier(CGPoint origin, CGPoint control, CGPoint destination, NSUInteger segments)
 {
-  if( ! initialized ) {
-    
-    //
-    // Position and 1 color passed as a uniform (to similate glColor4ub )
-    //
-    shader_ = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_Position_uColor];
-    
-    colorLocation_ = glGetUniformLocation( shader_->program_, "u_color");
-    pointSizeLocation_ = glGetUniformLocation( shader_->program_, "u_pointSize");
-    
-    initialized = YES;
-  }
+  lazy_init();
   
   ccVertex2F vertices[segments + 1];
   
@@ -104,31 +79,20 @@ void ccFillQuadBezier(CGPoint origin, CGPoint control, CGPoint destination, NSUI
   vertices[segments] = (ccVertex2F) {destination.x, destination.y};
   
   [shader_ use];
-  [shader_ setUniformForModelViewProjectionMatrix];
+  [shader_ setUniformsForBuiltins];
   [shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
   
   ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
   
   glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
-  glDrawArrays(GL_TRIANGLE_FAN, 0, (GLsizei) segments + 1);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, (GLsizei) segments + 1);
   
   CC_INCREMENT_GL_DRAWS(1);
 }
 
 void ccFillCubicBezier(CGPoint origin, CGPoint control1, CGPoint control2, CGPoint destination, NSUInteger segments)
 {
-  if( ! initialized ) {
-    
-    //
-    // Position and 1 color passed as a uniform (to similate glColor4ub )
-    //
-    shader_ = [[CCShaderCache sharedShaderCache] programForKey:kCCShader_Position_uColor];
-    
-    colorLocation_ = glGetUniformLocation( shader_->program_, "u_color");
-    pointSizeLocation_ = glGetUniformLocation( shader_->program_, "u_pointSize");
-    
-    initialized = YES;
-  }
+  lazy_init();
   
   ccVertex2F vertices[segments + 1];
   
@@ -142,13 +106,13 @@ void ccFillCubicBezier(CGPoint origin, CGPoint control1, CGPoint control2, CGPoi
   vertices[segments] = (ccVertex2F) {destination.x, destination.y};
   
   [shader_ use];
-  [shader_ setUniformForModelViewProjectionMatrix];
+  [shader_ setUniformsForBuiltins];
   [shader_ setUniformLocation:colorLocation_ with4fv:(GLfloat*) &color_.r count:1];
   
   ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
   
   glVertexAttribPointer(kCCVertexAttrib_Position, 2, GL_FLOAT, GL_FALSE, 0, vertices);
-  glDrawArrays(GL_TRIANGLE_FAN, 0, (GLsizei) segments + 1);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, (GLsizei) segments + 1);
   
   CC_INCREMENT_GL_DRAWS(1);
 }

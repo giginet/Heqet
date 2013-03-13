@@ -8,6 +8,9 @@
 
 #import "CCActionInstant.h"
 
+/**
+ いつのまにかKobold2DにCCRemoveFromParentというActionが拡張されていたのでそちらを利用しましょう
+ */
 @interface CCSuicide : CCCallBlockN
 
 + (id)actionWithCleanUp:(BOOL)cleanup;

@@ -18,6 +18,7 @@
 @property(readonly) uint32_t seed;
 @property(readwrite) tinymt32_t state;
 
++ (id)defaultRandom;
 + (id)random;
 + (id)randomWithSeed:(uint32_t)seed;
 + (id)randomWithState:(tinymt32_t)state;
